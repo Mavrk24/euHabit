@@ -3,7 +3,6 @@ import './Login.css';
 import PropTypes from 'prop-types';
 import {validatePassword} from '../src/validate';
 
-
 async function loginUser(credentials) {
   return fetch('http://localhost:8080/login', {
     method: 'POST',
@@ -32,14 +31,12 @@ export default function Login({setToken}) {
       <form onSubmit={handleSubmit} id="myform">
         <label>
         <p>Username</p>
-
           <input type="text" onChange={e => setUserName(e.target.value)}/>
         </label>
         <label>
           <p>Password</p>
           <input type="password" onChange={e => setPassword(e.target.value)}/>
         </label>
- 
         <p>
       {(() => {
         if (username == "root" || (validatePassword(parseInt(username, 16)) === true && password == "test")) {
@@ -49,7 +46,6 @@ export default function Login({setToken}) {
         }
       })()}
     </p>
-
       </form>
     </div>
   )
