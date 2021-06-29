@@ -15,7 +15,6 @@ function App() {
 
   return (
     <div className="wrapper">
-      {validate()}
       <h1>Application</h1>
       <BrowserRouter>
         <Switch>

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './Login.css';
 import PropTypes from 'prop-types';
 
+
 async function loginUser(credentials) {
   return fetch('http://localhost:8080/login', {
     method: 'POST',
@@ -27,18 +28,25 @@ export default function Login({setToken}) {
     
     <div className="login-wrapper">
       <h1>Please Log In</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} id="myform">
         <label>
         <p>Username</p>
-          <input type="text" id="user" onChange={e => setUserName(e.target.value)}/>
+        <p>
+      {(() => {
+        if (username == 'admin') {
+          return(<div>
+            <button type="submit">Submit</button>
+          </div>);
+        }
+      })()}
+    </p>
+          <input type="text" onChange={e => setUserName(e.target.value)}/>
         </label>
         <label>
           <p>Password</p>
           <input type="password" onChange={e => setPassword(e.target.value)}/>
         </label>
-        <div>
-          <button type="submit" onClick={getUser()}>Submit</button>
-        </div>
+        
       </form>
     </div>
   )
@@ -48,7 +56,3 @@ Login.propTypes = {
 
 }
 
-export function getUser(){
-  var user = "admin";
-  return user;
-}
