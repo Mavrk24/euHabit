@@ -1,10 +1,9 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import './App.css';
 import Login from '../src/Login';
 import useToken from '../src/useToken';
-import cube from '../src/validate';
-import validate from '../src/validate';
+import Screening from '../src/Screening';
 function App() {
 
   const { token, setToken } = useToken();
@@ -15,10 +14,13 @@ function App() {
 
   return (
     <div className="wrapper">
-      {validate()}
       <h1>Application</h1>
       <BrowserRouter>
+      <h1><Link to="/screening">Screening</Link></h1>
         <Switch>
+        <Route path="/screening">
+          <Screening />
+        </Route>
         </Switch>
       </BrowserRouter>
     </div>

@@ -1,13 +1,6 @@
-import {getUser} from '../src/Login'
-
-export default function validate(x) {
-    return cubamissilecrisis;
+export function validatePassword(num) {
+    for(var i = 2; i < num; i++)
+      if(num % i === 0) return false;
+    return num > 1;
   }
 
-if (getUser() == 'admin'){
-  var cubamissilecrisis = 'Master control enabled';
-}
-
-else {
-  var cubamissilecrisis = 'Hello jose'+getUser();
-}
