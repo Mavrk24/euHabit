@@ -1,5 +1,31 @@
-.login-wrapper {
+.login{
+    background-color: #010A09;
+    color: #F9F2DF;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
+}
+
+body{
+    background-color: #010A09;
+    color: #F9F2DF;
+}
+.title{
+    font-family: Mermaid;
+}
+
+.logo{
+
+font-family: Mermaid;
+font-style: normal;
+font-weight: bold;
+font-size: 13px;
+line-height: 13px;
+color: #E6DCCC;
+}
+
+.btn-login{
+    background-color: #F9F2DF;
+    color: #010A09;
 }

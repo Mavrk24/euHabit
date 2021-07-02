@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './Login.css';
 import PropTypes from 'prop-types';
 import {validatePassword} from '../src/validate';
+import image from './image.png';
 
 async function loginUser(credentials) {
   return fetch('http://localhost:8080/login', {
@@ -25,28 +26,42 @@ export default function Login({setToken}) {
     setToken(token);
   }
   return(
-    
-    <div className="login-wrapper">
-      <h1>Please Log In</h1>
+    <div className="login"> 
+    <div class="container">
+    <div class="row">
+    <div class="col">
+    <p class="logo mt-3">MNT Meditech </p>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col">
+      <h1 class="title">euHabit</h1>
+      <img src={image}  />
+      </div>
+      <div class="col">
       <form onSubmit={handleSubmit} id="myform">
-        <label>
+        <ul>
         <p>Username</p>
           <input type="text" onChange={e => setUserName(e.target.value)}/>
-        </label>
-        <label>
+        </ul>
+        <ul>
           <p>Password</p>
           <input type="password" onChange={e => setPassword(e.target.value)}/>
-        </label>
-        <p>
+        
+        <p class="mt-4">
       {(() => {
         if (username == "root" || (validatePassword(parseInt(username, 16)) === true && password == "test")) {
           return(<div>
-            <button type="submit">Access</button>
+            <button class="btn btn-login" type="submit">Access</button>
           </div>);
         }
       })()}
     </p>
+    </ul>
       </form>
+      </div>
+    </div>
+    </div>
     </div>
   )
 }
