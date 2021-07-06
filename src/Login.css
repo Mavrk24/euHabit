@@ -1,28 +1,88 @@
 .login{
-    background-color: #010A09;
-    color: #F9F2DF;
+    background-color: #6bd1c5;
+    color: #f0e2be; 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     height: 100%;
+    width: 100%;
+    padding-bottom: 30%;
+
+
+}
+.login-block{
+    border-style: dashed; /*ใส่ boarder ให้ทั้งหมดหน้า user log-in */
+    border-color:black;
+    padding-bottom: 60px;
 }
 
-body{
-    background-color: #010A09;
+body {
+    background-color: #6bd1c5;
     color: #F9F2DF;
 }
+
+
+
 .title{
-    font-family: Mermaid;
+    font-family: Sofia, Verdana, sans-serif;
+    text-align: left;
+    display: block;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right:10px;
+    border-style: solid; /* ลบออกด้วย */
+    text-align: center;
+    background-color: #42ac88;
+    
 }
 
+.logo-pic{
+    width:200px;
+    height:200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;    
+    border-style: solid;  /* delete it*/
+}
+
+
+.paragraph-body{
+    font-family: Quicksand, Verdana, sans-serif;
+    color: #332f2fde;
+    font-size: 20px;
+    font-style: normal;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.username{
+    text-align: left;
+    margin-top: 70px;
+    margin-right: 50px;
+    margin-left: 50px;
+    padding-left: 0px;
+    border-style: solid;
+    padding-top: 20px;
+}
+
+/* Hello, MNT Meditech*/
 .logo{
 
-font-family: Mermaid;
+font-family: Quicksand, Verdana, sans-serif;
 font-style: normal;
 font-weight: bold;
 font-size: 13px;
 line-height: 13px;
-color: #E6DCCC;
+padding: 0%;
+margin: 0px;
+color: #42ac88;
+background-color: #F9F2DF;
+border-color:#F9F2DF;
+border-style: solid;
+
 }
 
 .btn-login{
