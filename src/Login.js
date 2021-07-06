@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 import {validatePassword} from '../src/validate';
 import image from './image.png';
 
+// const fixed_email = 
+// const fixed_username = 
+const fixed_password = "123456"
+
 async function loginUser(credentials) {
   return fetch('http://localhost:8080/login', {
     method: 'POST',
@@ -23,7 +27,7 @@ export default function Login({setToken}) {
     const token = await loginUser({
       email,
       username,
-      password
+      fixed_password
     });
     setToken(token);
   }
