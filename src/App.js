@@ -1,54 +1,50 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { Form, Button } from 'react-bootstrap';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Login from '../src/Login';
 import useToken from '../src/useToken';
-import Screening from '../src/Screening';
-import Main from '../src/Main';
-import Profile from './Profile';
-import { useState } from 'react';
-
-
+import cube from '../src/validate';
+import validate from '../src/validate';
 function App() {
-  let audio = new Audio("/audio.mp3")
 
-  const start = () => {
-    audio.play()}
-  const [name, setName] = useState();
   const { token, setToken } = useToken();
-  var msg = new SpeechSynthesisUtterance('Hello,' + name + 'welcome to euHabit. Your new personal health portfolio')
-  msg.voice = window.speechSynthesis.getVoices()[2]
-  msg.rate = 0.85; 
+
   if(!token) {
     return <Login setToken={setToken} />
   }
 
   return (
     <div className="wrapper">
-      <button onClick ={()=> {
-        speechSynthesis.speak(msg)
-        }} >AI voice </button>
-      <button onClick={()=>start()}>Play</button>
-      <h1>Application</h1>
-      <input type="text" placeholder= "name" onChange={e => setName(e.target.value)}/>
+      <div className="welcome">
+      <h1>ยินดีต้อนรับเข้าสู่</h1> 
+      <p id="euHabit">euHabit</p> 
+      <p>กรุณาทำแบบสอบถามต่อไปนี้เพื่อประเมินความเสี่ยงต่อการเกิดอาการปวดบริเวณคอของท่าน</p>
+      </div>
+      <p class="terms-and-privacy mt-3">
+        Terms and Privacy <br/>
+        รับทราบและยินยอมปฎิบัติตามข้อตกลงและเงื่อนไขในการให้บริการของ euHabit
+      </p>
+    
+      <Form id="terms-checkbox">
+        <Form.Group controlId="formBasicCheckbox">
+        <Form.Check type="checkbox" label="Check me out" />
+        </Form.Group>
+      </Form>
+
+      <p class="mt-4 Next-button">
+      <button class="btn btn-login" type="submit">Next</button>
+      </p>
+
+
+
+
       <BrowserRouter>
-      <h1><Link to="/screening">Screening</Link></h1>
-      <h1><Link to="/main">Main</Link></h1>
-      <h1><Link to="/user">Profile</Link></h1>
         <Switch>
-        <Route path="/screening">
-          <Screening />
-        </Route>
-        <Route path="/main">
-          <Main />
-        </Route>
-        <Route path="/user">
-          <Profile />
-        </Route>
         </Switch>
       </BrowserRouter>
-      
     </div>
+      
   );
 }
 

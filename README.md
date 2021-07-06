@@ -23,3 +23,7 @@ Office hour: 20.30-21.30 h
     else:
       return false
 ```
+List ปัญหาชีวิต:
+ของน็อบ แก้
+- ทำ checkbox
+- จัดหน้า username ดีๆ
