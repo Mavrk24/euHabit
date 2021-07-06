@@ -4,8 +4,11 @@ import PropTypes from 'prop-types';
 import {validatePassword} from '../src/validate';
 import image from './image.png';
 
+
+const fixed_password = "123456"
+
 async function loginUser(credentials) {
-  return fetch('http://localhost:8080/login', {
+  return fetch('http://localhost:8080/api/users/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -13,17 +16,17 @@ async function loginUser(credentials) {
     body: JSON.stringify(credentials)
   })
     .then(data => data.json())
-}
-
-
+ }
 export default function Login({setToken}) {
+  const [email, setEmail] = useState();
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
   const handleSubmit = async e => {
     e.preventDefault();
     const token = await loginUser({
+      email,
       username,
-      password
+      fixed_password
     });
     setToken(token);
   }
@@ -43,7 +46,11 @@ export default function Login({setToken}) {
       <div class="col">
       <form onSubmit={handleSubmit} id="myform">
         <ul>
+        <p> Email</p>
+          <input type="text" onChange={e => setEmail(e.target.value)}/>
         <p>Username</p>
+        </ul>
+        <ul>
           <input type="text" onChange={e => setUserName(e.target.value)}/>
         </ul>
         <ul>
@@ -52,11 +59,11 @@ export default function Login({setToken}) {
         
         <p class="mt-4">
       {(() => {
-        if (username == "root" || (validatePassword(parseInt(username, 16)) === true && password == "test")) {
+        //if (username == "root" || (validatePassword(parseInt(username, 16)) === true && password == "test")) {
           return(<div>
             <button class="btn btn-login" type="submit">Access</button>
           </div>);
-        }
+        //}
       })()}
     </p>
     </ul>
@@ -67,10 +74,7 @@ export default function Login({setToken}) {
     </div>
   )
 }
-
-
 Login.propTypes = {
   setToken: PropTypes.func.isRequired
 
 }
-

@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import './App.css';
-import Login from '../src/Login';
-import useToken from '../src/useToken';
-import Screening from '../src/Screening';
-import Main from '../src/Main';
+import Login from './Login';
+import useToken from './useToken';
+import Screening from './Screening';
+import Main from './Main';
 import Profile from './Profile';
 import { useState } from 'react';
 
