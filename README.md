@@ -10,12 +10,12 @@ Office hour: 20.30-21.30 h
    - Demographic collection
 
 ### feature Screening
-  * Login & Register (T: debug, **M,N: In review**)
-  * Welcome page (N: in progress)
+- [X] Login & Register 
+- [X] * Welcome page 
   * **Data entry** (M,N)
   * **Algorithm** (T)
      (return result, database)
-  * Result (M)
+- [X] * Result (M)
  ```
     from DataentryAPI import NDI, ROSA
     if NDI >40 && ROSA > cutoff:
