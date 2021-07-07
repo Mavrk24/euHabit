@@ -1,0 +1,13 @@
+body{
+    background: linear-gradient(180deg, #010A09 0%, #010A09 100%);
+}
+
+.title{
+    text-align: left;
+    font-size: 20px;
+    color:aliceblue;
+    font-family: Quicksand, Verdana, sans-serif;
+    padding-bottom: 50px;
+    border-style: solid;
+    margin: 0px;
+}
