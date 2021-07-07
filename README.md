@@ -10,7 +10,7 @@ Office hour: 20.30-21.30 h
    - Demographic collection
 
 ### feature Screening
-  * Login & Register (T: debug, **M,N: In review**)
+  * Login & Register (T: ~~debug~~ done, **M,N: In review**)
   * Welcome page (N: in progress)
   * **Data entry** (M,N)
   * **Algorithm** (T)
