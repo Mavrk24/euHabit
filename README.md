@@ -21,12 +21,9 @@ Office hour: 20.30-21.30 h
     if NDI >40 && ROSA > cutoff:
       return true
     else:
-      return false
-```
-# ของน็อบ แก้
-- [/] ทำ checkbox *Check update 12.08*
-- [] จัดหน้า username ดีๆ
-- [] ทำ Terms and conditions
-- [] ทำ link ไปหน้าอื่น
-- [] ทำ Navbar
-- [] ทำ form
+- [X] ทำ checkbox *Check update 12.08*
+- [ ] จัดหน้า username ดีๆ
+- [ ] ทำ Terms and conditions
+- [ ] ทำ link ไปหน้าอื่น
+- [ ] ทำ Navbar
+- [ ] ทำ form
