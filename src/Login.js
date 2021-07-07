@@ -5,7 +5,6 @@ import {validatePassword} from '../src/validate';
 import image from './image.png';
 
 
-const fixed_password = "123456"
 
 async function loginUser(credentials) {
   return fetch('http://localhost:8080/api/users/login', {
@@ -26,7 +25,7 @@ export default function Login({setToken}) {
     const token = await loginUser({
       email,
       username,
-      fixed_password
+      password
     });
     setToken(token);
   }

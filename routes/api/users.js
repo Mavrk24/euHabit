@@ -31,16 +31,15 @@ router.post("/register", (req, res) => {
         });
         
   // Hash password before saving in database
-        bcrypt.genSalt(10, (err, salt) => {
-          bcrypt.hash(newUser.password, salt, (err, hash) => {
+          bcrypt.hash(newUser.password, 10, (err, hash) => {
             if (err) throw err;
             newUser.password = hash;
             newUser
               .save()
               .then(user => res.json(user))
               .catch(err => console.log(err));
+
           });
-        });
       }
     });
   });
@@ -57,6 +56,7 @@ router.post("/login", (req, res) => {
       return res.status(400).json(errors);
     }
   const email = req.body.email;
+    const username = req.body.username
     const password = req.body.password;
   // Find user by email
     User.findOne({ email }).then(user => {
@@ -66,6 +66,9 @@ router.post("/login", (req, res) => {
       }
   // Check password
       bcrypt.compare(password, user.password).then(isMatch => {
+        console.log(password);
+        console.log(user.password);
+        console.log(isMatch);
         if (isMatch) {
           // User matched
           // Create JWT Payload
@@ -90,7 +93,10 @@ router.post("/login", (req, res) => {
         } else {
           return res
             .status(400)
-            .json({ passwordincorrect: "Password incorrect" });
+            .json({ passwordincorrect: "Password incorrect",
+                    password: password,
+                    password2: {user}
+           });
         }
       });
     });
