@@ -29,6 +29,7 @@ Office hour: 20.30-21.30 h
    **Update 12.57**
 - [X] ทำ Terms and conditions
    **Update 13.40**
+  ```  Login & Register กับ Welcome page ทำเสร็จแล้ว file upload ใน main และ Nob (Update 15.43)  ``` 
 - [ ] ทำ link ไปหน้าอื่น
 - [ ] ทำ Navbar
 - [ ] ทำ form
