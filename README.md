@@ -24,9 +24,9 @@ Office hour: 20.30-21.30 h
       return false
 ```
 # ของน็อบ แก้
-- ทำ checkbox
-- จัดหน้า username ดีๆ
-- ทำ Terms and conditions
-- ทำ link ไปหน้าอื่น
-- ทำ Navbar
-- ทำ form
+[/] ทำ checkbox
+[] จัดหน้า username ดีๆ
+[] ทำ Terms and conditions
+[] ทำ link ไปหน้าอื่น
+[] ทำ Navbar
+[] ทำ form
