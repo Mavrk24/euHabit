@@ -11,11 +11,11 @@ Office hour: 20.30-21.30 h
 
 ### feature Screening
 - [X] Login & Register 
-- [X] * Welcome page 
-* **Data entry** (M,N)
-* **Algorithm** (T)
+- [X] Welcome page 
+- [ ]   **Data entry** (M,N)
+- [ ]  **Algorithm** (T)
      (return result, database)
-- [X] * Result (M)
+- [X] Result (M)
  ```
     from DataentryAPI import NDI, ROSA
     if NDI >40 && ROSA > cutoff:
