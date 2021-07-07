@@ -12,8 +12,8 @@ Office hour: 20.30-21.30 h
 ### feature Screening
 - [X] Login & Register 
 - [X] * Welcome page 
-  * **Data entry** (M,N)
-  * **Algorithm** (T)
+* **Data entry** (M,N)
+* **Algorithm** (T)
      (return result, database)
 - [X] * Result (M)
  ```
@@ -32,5 +32,4 @@ Office hour: 20.30-21.30 h
  - ```  Login & Register กับ Welcome page ทำเสร็จแล้ว file upload ใน main และ Nob (Update 15.43)  ```
  -  ```  ทำหน้า result เสร็จแล้ว (Update 22.40)  ```
 - [X] ทำ link ไปหน้าอื่น **(Update 22.40)**
-- [ ] *ทำ Navbar* 
 - [ ] ทำ form **(น็อบทำอยู่)**
