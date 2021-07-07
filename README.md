@@ -23,7 +23,7 @@ Office hour: 20.30-21.30 h
     else:
   ```
   ## ของน็อบ แก้
-- [X] ทำ checkbox *Check update 12.08*
+- [X] ทำ checkbox **Check update 12.08**
 - [ ] จัดหน้า username ดีๆ
 - [ ] ทำ Terms and conditions
 - [ ] ทำ link ไปหน้าอื่น
