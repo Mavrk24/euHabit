@@ -37,9 +37,25 @@
   }
 }
 
+.form-check{
+  padding-left: 0px;
+}
+
+#formBasicCheckbox{
+  margin-left: 16px;
+}
+
+.form-check-label{
+  position: relative;
+  left: 16px;
+  margin-left: 18px;
+  margin-right:18px
+}
+
 .wrapper{
   font-family: Quicksand, Verdana, sans-serif;
   font-style: normal;
+  color: #F9F2DF;
   font-size: 16px;
 }
 
@@ -47,9 +63,15 @@
   font-family:  Bai Jamjuree, Verdana, sans-serif;
   font-style: normal;
   text-align: center;
-  padding: 20px;
-  border: 5px solid ;
+  padding:40px;
   font-size: 16px;
+}
+
+#text-welcome{
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 3px solid ;
 }
 
 .terms-and-privacy{
@@ -60,14 +82,20 @@
 }
 
 #terms-checkbox{
+  font-family:  Bai Jamjuree, Verdana, sans-serif;
+  font-style: normal;
   text-align: center;
+  position: relative;
+  top: 65px; 
 }
 .Next-button{
   text-align: center;
+  position: relative;
+  top: 65px; 
 }
 
 #euHabit{
-  font-family: Sofia, Verdana, sans-serif;
+  font-family: Mermaid;
   font-size: 48px;
 }
 body {
@@ -75,3 +103,14 @@ body {
   background-color: #000000;
   
   }
+
+#Modal{
+  font-family:  Bai Jamjuree, Verdana, sans-serif;
+  font-style: normal;
+  color:#000000;
+}
+
+#btn-login{
+  background-color: #F9F2DF;
+  color: #010A09;
+}

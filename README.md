@@ -10,7 +10,7 @@ Office hour: 20.30-21.30 h
    - Demographic collection
 
 ### feature Screening
-  * Login & Register (T: debug, N: CSS in review)
+  * Login & Register (T: debug, **M,N: In review**)
   * Welcome page (N: in progress)
   * **Data entry** (M,N)
   * **Algorithm** (T)
@@ -21,9 +21,15 @@ Office hour: 20.30-21.30 h
     if NDI >40 && ROSA > cutoff:
       return true
     else:
-      return false
-```
-List ปัญหาชีวิต:
-ของน็อบ แก้
-- ทำ checkbox
-- จัดหน้า username ดีๆ
+  ```
+  ## ของน็อบ แก้
+- [X] ทำ checkbox 
+   **Update 12.08**
+- [X] จัดหน้า username ดีๆ 
+   **Update 12.57**
+- [X] ทำ Terms and conditions
+   **Update 13.40**
+  ```  Login & Register กับ Welcome page ทำเสร็จแล้ว file upload ใน main และ Nob (Update 15.43)  ``` 
+- [ ] ทำ link ไปหน้าอื่น
+- [ ] ทำ Navbar
+- [ ] ทำ form

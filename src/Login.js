@@ -15,6 +15,7 @@ async function loginUser(credentials) {
     .then(data => data.json())
  }
 export default function Login({setToken}) {
+  const [email, setEmail] = useState();
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
   const handleSubmit = async e => {
@@ -27,20 +28,23 @@ export default function Login({setToken}) {
   }
   return(
     <div className="login d-flex"> 
-      <div class="container-fluid">
+      <div class="container-fluid b-0">
         <div class="row">
           <div class="col">
-          <p class="logo w-100 p-3">MNT Meditech </p>
+          <p class="logo w-100 mt-4 mx-2">MNT Meditech</p>
           </div>
         </div>
         <div class="login-block">
         <div class="row">
             <div class="col">
-              <img class="logo-pic" src={image}  />
-              <h1 class="title"><strong>euHabit</strong></h1>
+              <h1 class="title"><strong>euHabit.</strong></h1>
             </div>
-            <div class="col paragraph-body username d-flex justify-content-center">
+            <div class="col paragraph-body username d-flex">
             <form onSubmit={handleSubmit} id="myform">
+            <ul>
+              <p>E-mail</p>
+              <input type="text" onChange={e => setEmail(e.target.value)}/>
+              </ul>
               <ul>
               <p>Username</p>
               <input type="text" onChange={e => setUserName(e.target.value)}/>
@@ -48,10 +52,11 @@ export default function Login({setToken}) {
               <ul>
               <p>Password</p>
               <input type="password" onChange={e => setPassword(e.target.value)}/>
-        
-              <p class="mt-4">
-              <button class="btn btn-login" type="submit">Access</button>
-              </p>
+              </ul>
+              <ul>
+              <div class="mt-4">
+              <button class="btn btn-login" type="submit"><b>Access</b></button>
+              </div>
               </ul>
             </form>
             </div>
