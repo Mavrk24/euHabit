@@ -33,3 +33,4 @@ Office hour: 20.30-21.30 h
  -  ```  ทำหน้า result เสร็จแล้ว (Update 22.40)  ```
 - [X] ทำ link ไปหน้าอื่น **(Update 22.40)**
 - [ ] ทำ form **(น็อบทำอยู่)**
+- [ ] ทำ Selecting bar ไม่ได้ ใน form
