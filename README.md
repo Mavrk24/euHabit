@@ -23,9 +23,12 @@ Office hour: 20.30-21.30 h
     else:
   ```
   ## ของน็อบ แก้
-- [X] ทำ checkbox **Check update 12.08**
-- [X] จัดหน้า username ดีๆ **Check update 12.57**
-- [ ] ทำ Terms and conditions
+- [X] ทำ checkbox 
+   **Update 12.08**
+- [X] จัดหน้า username ดีๆ 
+   **Update 12.57**
+- [X] ทำ Terms and conditions
+   **Update 13.40**
 - [ ] ทำ link ไปหน้าอื่น
 - [ ] ทำ Navbar
 - [ ] ทำ form
