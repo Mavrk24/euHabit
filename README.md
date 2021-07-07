@@ -10,12 +10,12 @@ Office hour: 20.30-21.30 h
    - Demographic collection
 
 ### feature Screening
-  * Login & Register (T: debug, **M,N: In review**)
-  * Welcome page (N: in progress)
-  * **Data entry** (M,N)
-  * **Algorithm** (T)
+- [X] Login & Register 
+- [X] Welcome page 
+- [ ]   **Data entry** (M,N)
+- [ ]  **Algorithm** (T)
      (return result, database)
-  * Result (M)
+- [X] Result (M)
  ```
     from DataentryAPI import NDI, ROSA
     if NDI >40 && ROSA > cutoff:
@@ -29,7 +29,7 @@ Office hour: 20.30-21.30 h
    **Update 12.57**
 - [X] ทำ Terms and conditions
    **Update 13.40**
-  ```  Login & Register กับ Welcome page ทำเสร็จแล้ว file upload ใน main และ Nob (Update 15.43)  ``` 
-- [ ] ทำ link ไปหน้าอื่น
-- [ ] *ทำ Navbar*
-- [ ] ทำ form
+ - ```  Login & Register กับ Welcome page ทำเสร็จแล้ว file upload ใน main และ Nob (Update 15.43)  ```
+ -  ```  ทำหน้า result เสร็จแล้ว (Update 22.40)  ```
+- [X] ทำ link ไปหน้าอื่น **(Update 22.40)**
+- [ ] ทำ form **(น็อบทำอยู่)**
