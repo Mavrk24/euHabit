@@ -1,11 +1,13 @@
 import React from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Container, Col, Row } from 'react-bootstrap';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Login from '../src/Login';
 import useToken from '../src/useToken';
-import cube from '../src/validate';
-import validate from '../src/validate';
+import Screening from '../src/Screening';
+import Main from '../src/Main'
+
+
 function App() {
 
   const { token, setToken } = useToken();
@@ -21,19 +23,25 @@ function App() {
       <p id="euHabit">euHabit</p> 
       <p>กรุณาทำแบบสอบถามต่อไปนี้เพื่อประเมินความเสี่ยงต่อการเกิดอาการปวดบริเวณคอของท่าน</p>
       </div>
-      <p class="terms-and-privacy mt-3">
-        Terms and Privacy <br/>
-        รับทราบและยินยอมปฎิบัติตามข้อตกลงและเงื่อนไขในการให้บริการของ euHabit
-      </p>
-    
-      <Form id="terms-checkbox">
-        <Form.Group controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
-      </Form>
-
+      <Container>
+        <Row>
+          <p class="terms-and-privacy mt-3">
+            Terms and Privacy <br/>
+            รับทราบและยินยอมปฎิบัติตามข้อตกลงและเงื่อนไขในการให้บริการของ euHabit
+          </p>
+        </Row>
+        <Row>
+          <Col>
+            <Form id="terms-checkbox">
+              <Form.Group controlId="formBasicCheckbox">
+                <Form.Check type="checkbox" label="Check me out" />
+              </Form.Group>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
       <p class="mt-4 Next-button">
-      <button class="btn btn-login" type="submit">Next</button>
+      <Button class="btn btn-login" type="submit" href="/screening" >Next</Button>
       </p>
 
 
@@ -41,6 +49,12 @@ function App() {
 
       <BrowserRouter>
         <Switch>
+        <Route path="/screening">
+          <Screening />
+        </Route>
+        <Route path="/main">
+          <Main />
+        </Route>
         </Switch>
       </BrowserRouter>
     </div>
