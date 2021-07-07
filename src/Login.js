@@ -55,7 +55,7 @@ export default function Login({setToken}) {
               </ul>
               <ul>
               <div class="mt-4">
-              <button class="btn btn-login" type="submit">Access</button>
+              <button class="btn btn-login" type="submit"><b>Access</b></button>
               </div>
               </ul>
             </form>
