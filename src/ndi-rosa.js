@@ -14,10 +14,10 @@ export default class Entry extends Component{
                     ในแต่ละข้อซึ่งอธิบายอาการของท่านในวันนี้ได้ดีที่สุด 
                 </p>
 
+{/* คำถาม NDI */}      
+
                 <Form className="data-form px-5">
-                    
-    {/*คำถามข้อที่ 1*/}
-                    <Form.Group className="mb-3">
+{/*Q1*/}            <Form.Group className="mb-3">
                         <Form.Label> 1. ความเจ็บปวด </Form.Label>
                         {['radio'].map((type) => (
                             <div key={`default-${type}`} className="mb-3">
@@ -50,6 +50,121 @@ export default class Entry extends Component{
                                     type={type}
                                     id={`default-${type}`}
                                     label="ปวดร้ายแรงที่สุดเท่าที่จะจินตนาการได้ในขณะนี้"
+                                />
+                            </div>
+                        ))}
+                    </Form.Group>
+        
+{/*Q2*/}            <Form.Group className="mb-3">
+                        <Form.Label>2. การดูแลตนเอง</Form.Label>
+                        {['radio'].map((type) => (
+                            <div key={`default-${type}`} className="mb-3">
+                                <Form.Check 
+                                    type={type}
+                                    id={`default-${type}`}
+                                    label="ฉันสามารถดูแลตนเองได้ตามปกติโดยไม่มีความเจ็บปวดเพิ่มขึ้น"
+                                />
+                                <Form.Check
+                                    type={type}
+                                    id={`default-${type}`}
+                                    label="ฉันสามารถดูแลตนเองได้ตามปกติแต่อาจมีความเจ็บปวดเพิ่มขึ้น"
+                                />
+                                <Form.Check
+                                    type={type}
+                                    id={`default-${type}`}
+                                    label="ขณะดูแลตนเองจะมีอาการเจ็บปวดทำให้ต้องทำช้า ๆ และระมัดระวัง"
+                                />
+                                <Form.Check
+                                    type={type}
+                                    id={`default-${type}`}
+                                    label="ฉันต้องการความช่วยเหลือบ้างแต่ยังสามารถดูแลตนเองได้เป็นส่วนใหญ"
+                                />
+                                <Form.Check
+                                    type={type}
+                                    id={`default-${type}`}
+                                    label="ฉันต้องการความช่วยเหลือทุกวันในการดูแลตนเองเกือบทุกด้าน"
+                                />
+                                <Form.Check
+                                    type={type}
+                                    id={`default-${type}`}
+                                    label="ฉันไม่สามารถแต่งตัวเองได้,ฉันอาบน้ำตนเองด้วยความยากลำบากและต้องอยู่บนเตียง"
+                                />
+                            </div>
+                        ))}
+                    </Form.Group>
+
+               
+{/*Q3*/}            <Form.Group className="mb-3">
+                        <Form.Label>2. การดูแลตนเอง</Form.Label>
+                        {['radio'].map((type) => (
+                            <div key={`default-${type}`} className="mb-3">
+                                <Form.Check 
+                                    type={type}
+                                    id={`default-${type}`}
+                                    label="ฉันสามารถดูแลตนเองได้ตามปกติโดยไม่มีความเจ็บปวดเพิ่มขึ้น"
+                                />
+                                <Form.Check
+                                    type={type}
+                                    id={`default-${type}`}
+                                    label="ฉันสามารถดูแลตนเองได้ตามปกติแต่อาจมีความเจ็บปวดเพิ่มขึ้น"
+                                />
+                                <Form.Check
+                                    type={type}
+                                    id={`default-${type}`}
+                                    label="ขณะดูแลตนเองจะมีอาการเจ็บปวดทำให้ต้องทำช้า ๆ และระมัดระวัง"
+                                />
+                                <Form.Check
+                                    type={type}
+                                    id={`default-${type}`}
+                                    label="ฉันต้องการความช่วยเหลือบ้างแต่ยังสามารถดูแลตนเองได้เป็นส่วนใหญ"
+                                />
+                                <Form.Check
+                                    type={type}
+                                    id={`default-${type}`}
+                                    label="ฉันต้องการความช่วยเหลือทุกวันในการดูแลตนเองเกือบทุกด้าน"
+                                />
+                                <Form.Check
+                                    type={type}
+                                    id={`default-${type}`}
+                                    label="ฉันไม่สามารถแต่งตัวเองได้,ฉันอาบน้ำตนเองด้วยความยากลำบากและต้องอยู่บนเตียง"
+                                />
+                            </div>
+                        ))}
+                    </Form.Group>
+
+{/*Q4*/}            <Form.Group className="mb-3">
+                        <Form.Label>2. การดูแลตนเอง</Form.Label>
+                        {['radio'].map((type) => (
+                            <div key={`default-${type}`} className="mb-3">
+                                <Form.Check 
+                                    type={type}
+                                    id={`default-${type}`}
+                                    label="ฉันสามารถดูแลตนเองได้ตามปกติโดยไม่มีความเจ็บปวดเพิ่มขึ้น"
+                                />
+                                <Form.Check
+                                    type={type}
+                                    id={`default-${type}`}
+                                    label="ฉันสามารถดูแลตนเองได้ตามปกติแต่อาจมีความเจ็บปวดเพิ่มขึ้น"
+                                />
+                                <Form.Check
+                                    type={type}
+                                    id={`default-${type}`}
+                                    label="ขณะดูแลตนเองจะมีอาการเจ็บปวดทำให้ต้องทำช้า ๆ และระมัดระวัง"
+                                />
+                                <Form.Check
+                                    type={type}
+                                    id={`default-${type}`}
+                                    label="ฉันต้องการความช่วยเหลือบ้างแต่ยังสามารถดูแลตนเองได้เป็นส่วนใหญ"
+                                />
+                                <Form.Check
+                                    type={type}
+                                    id={`default-${type}`}
+                                    label="ฉันต้องการความช่วยเหลือทุกวันในการดูแลตนเองเกือบทุกด้าน"
+                                />
+                                <Form.Check
+                                    type={type}
+                                    id={`default-${type}`}
+                                    label="ฉันไม่สามารถแต่งตัวเองได้,ฉันอาบน้ำตนเองด้วยความยากลำบากและต้องอยู่บนเตียง"
                                 />
                             </div>
                         ))}
