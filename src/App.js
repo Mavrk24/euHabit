@@ -10,11 +10,22 @@ import {useState, setState} from 'react';
 import Result from './result';
 import { Component } from 'react';
 import Entry from './entry';
+import {useHistory} from 'react-router-dom'
 
 function Application() {
   const [show, setShow] = useState(false);
   const [checked, setChecked] = useState(false);
   const handleClose = () => setShow(false);
+  const history = useHistory();
+  const handleSubmit = async e => {
+    e.preventDefault();
+    if (checked === true){
+    history.push('/entry');
+    }
+    else{
+      alert('Please agree to our terms & condition.');
+    }
+  }
   const handleShow = async e => {
     setShow(true);
     setChecked(e.currentTarget.checked)
@@ -106,7 +117,7 @@ function Application() {
       </Modal.Footer>
     </Modal>
           <p class="mt-4 Next-button">
-          <Button class="btn" variant="dark" id="btn-login" type="submit" href="/entry" ><b>Next</b></Button>
+          <Button class="btn" onClick={handleSubmit} variant="dark" id="btn-login" type="submit"><b>Next</b></Button>
           </p>
         </div>
           
