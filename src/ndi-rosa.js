@@ -3,7 +3,7 @@ import {React, useState} from 'react';
 import { Component } from 'react';
 import './ndi-rosa.css';
 
-export default class Entry extends Component{
+export default class NDI extends Component{
     render() {
         return(
             <div> 
