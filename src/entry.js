@@ -2,8 +2,27 @@ import { Form, Button, Container, Col, Row, Modal, FormCheck, FormLabel, FormSel
 import {React, useState} from 'react';
 import { Component } from 'react';
 import './entry.css';
+import {
+  FormWithConstraints,
+  FieldFeedbacks,
+  FieldFeedback
+} from 'react-form-with-constraints';
 
 export default class Entry extends Component{
+  handleChange = e => {
+    this.form.validateFields(e.target);
+  }
+
+  contactSubmit = e => {
+    e.preventDefault();
+    this.form.validateFields();
+
+    if (!this.form.isValid()) {
+      console.log('form is invalid: do not submit');
+    } else {
+      console.log('form is valid: submit');
+    }
+  }
   render() {
     return(
       <div> 
@@ -42,37 +61,58 @@ export default class Entry extends Component{
         as="textarea" rows={1}
      */}
 
-        <Form className="data-form px-5"> 
-          <Row className="mb-3">
-              <Form.Group as={Col} controlId="exampleForm.ControlTextarea1">
-                <Form.Label>อายุ</Form.Label>
-                <Form.Control type="number" placeholder="Age" />
-              </Form.Group>
-            
+<FormWithConstraints
+        ref={form => this.form = form}
+        onSubmit={this.contactSubmit}
+        noValidate className="data-form px-5" onSubmit="this.submit"> 
+          <Row className="">
+          <Form.Group as={Col} className="mb-3" controlId="exampleForm.ControlTextarea1">
+          <Form.Label >อายุ</Form.Label>
+                <input name="age" type="number" size="30" placeholder="Age"
+                 required onChange={this.handleChange}
+                 className="form-control mb-3" />
+          <FieldFeedbacks for="age">
+            <FieldFeedback when="*" class="mb-3"/>
+          </FieldFeedbacks>    
+          </Form.Group>
               <Form.Group as={Col} className="mb-3" controlId="exampleForm.ControlTextarea1">
                 <Form.Label>Biological sex</Form.Label>
-                  <Form.Control as="select" defaultValue="- Select -">
-                    <option> - Select - </option>
+                 <Form.Control name="sex" as="select" defaultValue=" " required onChange={this.handleChange}>
+                    <option> </option>
                     <option>Female</option>
                     <option>Male</option>
                   </Form.Control>
+                  <FieldFeedbacks for="sex">
+            <FieldFeedback when="*" class="mt-3 mb-3"/>
+          </FieldFeedbacks> 
               </Form.Group>
           </Row>
               
-              <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                <Form.Label>อาชีพ</Form.Label>
-                <Form.Control type="text" placeholder="Occupation" />
-              </Form.Group>                 
-
-              <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                <Form.Label>คณะที่กำลังศึกษา</Form.Label>
-                <Form.Control type="text" placeholder="Faculty" />
-              </Form.Group>              
               
-              <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                <Form.Label>ชั้นปี</Form.Label>
-                <Form.Control type="number" placeholder="Study Year" />
-              </Form.Group>
+                <Form.Label>อาชีพ</Form.Label>
+                <input name="job" size="30" placeholder="Occupation"
+                 required minLength={2} onChange={this.handleChange}
+                 className="form-control mb-3" />
+          <FieldFeedbacks for="job">
+            <FieldFeedback when="*" class="mb-3" />
+          </FieldFeedbacks>           
+
+                <Form.Label>คณะที่กำลังศึกษา</Form.Label>
+                <input name="faculty" size="30" placeholder="Faculty"
+                 required minLength={2} onChange={this.handleChange}
+                 className="form-control mb-3" />
+          <FieldFeedbacks for="faculty">
+            <FieldFeedback when="*" class="mb-3"/>
+          </FieldFeedbacks>    
+
+          <Form.Label>ชั้นปี</Form.Label>
+                <input name="year" type="number" size="30" placeholder="Study year"
+                 required onChange={this.handleChange}
+                 className="form-control mb-3" />
+          <FieldFeedbacks for="year">
+            <FieldFeedback when="*" class="mb-3"/>
+          </FieldFeedbacks>    
+
             
               <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                 <Form.Text className="text-muted">
@@ -81,7 +121,12 @@ export default class Entry extends Component{
               </Form.Group>
 
 
-        </Form>
+        
+
+         <p id="Nxtbutton">
+          <button class="btn" id="btn-login" type="submit" onClick={this.contactSubmit}><b>Next</b></button>
+          </p>
+          </ FormWithConstraints>
       </div>
     
     )

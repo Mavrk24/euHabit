@@ -18,3 +18,10 @@ body{
 .data-form{
     padding: 20px
 }
+
+#Nxtbutton{
+    align-items: center;
+    position: relative;
+    top: 2%;
+    text-align: center;
+  }
