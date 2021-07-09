@@ -36,5 +36,8 @@ export default function Screening() {
         <button type="submit">Submit</button>
         </label>
   </form>
-  </div>)
+  </div>
+  /* form สำหรับ Screening test */
+
+  )
 }

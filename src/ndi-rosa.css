@@ -5,7 +5,7 @@ body{
 
 #demographic-data{
     text-align: left;
-    font-size: 20px;
+    font-size: 30px;
     color:aliceblue;
     font-family: Quicksand, Verdana, sans-serif;
     margin-top: 30px;
@@ -15,13 +15,13 @@ body{
     border-style: solid;
 }
 
+#instruction{
+    text-align: center;
+    font-size: 16px;
+    color: aliceblue;
+    border-style: solid;
+}
+
 .data-form{
     padding: 20px
 }
-
-#Nxtbutton{
-    align-items: center;
-    position: relative;
-    top: 2%;
-    text-align: center;
-  }

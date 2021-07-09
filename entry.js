@@ -2,12 +2,11 @@ import { Form, Button, Container, Col, Row, Modal, FormCheck, FormLabel, FormSel
 import {React, useState} from 'react';
 import { Component } from 'react';
 import './entry.css';
-import { useHistory } from 'react-router-dom';
 import {
   FormWithConstraints,
   FieldFeedbacks,
   FieldFeedback
-} from 'react-form-with-constraints'
+} from 'react-form-with-constraints';
 
 export default class Entry extends Component{
   handleChange = e => {
@@ -21,7 +20,6 @@ export default class Entry extends Component{
     if (!this.form.isValid()) {
       console.log('form is invalid: do not submit');
     } else {
-      this.props.history.push('/ndi');
       console.log('form is valid: submit');
     }
   }
