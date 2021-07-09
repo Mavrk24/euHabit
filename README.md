@@ -9,19 +9,7 @@ Office hour: 20.30-21.30 h
    - Match intervention 
    - Demographic collection
 
-### feature Screening
-- [X] Login & Register 
-- [X] Welcome page 
-- [ ]   **Data entry** (M,N)
-- [ ]  **Algorithm** (T)
-     (return result, database)
-- [X] Result (M)
- ```
-    from DataentryAPI import NDI, ROSA
-    if NDI >40 && ROSA > cutoff:
-      return true
-    else:
-  ```
+
   ## ของน็อบ แก้
 - [X] ทำ checkbox 
    **Update 12.08**
