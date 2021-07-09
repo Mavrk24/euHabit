@@ -1,41 +1,152 @@
+import { Form, Button, Container, Col, Row, Modal, FormControl, InputGroup, FormSelect } from 'react-bootstrap';
 import {React, useState} from 'react';
 import { Component } from 'react';
 import './entry.css';
+import { useHistory } from 'react-router-dom';
+import axios from 'axios';
+import {
+  FormWithConstraints,
+  FieldFeedbacks,
+  FieldFeedback
+} from 'react-form-with-constraints'
 
 export default class Entry extends Component{
-    render() {
+  sendform = (e) => {
+    axios
+    .post("/subentry", {
+      age: document.getElementById("age").value,
+      sex: document.getElementById("sex").value,
+      job: document.getElementById("job").value,
+      faculty: document.getElementById("faculty").value,
+      year: document.getElementById("year").value,
+})
+.then(function (response) {
+   console.log(response);
+});
+};
+
+  handleChange = e => {
+    this.form.validateFields(e.target);
+  }
+
+  contactSubmit = e => {
+    e.preventDefault();
+    this.sendform();
+    this.form.validateFields();
+
+    if (!this.form.isValid()) {
+      console.log('form is invalid: do not submit');
+    } else {
+      this.props.history.push('/ndi');
+      console.log('form is valid: submit');
+    }
+  }
+  render() {
     return(
-      <div className="login-wrapper"> 
-        <form>
+      <div> 
+        <h1 class="mx-5" id="demographic-data"> Demographic Data</h1>
+     {/*<form>
+        <h1 id="demographic-data"> Demographic Data</h1>
+        <div class="mt-5">
           <label>
-              <p>Age</p>
+              <p>อายุ</p>
                 <input type="number"/>
               </label>
-              <p>Gender</p>
+              <p>เพศ</p>
               <select>
                   <option value="m">Male</option>
                   <option value="f">Female</option>
                   <option value="o">Others</option>
               </select>
               <label>
-                <p>Occupation</p>
+                <p>อาขีพ</p>
                 <input type="text" />
               </label>
               <label>
-                <p>Faculty</p>
+                <p>คณะที่กำลังศึกษา (หากเป็นนิสิต/นักศึกษา)</p>
                 <input type="text" />
               </label>
               <label>
-                <p>Year</p>
+                <p>ชั้นปีที่กำลังศึกษา</p>
                 <input type="number" />
               </label>
               <label>
               <p></p>
               <button type="submit">Submit</button>
               </label>
+        </div>  
         </form>
-        </div>
+        as="textarea" rows={1}
+     */}
+
+<FormWithConstraints
+        ref={form => this.form = form}
+        onSubmit={this.contactSubmit}
+        noValidate className="data-form px-5" onSubmit="this.submit"> 
+          <Row className="">
+          <Form.Group as={Col} className="mb-3" controlId="exampleForm.ControlTextarea1">
+          <Form.Label >อายุ*</Form.Label>
+                <input name="age"id="age" type="number" size="30" placeholder="อายุ"
+                 required onChange={this.handleChange}
+                 className="form-control mb-3" />
+          <FieldFeedbacks for="age">
+            <FieldFeedback when="*" class="mb-3"/>
+          </FieldFeedbacks>    
+          </Form.Group>
+              <Form.Group as={Col} className="mb-3" controlId="exampleForm.ControlTextarea1">
+                <Form.Label>เพศกำเนิด*</Form.Label>
+                 <Form.Control name="sex" as="select" defaultValue=" " id="sex" required onChange={this.handleChange}>
+                    <option> </option>
+                    <option>หญิง</option>
+                    <option>ชาย</option>
+                  </Form.Control>
+                  <FieldFeedbacks for="sex">
+            <FieldFeedback when="*" class="mt-3 mb-3"/>
+          </FieldFeedbacks> 
+              </Form.Group>
+          </Row>
+
+          <Form.Label>อาชีพ* <br/>(ถ้ากำลังศึกษาอยู่ กรอก "กำลังศึกษา")</Form.Label>
+                <input name="job" type="text" id="job" size="30" placeholder="Occupation"
+                 onChange={this.handleChange}
+                 className="form-control mb-3" />
+          <FieldFeedbacks for="job">
+            <FieldFeedback when="*" class="mb-3"/>
+          </FieldFeedbacks>
+              
+          <Form.Label>คณะที่กำลังศึกษา (ถ้ากำลังศึกษาอยู่)</Form.Label>
+                <input name="faculty" type="text" id="faculty" size="30" placeholder="Faculty"
+                 onChange={this.handleChange}
+                 className="form-control mb-3" />
+          <FieldFeedbacks for="faculty">
+            <FieldFeedback when="*" class="mb-3"/>
+          </FieldFeedbacks>   
+
+              
+          <Form.Label>ชั้นปี (ถ้ากำลังศึกษาอยู่)</Form.Label>
+                <input name="year" type="number" id="year" size="30" placeholder="Study year"
+                 onChange={this.handleChange}
+                 className="form-control mb-3" />
+          <FieldFeedbacks for="year">
+            <FieldFeedback when="*" class="mb-3"/>
+          </FieldFeedbacks>   
+
+            
+              <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                <Form.Text className="text-muted">
+                  เราจะไม่เปิดเผยข้อมูลของคุณให้ผู้อื่นที่ไม่เกี่ยวข้องและจะใช้เพื่อการส่งแบบสอบถามการใช้งานเพิ่มเติมเท่านั้น
+                </Form.Text>
+              </Form.Group>
+
+
+        
+
+         <p id="Nxtbutton">
+          <button class="btn" id="btn-login" type="submit" onClick={this.contactSubmit}><b>Next</b></button>
+          </p>
+          </ FormWithConstraints>
+      </div>
     
     )
-    }
+  }
 }
