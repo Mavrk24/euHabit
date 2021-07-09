@@ -3,6 +3,7 @@ import {React, useState} from 'react';
 import { Component } from 'react';
 import './entry.css';
 import { useHistory } from 'react-router-dom';
+import axios from 'axios';
 import {
   FormWithConstraints,
   FieldFeedbacks,
@@ -10,12 +11,28 @@ import {
 } from 'react-form-with-constraints'
 
 export default class Entry extends Component{
+  sendform = (e) => {
+    axios
+    .post("/subentry", {
+      age: document.getElementById("age").value,
+      sex: document.getElementById("sex").value,
+      job: document.getElementById("job").value,
+      faculty: document.getElementById("faculty").value,
+      year: document.getElementById("year").value,
+      username: JSON.parse(localStorage.getItem('token')).token,
+})
+.then(function (response) {
+   console.log(response);
+});
+};
+
   handleChange = e => {
     this.form.validateFields(e.target);
   }
 
   contactSubmit = e => {
     e.preventDefault();
+    this.sendform();
     this.form.validateFields();
 
     if (!this.form.isValid()) {
@@ -69,8 +86,8 @@ export default class Entry extends Component{
         noValidate className="data-form px-5" onSubmit="this.submit"> 
           <Row className="">
           <Form.Group as={Col} className="mb-3" controlId="exampleForm.ControlTextarea1">
-          <Form.Label >อายุ</Form.Label>
-                <input name="age" type="number" size="30" placeholder="อายุ"
+          <Form.Label >อายุ*</Form.Label>
+                <input name="age"id="age" type="number" size="30" placeholder="อายุ"
                  required onChange={this.handleChange}
                  className="form-control mb-3" />
           <FieldFeedbacks for="age">
@@ -78,8 +95,8 @@ export default class Entry extends Component{
           </FieldFeedbacks>    
           </Form.Group>
               <Form.Group as={Col} className="mb-3" controlId="exampleForm.ControlTextarea1">
-                <Form.Label>เพศกำเนิด</Form.Label>
-                 <Form.Control name="sex" as="select" defaultValue=" " required onChange={this.handleChange}>
+                <Form.Label>เพศกำเนิด*</Form.Label>
+                 <Form.Control name="sex" as="select" defaultValue=" " id="sex" required onChange={this.handleChange}>
                     <option> </option>
                     <option>หญิง</option>
                     <option>ชาย</option>
@@ -90,56 +107,29 @@ export default class Entry extends Component{
               </Form.Group>
           </Row>
 
-          <Form.Label>อาชีพ</Form.Label>
-          <InputGroup className="mb-3">
-            <InputGroup.Prepend>
-             <InputGroup.Radio name="student" aria-label="Checkbox for following text input" onChange={this.handleChange}/>
-            </InputGroup.Prepend>
-              <FormControl name="studenttext"  value="นิสิต นักศึกษา" aria-label="Text input with checkbox"onChange={this.handleChange} />        
-          </InputGroup>
-          <InputGroup className="mb-3">
-          <InputGroup.Prepend>
-             <InputGroup.Radio name="other" aria-label="Checkbox for following text input" onChange={this.handleChange}/>
-            </InputGroup.Prepend>
-              <FormControl name="job" minLength={2}  placeholder="อื่นๆ (โปรดระบุ)" aria-label="Text input with checkbox"onChange={this.handleChange} />        
-          </InputGroup>
+          <Form.Label>อาชีพ* <br/>(ถ้ากำลังศึกษาอยู่ กรอก "นักเรียน" หรือ "นิสิต นักศึกษา")</Form.Label>
+                <input name="job" type="text" id="job" size="30" placeholder="Occupation"
+                 onChange={this.handleChange}
+                 className="form-control mb-3" />
           <FieldFeedbacks for="job">
-            <FieldFeedback when="*" class="mb-3" />
-          </FieldFeedbacks>   
+            <FieldFeedback when="*" class="mb-3"/>
+          </FieldFeedbacks>
               
-        
-          <Form.Label>คณะที่กำลังศึกษา</Form.Label>
-          <InputGroup className="mb-3">
-            <InputGroup.Prepend>
-             <InputGroup.Radio name="notfaculty" aria-label="Checkbox for following text input" onChange={this.handleChange}/>
-            </InputGroup.Prepend>
-              <FormControl name="notfacultytext"  value="ไม่ได้ทำการศึกษาอยู่ในขณะนี้" aria-label="Text input with checkbox"onChange={this.handleChange} />        
-          </InputGroup>
-          <InputGroup className="mb-3">
-          <InputGroup.Prepend>
-             <InputGroup.Radio name="faculty" aria-label="Checkbox for following text input" onChange={this.handleChange}/>
-            </InputGroup.Prepend>
-              <FormControl name="facultytext" minLength={2}  placeholder="คณะ (โปรดระบุ)" aria-label="Text input with checkbox"onChange={this.handleChange} />        
-          </InputGroup>
-          <FieldFeedbacks for="facultytext">
-            <FieldFeedback when="*" class="mb-3" />
+          <Form.Label>คณะที่กำลังศึกษา (ถ้ากำลังศึกษาอยู่ระดับมหาวิทยาลัย)</Form.Label>
+                <input name="faculty" type="text" id="faculty" size="30" placeholder="Faculty"
+                 onChange={this.handleChange}
+                 className="form-control mb-3" />
+          <FieldFeedbacks for="faculty">
+            <FieldFeedback when="*" class="mb-3"/>
           </FieldFeedbacks>   
+
               
-          <Form.Label>คณะที่กำลังศึกษา</Form.Label>
-          <InputGroup className="mb-3">
-            <InputGroup.Prepend>
-             <InputGroup.Radio name="notyear" aria-label="Checkbox for following text input" onChange={this.handleChange}/>
-            </InputGroup.Prepend>
-              <FormControl name="notyeartext"  value="ไม่ได้ทำการศึกษาอยู่ในขณะนี้" aria-label="Text input with checkbox"onChange={this.handleChange} />        
-          </InputGroup>
-          <InputGroup className="mb-3">
-          <InputGroup.Prepend>
-             <InputGroup.Radio name="year" aria-label="Checkbox for following text input" onChange={this.handleChange}/>
-            </InputGroup.Prepend>
-              <FormControl name="yeartext" minLength={2}  placeholder="ปีการศึกษา (โปรดระบุ)" aria-label="Text input with checkbox"onChange={this.handleChange} />        
-          </InputGroup>
-          <FieldFeedbacks for="yeartext">
-            <FieldFeedback when="*" class="mb-3" />
+          <Form.Label>ชั้นปี (ถ้ากำลังศึกษาอยู่ระดับมหาวิทยาลัย)</Form.Label>
+                <input name="year" type="number" id="year" size="30" placeholder="Study year"
+                 onChange={this.handleChange}
+                 className="form-control mb-3" />
+          <FieldFeedbacks for="year">
+            <FieldFeedback when="*" class="mb-3"/>
           </FieldFeedbacks>   
 
             
