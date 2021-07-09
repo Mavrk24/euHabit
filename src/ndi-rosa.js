@@ -459,9 +459,11 @@ export default class NDI extends Component{
                             </div>
                         ))}
                     </Form.Group>                
-
-
                 </Form>
+            
+                <p id="Nxtbutton">
+                    <button class="btn" id="btn-login" type="submit" onClick={this.contactSubmit}><b>Next</b></button>
+                </p>
 
             </div>
         )
