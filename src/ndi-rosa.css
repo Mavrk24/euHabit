@@ -22,6 +22,7 @@ body{
     border-style: solid;
 }
 
-.data-form{
-    padding: 20px
+#screening-form{
+    padding: 20px;
+    font-size: 14px;
 }
