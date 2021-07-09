@@ -3,15 +3,17 @@ import {React, useState} from 'react';
 import { Component } from 'react';
 import './rosa.css';
 
-export default class NDI extends Component{
+export default class ROSA extends Component{
     render() {
         return(
             <div> 
                 <h1 class="mx-5 pb-3" id="demographic-data"> 
-                    rapid office strain assessment (ROSA) แบบประเมินความเสี่ยงทางการยศาสตร์ด้วยวิธีโรซ่า
-                </h1> 
+                    rapid office strain assessment (ROSA) 
+                 
+                <a id="survey"> แบบประเมินความเสี่ยงทางการยศาสตร์ด้วยวิธีโรซ่า
+                </a> 
                 
-                     
+                </h1>    
                
                 <p class="mx-5 p-3" id="instruction"> 
                     แบบสอบถามนี้ทำขึ้นเพื่อวิเคราะห์สถานีงานและท่าทางการนั่งทำงานกับคอมพิวเตอร์โดยประเมินจาก
