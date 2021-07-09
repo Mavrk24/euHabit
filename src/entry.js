@@ -19,6 +19,7 @@ export default class Entry extends Component{
       job: document.getElementById("job").value,
       faculty: document.getElementById("faculty").value,
       year: document.getElementById("year").value,
+      username: JSON.parse(localStorage.getItem('token')).token,
 })
 .then(function (response) {
    console.log(response);
@@ -106,7 +107,7 @@ export default class Entry extends Component{
               </Form.Group>
           </Row>
 
-          <Form.Label>อาชีพ* <br/>(ถ้ากำลังศึกษาอยู่ กรอก "กำลังศึกษา")</Form.Label>
+          <Form.Label>อาชีพ* <br/>(ถ้ากำลังศึกษาอยู่ กรอก "นักเรียน" หรือ "นิสิต นักศึกษา")</Form.Label>
                 <input name="job" type="text" id="job" size="30" placeholder="Occupation"
                  onChange={this.handleChange}
                  className="form-control mb-3" />
@@ -114,7 +115,7 @@ export default class Entry extends Component{
             <FieldFeedback when="*" class="mb-3"/>
           </FieldFeedbacks>
               
-          <Form.Label>คณะที่กำลังศึกษา (ถ้ากำลังศึกษาอยู่)</Form.Label>
+          <Form.Label>คณะที่กำลังศึกษา (ถ้ากำลังศึกษาอยู่ระดับมหาวิทยาลัย)</Form.Label>
                 <input name="faculty" type="text" id="faculty" size="30" placeholder="Faculty"
                  onChange={this.handleChange}
                  className="form-control mb-3" />
@@ -123,7 +124,7 @@ export default class Entry extends Component{
           </FieldFeedbacks>   
 
               
-          <Form.Label>ชั้นปี (ถ้ากำลังศึกษาอยู่)</Form.Label>
+          <Form.Label>ชั้นปี (ถ้ากำลังศึกษาอยู่ระดับมหาวิทยาลัย)</Form.Label>
                 <input name="year" type="number" id="year" size="30" placeholder="Study year"
                  onChange={this.handleChange}
                  className="form-control mb-3" />
