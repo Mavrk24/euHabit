@@ -20,6 +20,14 @@ const UserSchema = new Schema(
       type: Date,
       default: Date.now
     },
+    screening: {
+      type: Array,
+      require: false
+    },
+    result: {
+      type: Array,
+      require: false
+    }
   },
   {
     // กำหนด collection ของ MongoDB หรือจะไม่กำหนดก็ได้
