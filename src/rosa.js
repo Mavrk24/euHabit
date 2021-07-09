@@ -1,16 +1,18 @@
 import { Form, Button, Container, Col, Row, Modal, FormCheck, FormLabel, FormSelect } from 'react-bootstrap';
 import {React, useState} from 'react';
 import { Component } from 'react';
-import './ndi-rosa.css';
+import './rosa.css';
 
 export default class NDI extends Component{
     render() {
         return(
             <div> 
                 <h1 class="mx-5 pb-3" id="demographic-data"> 
-                    rapid office strain assessment (ROSA) <br/> 
-                    แบบประเมินความเสี่ยงทางการยศาสตร์ด้วยวิธีโรซ่า 
-                </h1>
+                    rapid office strain assessment (ROSA) แบบประเมินความเสี่ยงทางการยศาสตร์ด้วยวิธีโรซ่า
+                </h1> 
+                
+                     
+               
                 <p class="mx-5 p-3" id="instruction"> 
                     แบบสอบถามนี้ทำขึ้นเพื่อวิเคราะห์สถานีงานและท่าทางการนั่งทำงานกับคอมพิวเตอร์โดยประเมินจาก
                     1. ระดับของจอคอมพิวเตอร์และลักษณะการใช้โทรศัพท์สำนักงาน 
@@ -21,7 +23,7 @@ export default class NDI extends Component{
 {/*คำถาม ROSA*/}
 
                 <Form className="px-5" id="screening-form"></Form>
-                    <h1> การวิเคราะห์จอมอนิเตอร์และโทรศัพท์ </h1>
+                    <p className="px-5"> การวิเคราะห์จอมอนิเตอร์และโทรศัพท์ </p>
                     <Form.Group className="mb-3 px-4">
                         <Form.Label> 1. ความเจ็บปวด </Form.Label>
                         {['radio'].map((type) => (
