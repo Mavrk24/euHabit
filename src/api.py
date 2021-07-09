@@ -17,3 +17,8 @@ def api():
     k = session.get("username") 
     #m = 'eu' + k['username']
     return {'username': PredictBC(int(k['username']),int(k['symptoms']))[-1]}
+
+@app.route("/subentry" , methods=['POST'])
+def sub():
+    entry = request.get_json()
+    return entry

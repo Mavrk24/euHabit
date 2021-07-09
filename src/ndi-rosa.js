@@ -1,6 +1,7 @@
 import { Form, Button, Container, Col, Row, Modal, FormCheck, FormLabel, FormSelect } from 'react-bootstrap';
 import {React, useState} from 'react';
 import { Component } from 'react';
+import { useHistory } from 'react-router-dom';
 import './ndi-rosa.css';
 
 export default class NDI extends Component{
@@ -462,7 +463,7 @@ export default class NDI extends Component{
                 </Form>
             
                 <p id="Nxtbutton">
-                    <button class="btn" id="btn-login" type="submit" onClick={this.contactSubmit}><b>Next</b></button>
+                    <Button class="btn" id="btn-login" type="submit" href="/rosa"><b>Next</b></Button>
                 </p>
 
             </div>
