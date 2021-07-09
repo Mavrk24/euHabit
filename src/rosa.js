@@ -21,9 +21,9 @@ export default class NDI extends Component{
                 </p>
 
 {/*คำถาม ROSA*/}
-
+                <p className="px-5"> การวิเคราะห์จอมอนิเตอร์และโทรศัพท์ </p>
                 <Form className="px-5" id="screening-form"></Form>
-                    <p className="px-5"> การวิเคราะห์จอมอนิเตอร์และโทรศัพท์ </p>
+                    
                     <Form.Group className="mb-3 px-4">
                         <Form.Label> 1. ความเจ็บปวด </Form.Label>
                         {['radio'].map((type) => (
