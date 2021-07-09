@@ -34,3 +34,6 @@ Office hour: 20.30-21.30 h
 - [X] ทำ link ไปหน้าอื่น **(Update 22.40)**
 - [ ] ทำ form **(น็อบทำอยู่)**
 - [ ] ทำ Selecting bar ไม่ได้ ใน form
+
+- ทำ Inputgroup.Radio กับ Demographic data sheet หัวช้อ Occupation, Faculty, Study Year.
+- 
