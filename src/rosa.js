@@ -3,7 +3,7 @@ import {React, useState} from 'react';
 import { Component } from 'react';
 import './rosa.css';
 
-export default class NDI extends Component{
+export default class ROSA extends Component{
     render() {
         return(
             <div> 
@@ -12,7 +12,6 @@ export default class NDI extends Component{
                 </h1> 
                 
                      
-               
                 <p class="mx-5 p-3" id="instruction"> 
                     แบบสอบถามนี้ทำขึ้นเพื่อวิเคราะห์สถานีงานและท่าทางการนั่งทำงานกับคอมพิวเตอร์โดยประเมินจาก
                     1. ระดับของจอคอมพิวเตอร์และลักษณะการใช้โทรศัพท์สำนักงาน 
@@ -22,8 +21,7 @@ export default class NDI extends Component{
 
 {/*คำถาม ROSA*/}
                 <p className="px-5"> การวิเคราะห์จอมอนิเตอร์และโทรศัพท์ </p>
-                <Form className="px-5" id="screening-form"></Form>
-                    
+                <Form className="px-5" id="screening-form">
                     <Form.Group className="mb-3 px-4">
                         <Form.Label> 1. ความเจ็บปวด </Form.Label>
                         {['radio'].map((type) => (
@@ -67,9 +65,7 @@ export default class NDI extends Component{
                             </div>
                         ))}
                     </Form.Group>
-
-
-
+                </Form>
 
             </div>
         )
