@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import {React} from 'react';
-
-export default function Profile() {
-  return(
-  <div className="login-wrapper"> 
-  <form>
-    <label>
-        <p>Profile stuff</p>
-    </label>
-  </form>
-  </div>)
-}
-=======
 import {React, useState, useEffect} from 'react';
 import axios from 'axios';
 import { Component } from 'react';
@@ -46,4 +32,3 @@ export default class Content extends Component {
   </div>)
   }
   }
->>>>>>> main
