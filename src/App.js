@@ -2,14 +2,6 @@ import React from 'react';
 import { Form, Button, Container, Col, Row, Modal, FormCheck } from 'react-bootstrap';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-<<<<<<< HEAD
-import Login from './Login';
-import useToken from './useToken';
-import Screening from './Screening';
-import Main from './Main';
-import Profile from './Profile';
-import { useState } from 'react';
-=======
 import Login from '../src/Login';
 import useToken from '../src/useToken';
 import Screening from '../src/Screening';
@@ -134,7 +126,6 @@ function Application() {
     }
     
     
->>>>>>> main
 
 
 
