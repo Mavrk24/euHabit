@@ -2,7 +2,6 @@ import { Form, Button, Container, Col, Row, Modal, FormCheck, FormLabel, FormSel
 import {React, useState} from 'react';
 import { Component } from 'react';
 import Image from 'react-bootstrap/Image';
-import Peach from './Peach.png';
 import rosa11 from './rosa11.png';
 import rosa12 from './rosa12.png';
 import rosa13 from './rosa13.png';
@@ -17,7 +16,6 @@ import rosa42 from './rosa14.png';
 import rosa43 from './rosa14.png';
 import rosa44 from './rosa14.png';
 import rosa45 from './rosa14.png';
-
 import './rosa.css';
 
 export default class ROSA extends Component{
@@ -37,14 +35,17 @@ export default class ROSA extends Component{
                 </p>
 
 {/*คำถาม ROSA*/}
-                <p className="px-5 mb-2"> การวิเคราะห์จอมอนิเตอร์และโทรศัพท์ </p>
+                
 
 {/* เพิ่มภาพประกอบในตัวเลือกด้วย */}
 
 
-                <Form className="px-5" id="screening-form">
+                <Form className="px-5 mb-3 mx-3" id="screening-form">
+
+                <p className="mb-2 pt-2" id="qtitle"> การวิเคราะห์จอมอนิเตอร์และโทรศัพท์ </p>
+
 {/*Q1 ข้อ 8*/}       <Form.Group className="mb-3 px-4">
-                        <Form.Label> 1. จอมอนิเตอร์ (Monitor) </Form.Label>
+                        <Form.Label id="question"> 1. จอมอนิเตอร์ (Monitor) </Form.Label>
                         {['checkbox'].map((type) => (
                             <div key={`default-${type}`} className="mb-3">
         {/* = 1 point */}       <Form.Check 
@@ -54,8 +55,9 @@ export default class ROSA extends Component{
                                     label="จอห่างจากลำตัว 1 ช่วงความยาวแขน (40-75 ซม.) และจอสูงระดับดวงตา"
                                 />
                                 {/*<img src={Peach} alt="Logo" />*/}
+
                                 <svg width="150" height="150">
-                                    <image href={rosa11} height="150" width="150"/>
+                                    <image href={rosa11} height="150" width="150"/ >
                                 </svg>
 
         {/* = 2 point */}       <Form.Check
@@ -124,9 +126,10 @@ export default class ROSA extends Component{
                             </div>
                         ))}
                     </Form.Group>
+                <p className="mb-2 pt-2" id="qtitle"> การวิเคราะห์เม้าส์และแป้นพิมพ์ (Mouse and Keyboard) </p>    
 
 {/*Q1 ข้อ 11*/}      <Form.Group className="mb-3 px-4">
-                        <Form.Label> 3. เม้าส์ (Mouse)  </Form.Label>
+                        <Form.Label id="question"> 3. เม้าส์ (Mouse)  </Form.Label>
                         {['checkbox'].map((type) => (
                             <div key={`default-${type}`} className="mb-3">
         {/* = 1 point */}       <Form.Check 
@@ -199,7 +202,7 @@ export default class ROSA extends Component{
 
 
 {/*Q1 ข้อ 12*/}       <Form.Group className="mb-3 px-4">
-                        <Form.Label> 4. แป้นพิมพ์ (Keyboard) </Form.Label>
+                        <Form.Label id="question"> 4. แป้นพิมพ์ (Keyboard) </Form.Label>
                         {['checkbox'].map((type) => (
                             <div key={`default-${type}`} className="mb-3">
         {/* = 1 point */}       <Form.Check 
