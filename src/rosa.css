@@ -24,14 +24,17 @@ body{
 
 #instruction{
     text-align: center;
-    font-size: 11px;
+    font-size: 13px;
     color: aliceblue;
     border-style: solid;
+    letter-spacing: 80%;
+    
 }
 
 #screening-form{
     padding: 20px;
-    font-size: 12px;
+    font-size: 14px;
+    letter-spacing: 80%;
 }
 
 #qtitle{

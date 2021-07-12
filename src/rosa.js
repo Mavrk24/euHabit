@@ -23,7 +23,7 @@ export default class ROSA extends Component{
         return(
             <div> 
                 <h1 class="mx-5 pb-3" id="demographic-data"> 
-                    rapid office strain assessment (ROSA) <br/>
+                    Rapid Office Strain Assessment (ROSA) <br/>
                     <p class="mt-2" id="survey"> แบบประเมินความเสี่ยงทางการยศาสตร์ด้วยวิธีโรซ่า </p>
                 </h1> 
                 
@@ -50,27 +50,27 @@ export default class ROSA extends Component{
                         {['checkbox'].map((type) => (
                             <div key={`default-${type}`} className="mb-3">
         {/* = 1 point */}       <Form.Check                      
-                                    type={type}
+                                    type="radio"
                                     id={`default-${type}`}
-                                    name="rosa1"
+                                    name="rosa11"
                                     label="จอห่างจากลำตัว 1 ช่วงความยาวแขน (40-75 ซม.) และจอสูงระดับดวงตา"
                                 />
                                 <svg width="75" height="75" id="photo">
                                     <image href={rosa11} height="75" width="75"/ >
                                 </svg>
         {/* = 2 point */}       <Form.Check 
-                                    type={type}
+                                    type="radio"
                                     id={`default-${type}`}
-                                    name="rosa1"
+                                    name="rosa11"
                                     label="จอต่ำเกินไป (ต่ำกว่า 30 องศา)"
                                 />
                                 <svg width="75" height="75" id="photo">
                                     <image href={rosa12} height="75" width="75"/ >
                                 </svg>
         {/* = 3 point */}       <Form.Check
-                                    type={type}
+                                    type="radio"
                                     id={`default-${type}`}
-                                    name="rosa1"
+                                    name="rosa11"
                                     label="จอสูงเกินไป (แหงนคอ)"
                                 />
                                 <svg width="75" height="75" id="photo">
@@ -132,18 +132,18 @@ export default class ROSA extends Component{
                         {['checkbox'].map((type) => (
                             <div key={`default-${type}`} className="mb-3">
         {/* = 1 point */}       <Form.Check 
-                                    type={type}
+                                    type="radio"
                                     id={`default-${type}`}
-                                    name="rosa3"
+                                    name="rosa31"
                                     label="เม้าส์ขนานเป็นแนวเดียวกับไหล่"
                                 />
                                 <svg width="75" height="75" id="photo">
                                     <image href={rosa31} height="75" width="75"/ >
                                 </svg>
         {/* = 2 point */}       <Form.Check
-                                    type={type}
+                                    type="radio"
                                     id={`default-${type}`}
-                                    name="rosa3"
+                                    name="rosa31"
                                     label="การเอื้อมมือไปที่เม้าส์"
                                 />
                                 <svg width="75" height="75" id="photo">
@@ -152,7 +152,7 @@ export default class ROSA extends Component{
         {/* + 2 point */}       <Form.Check
                                     type={type}
                                     id={`default-${type}`}
-                                    name="rosa3"
+                                    name="rosa31"
                                     label="เม้าส์และเเป้นพิมพ์วางต่างระดับกัน"
                                 />
                                 <svg width="75" height="75" id="photo">
@@ -205,18 +205,18 @@ export default class ROSA extends Component{
                         {['checkbox'].map((type) => (
                             <div key={`default-${type}`} className="mb-3">
         {/* = 1 point */}       <Form.Check 
-                                    type={type}
+                                    type="radio"
                                     id={`default-${type}`}
-                                    name="rosa4"
+                                    name="rosa41"
                                     label="ข้อมือตรง, ไหล่อยู่ในท่าสบาย"
                                 />
                                 <svg width="75" height="75" id="photo">
                                     <image href={rosa41} height="75" width="75"/ >
                                 </svg> 
         {/* = 2 point */}       <Form.Check
-                                    type={type}
+                                    type="radio"
                                     id={`default-${type}`}
-                                    name="rosa4"
+                                    name="rosa41"
                                     label="ข้อมือกระดก/ แป้นพิมพ์เอียงขึ้น (ข้อมืองอ > 15 องศา)"
                                 />
                                 <svg width="75" height="75" id="photo">
