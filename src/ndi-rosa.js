@@ -8,8 +8,8 @@ export default class NDI extends Component{
     render() {
         return(
             <div> 
-                <h1 class="mx-5 pb-3" id="demographic-data"> Neck Disability Index (NDI) </h1>
-                <p class="mx-5 p-3" id="instruction"> 
+                <h1 class="mx-5 pb-3" id="demographic-data1"> Neck Disability Index (NDI) </h1>
+                <p class="mx-5 p-3" id="instruction1"> 
                     แบบสอบถามนี้ทำขึ้นเพื่อรับข้อมูลว่าอาการปวดคอมีผลต่อการใช้ชีวิตประจำวันของท่านอย่างไร
                     กรุณาทำเครื่องหมายลงในช่องเพียงหนึ่งช่อง
                     ในแต่ละข้อซึ่งอธิบายอาการของท่านในวันนี้ได้ดีที่สุด 
@@ -17,7 +17,7 @@ export default class NDI extends Component{
 
 {/* คำถาม NDI */}      
 
-                <Form className="px-5" id="screening-form">
+                <Form className="px-5" id="screening-form1">
 {/*Q1*/}            <Form.Group className="mb-3 px-4">
                         <Form.Label> 1. ความเจ็บปวด </Form.Label>
                         {['radio'].map((type) => (
