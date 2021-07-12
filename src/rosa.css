@@ -11,33 +11,41 @@ body{
 
 #demographic-data{
     text-align: left;
-    font-size: 30px;
-    color:aliceblue;
+    font-size: 16px;
+    color:rgb(17, 38, 56);
     font-family: Quicksand, Verdana, sans-serif;
     margin-top: 30px;
     padding-top: 10px;
     padding-left: 10px;
     padding-bottom: 50px;
     border-style: solid;
+    background-color: rgb(204, 205, 207);
 }
 
 #instruction{
     text-align: center;
-    font-size: 16px;
+    font-size: 11px;
     color: aliceblue;
     border-style: solid;
 }
 
 #screening-form{
     padding: 20px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 #qtitle{
-    font-size: 24px;
+    font-size: 14px;
 }
 
 #question{
-    font-size: 20px;
+    font-size: 14px;
     /*background-color: rgba(248, 215, 28, 0.952);*/
+}
+
+#photo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
