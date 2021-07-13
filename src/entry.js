@@ -1,4 +1,4 @@
-import { Form, Button, Container, Col, Row, Modal, FormCheck, FormLabel, FormSelect } from 'react-bootstrap';
+import { Form, Button, Container, Col, Row, Modal, FormControl, InputGroup, FormSelect } from 'react-bootstrap';
 import {React, useState} from 'react';
 import { Component } from 'react';
 import './entry.css';
@@ -70,7 +70,7 @@ export default class Entry extends Component{
           <Row className="">
           <Form.Group as={Col} className="mb-3" controlId="exampleForm.ControlTextarea1">
           <Form.Label >อายุ</Form.Label>
-                <input name="age" type="number" size="30" placeholder="Age"
+                <input name="age" type="number" size="30" placeholder="อายุ"
                  required onChange={this.handleChange}
                  className="form-control mb-3" />
           <FieldFeedbacks for="age">
@@ -78,42 +78,69 @@ export default class Entry extends Component{
           </FieldFeedbacks>    
           </Form.Group>
               <Form.Group as={Col} className="mb-3" controlId="exampleForm.ControlTextarea1">
-                <Form.Label>Biological sex</Form.Label>
+                <Form.Label>เพศกำเนิด</Form.Label>
                  <Form.Control name="sex" as="select" defaultValue=" " required onChange={this.handleChange}>
                     <option> </option>
-                    <option>Female</option>
-                    <option>Male</option>
+                    <option>หญิง</option>
+                    <option>ชาย</option>
                   </Form.Control>
                   <FieldFeedbacks for="sex">
             <FieldFeedback when="*" class="mt-3 mb-3"/>
           </FieldFeedbacks> 
               </Form.Group>
           </Row>
-              
-              
-                <Form.Label>อาชีพ</Form.Label>
-                <input name="job" size="30" placeholder="Occupation"
-                 required minLength={2} onChange={this.handleChange}
-                 className="form-control mb-3" />
+
+          <Form.Label>อาชีพ</Form.Label>
+          <InputGroup className="mb-3">
+            <InputGroup.Prepend>
+             <InputGroup.Radio name="student" aria-label="Checkbox for following text input" onChange={this.handleChange}/>
+            </InputGroup.Prepend>
+              <FormControl name="studenttext"  value="นิสิต นักศึกษา" aria-label="Text input with checkbox"onChange={this.handleChange} />        
+          </InputGroup>
+          <InputGroup className="mb-3">
+          <InputGroup.Prepend>
+             <InputGroup.Radio name="other" aria-label="Checkbox for following text input" onChange={this.handleChange}/>
+            </InputGroup.Prepend>
+              <FormControl name="job" minLength={2}  placeholder="อื่นๆ (โปรดระบุ)" aria-label="Text input with checkbox"onChange={this.handleChange} />        
+          </InputGroup>
           <FieldFeedbacks for="job">
             <FieldFeedback when="*" class="mb-3" />
-          </FieldFeedbacks>           
-
-                <Form.Label>คณะที่กำลังศึกษา</Form.Label>
-                <input name="faculty" size="30" placeholder="Faculty"
-                 required minLength={2} onChange={this.handleChange}
-                 className="form-control mb-3" />
-          <FieldFeedbacks for="faculty">
-            <FieldFeedback when="*" class="mb-3"/>
-          </FieldFeedbacks>    
-
-          <Form.Label>ชั้นปี</Form.Label>
-                <input name="year" type="number" size="30" placeholder="Study year"
-                 required onChange={this.handleChange}
-                 className="form-control mb-3" />
-          <FieldFeedbacks for="year">
-            <FieldFeedback when="*" class="mb-3"/>
-          </FieldFeedbacks>    
+          </FieldFeedbacks>   
+              
+        
+          <Form.Label>คณะที่กำลังศึกษา</Form.Label>
+          <InputGroup className="mb-3">
+            <InputGroup.Prepend>
+             <InputGroup.Radio name="notfaculty" aria-label="Checkbox for following text input" onChange={this.handleChange}/>
+            </InputGroup.Prepend>
+              <FormControl name="notfacultytext"  value="ไม่ได้ทำการศึกษาอยู่ในขณะนี้" aria-label="Text input with checkbox"onChange={this.handleChange} />        
+          </InputGroup>
+          <InputGroup className="mb-3">
+          <InputGroup.Prepend>
+             <InputGroup.Radio name="faculty" aria-label="Checkbox for following text input" onChange={this.handleChange}/>
+            </InputGroup.Prepend>
+              <FormControl name="facultytext" minLength={2}  placeholder="คณะ (โปรดระบุ)" aria-label="Text input with checkbox"onChange={this.handleChange} />        
+          </InputGroup>
+          <FieldFeedbacks for="facultytext">
+            <FieldFeedback when="*" class="mb-3" />
+          </FieldFeedbacks>   
+              
+          <Form.Label>คณะที่กำลังศึกษา</Form.Label>
+          <InputGroup className="mb-3">
+            <InputGroup.Prepend>
+             <InputGroup.Radio name="notyear" aria-label="Checkbox for following text input" onChange={this.handleChange}/>
+            </InputGroup.Prepend>
+              <FormControl name="notyeartext"  value="ไม่ได้ทำการศึกษาอยู่ในขณะนี้" aria-label="Text input with checkbox"onChange={this.handleChange} />        
+          </InputGroup>
+          <InputGroup className="mb-3">
+          <InputGroup.Prepend>
+             <InputGroup.Radio name="year" aria-label="Checkbox for following text input" onChange={this.handleChange}/>
+            </InputGroup.Prepend>
+              <FormControl name="yeartext" minLength={2}  placeholder="ปีการศึกษา (โปรดระบุ)" aria-label="Text input with checkbox"onChange={this.handleChange} />        
+          </InputGroup>
+          <FieldFeedbacks for="yeartext">
+            <FieldFeedback when="*" class="mb-3" />
+          </FieldFeedbacks>   
 
             
               <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
