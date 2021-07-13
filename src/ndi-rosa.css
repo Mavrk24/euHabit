@@ -1,8 +1,8 @@
 body{
-    background: linear-gradient(180deg, #010A09 0%, #010A09 100%);
+    background: linear-gradient(180deg, #befff7 0%, #d8ecea 100%);
     font-family: "Bai Jamjuree", Verdana, sans-serif;
 }
-
+/*
 #demographic-data{
     text-align: left;
     font-size: 30px;
@@ -13,16 +13,31 @@ body{
     padding-left: 10px;
     padding-bottom: 50px;
     border-style: solid;
+} */
+
+#demographic-data1{
+    text-align: left;
+    font-size: 16px;
+    color:rgb(17, 38, 56);
+    font-family: Quicksand, Verdana, sans-serif;
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 50px;
+    border-style: solid;
+    background-color: rgb(204, 205, 207);
 }
 
-#instruction{
+#instruction1{
     text-align: center;
-    font-size: 16px;
+    font-size: 11px;
     color: aliceblue;
     border-style: solid;
+    letter-spacing: 80%;
 }
 
-#screening-form{
+#screening-form1{
     padding: 20px;
-    font-size: 14px;
+    font-size: 12px;
+    
 }

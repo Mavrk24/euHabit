@@ -1,22 +1,23 @@
 import { Form, Button, Container, Col, Row, Modal, FormCheck, FormLabel, FormSelect } from 'react-bootstrap';
 import {React, useState} from 'react';
 import { Component } from 'react';
+import { useHistory } from 'react-router-dom';
 import './ndi-rosa.css';
 
 export default class NDI extends Component{
     render() {
         return(
             <div> 
-                <h1 class="mx-5 pb-3" id="demographic-data"> Neck Disability Index (NDI) </h1>
-                <p class="mx-5 p-3" id="instruction"> 
-                    แบบสอบถามนี้ทำขึ้นเพื่อให้แพทย์ได้รับข้อมูลว่าอาการปวดคอมีผลต่อการใช้ชีวิตประจำวันของท่านอย่างไร เพื่อให้
-                    แพทย์สามารถนำมาช่วยวางแผนการรักษาได้อย่างเหมาะสม กรุณาทำเครื่องหมายลงในช่องสี่เหลี่ยมเพียงหนึ่งช่อง
+                <h1 class="mx-5 pb-3" id="demographic-data1"> Neck Disability Index (NDI) </h1>
+                <p class="mx-5 p-3" id="instruction1"> 
+                    แบบสอบถามนี้ทำขึ้นเพื่อรับข้อมูลว่าอาการปวดคอมีผลต่อการใช้ชีวิตประจำวันของท่านอย่างไร
+                    กรุณาทำเครื่องหมายลงในช่องเพียงหนึ่งช่อง
                     ในแต่ละข้อซึ่งอธิบายอาการของท่านในวันนี้ได้ดีที่สุด 
                 </p>
 
 {/* คำถาม NDI */}      
 
-                <Form className="px-5" id="screening-form">
+                <Form className="px-5" id="screening-form1">
 {/*Q1*/}            <Form.Group className="mb-3 px-4">
                         <Form.Label> 1. ความเจ็บปวด </Form.Label>
                         {['radio'].map((type) => (
@@ -462,7 +463,7 @@ export default class NDI extends Component{
                 </Form>
             
                 <p id="Nxtbutton">
-                    <button class="btn" id="btn-login" type="submit" onClick={this.contactSubmit}><b>Next</b></button>
+                    <Button class="btn" id="btn-login" type="submit" href="/rosa"><b>Next</b></Button>
                 </p>
 
             </div>

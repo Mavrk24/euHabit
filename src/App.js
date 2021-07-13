@@ -12,6 +12,7 @@ import { Component } from 'react';
 import Entry from './entry';
 import {useHistory} from 'react-router-dom'
 import NDI from './ndi-rosa';
+import ROSA from './rosa';
 
 function Application() {
   const [show, setShow] = useState(false);
@@ -147,6 +148,7 @@ function App() {
     <Route exact path='/entry' component={Entry} />
     <Route exact path='/result' component={Result} />
     <Route exact path='/ndi' component={NDI} />
+    <Route exact path='/rosa' component={ROSA} />
     </Switch>
   </BrowserRouter>
   )
