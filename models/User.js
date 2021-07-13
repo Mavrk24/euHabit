@@ -21,7 +21,7 @@ const UserSchema = new Schema(
       default: Date.now
     },
     screening: {
-      type: Array,
+      type: String,
       require: false
     },
     result: {
