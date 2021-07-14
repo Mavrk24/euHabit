@@ -3,6 +3,7 @@ import { Form, Button, Container, Col, Row, Modal, FormCheck } from 'react-boots
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Login from '../src/Login';
+import Register from '../src/register-login';
 import useToken from '../src/useToken';
 import Screening from '../src/Screening';
 import Main from '../src/Main'
@@ -13,6 +14,7 @@ import Entry from './entry';
 import {useHistory} from 'react-router-dom'
 import NDI from './ndi-rosa';
 import ROSA from './rosa';
+import Mainpage from './mainpage';
 
 function Application() {
   const [show, setShow] = useState(false);
@@ -125,17 +127,16 @@ function Application() {
           
       );
     }
-    
-    
-
-
 
 function App() {
   const { token, setToken } = useToken();
-
-  if(!token) {
+if (!token) {
     return <Login setToken={setToken} />
   }
+  else { 
+    return <Register /> 
+  }    
+
   return(
     <BrowserRouter>
     <Switch>
@@ -145,11 +146,17 @@ function App() {
     <Route path="/main">
       <Main />
     </Route>
+    <Route path="/register">
+      <Register />
+    </Route>
+
     <Route exact path='/entry' component={Entry} />
-    <Route exact path='/result' component={Result} />
     <Route exact path='/ndi' component={NDI} />
     <Route exact path='/rosa' component={ROSA} />
+    <Route exact path='/result' component={Result} />
+    <Route exact path='/mainpage' component={Mainpage} />
     </Switch>
+
   </BrowserRouter>
   )
 }
