@@ -27,6 +27,14 @@ const UserSchema = new Schema(
     result: {
       type: Array,
       require: false
+    },
+    demographic: {
+      type: String,
+      require: false
+    },
+    age: {
+      type: String,
+      require: false
     }
   },
   {

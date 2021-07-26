@@ -3,7 +3,7 @@ const keys = require("../config/keys");
  
 // สร้าง middleware ฟังก์ชั่นสำหรับ verification token
 const authorization = ((req, res, next) => {
-    const authorization = req.headers['authorization']  // ดึงข้อมูล authorization ใน header
+    const authorization = req.headers['token']  // ดึงข้อมูล authorization ใน header
     // ถ้าไม่มีการส่งค่ามา ส่ง ข้อความ json พร้อม status 401 Unauthorized
     if(authorization===undefined) return res.status(401).json({
         "status": 401,
@@ -12,7 +12,8 @@ const authorization = ((req, res, next) => {
     // ถ้ามีการส่งค่ามา แยกเอาเฉพาะค่า token จากที่ส่งมา 'Bearer xxxx' เราเอาเฉพาะ xxxx
     // แยกข้อความด้วยช่องว่างได้ array สองค่า เอา array key ตัวที่สองคือ 1 
     // array key เริ่มต้นที่ 0 จะเได้ key เท่ากับ 1 คือค่า xxxx ที่เป้น token
-    const token = req.headers['authorization'].split(' ')[1]
+    const token = JSON.parse(req.headers['token']).token
+// แก้ token Authorization
     if(token===undefined) return res.status(401).json({ // หากไมมีค่า token
         "status": 401,
         "message": "Unauthorized"

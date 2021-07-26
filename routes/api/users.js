@@ -74,10 +74,6 @@ router.post("/login", (req, res) => {
 
     // Check password
     bcrypt.compare(password, user.password).then(isMatch => {
-
-      console.log(password);
-      console.log(user.password);
-      console.log(isMatch);
       
       if (isMatch) {
         // User matched
@@ -95,6 +91,7 @@ router.post("/login", (req, res) => {
              expiresIn: 31556926 // 1 year in seconds
             },
            (err, token) => {
+              // สำหรับใส่ค่าเป็น JSON
               res.json({
               token: "Bearer " + token
               });
@@ -143,6 +140,49 @@ router.post('/screening',verifyToken,(req,res)=>{
 });
 
 
+// @route PUT api/users/demographic
+// @desc update user.demographic using Header and req
+// @access login-required
+router.post('/demographic',verifyToken,(req,res)=>{
+  jwt.verify(req.token,keys.secretOrKey ,(err,authData)=>{
+    if(err){
+
+      //Forbidden
+      res.sendErr(403);
+    } else {
+
+      console.log(JSON.stringify(req.body))
+
+      async function update_demographic(){
+        const username = authData.username
+        
+        // Find user by username
+        User.findOne({ username }).then(user => {
+
+          // Check if user exists
+          if (!user) {
+            return res.status(404).json({ usernotfound: "Username not found" });
+          }
+          user.demographic = JSON.stringify({
+            age: req.body.age,
+            sex: req.body.sex,
+            job: req.body.job,
+            faculty: req.body.faculty,
+            year: req.body.year,
+          });
+          console.log(user.demographic)
+          console.log(user)
+          user.save();
+        });
+
+        return res.send("Updated")
+      }
+      update_demographic();
+    }
+  });
+});
+
+
 // @route GET api/users/logout
 // @desc Logout user
 // @access Public
@@ -155,8 +195,8 @@ router.get('/logout', (req, res) =>{
 //Verify Token
 function verifyToken(req,res,next){
     //Auth header value = > send token into header
-
-    const bearerHeader = req.headers['authorization'];
+    const bearerHeader = JSON.parse(req.headers["token"]).token;
+// แก้ token Authorization
     //check if bearer is undefined
     if(typeof bearerHeader !== 'undefined'){
 
@@ -164,7 +204,6 @@ function verifyToken(req,res,next){
         const bearer = bearerHeader.split(' ');
         //Get token from string
         const bearerToken = bearer[1];
-
         //set the token
         req.token = bearerToken;
 
@@ -173,7 +212,7 @@ function verifyToken(req,res,next){
 
     }else{
         //Fobidden
-        res.sendErr(403);
+        res.send('403');
     }
 }
 

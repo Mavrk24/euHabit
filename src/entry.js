@@ -10,8 +10,19 @@ import {
   FieldFeedback
 } from 'react-form-with-constraints'
 
+
+
 export default class Entry extends Component{
   sendform = (e) => {
+    const data = {
+      age: document.getElementById("age").value,
+      sex: document.getElementById("sex").value,
+      job: document.getElementById("job").value,
+      faculty: document.getElementById("faculty").value,
+      year: document.getElementById("year").value,
+    }
+    this.updateDemographic(data)
+
     axios
     .post("/subentry", {
       age: document.getElementById("age").value,
@@ -20,14 +31,27 @@ export default class Entry extends Component{
       faculty: document.getElementById("faculty").value,
       year: document.getElementById("year").value,
       username: JSON.parse(localStorage.getItem('token')).token,
-})
-.then(function (response) {
-   console.log(response);
-});
-};
+    })
+    .then(function (response) {
+      console.log(response);
+    });
+
+  };
 
   handleChange = e => {
     this.form.validateFields(e.target);
+  }
+
+  async updateDemographic(credentials) {
+    return fetch('http://localhost:8080/api/users/demographic', {
+      method: 'POST',
+      headers: {
+        token: localStorage.getItem("token"),
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(credentials)
+    })
+      .then(data => data.json())
   }
 
   contactSubmit = e => {

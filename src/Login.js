@@ -12,10 +12,11 @@ async function loginUser(credentials) {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(credentials)
+    body: JSON.stringify(credentials) 
   })
     .then(data => data.json())
- }
+}
+
 export default function Login({setToken}) {
   const [email, setEmail] = useState();
   const [username, setUserName] = useState();
@@ -73,6 +74,7 @@ export default function Login({setToken}) {
     </div>
   )
 }
+
 Login.propTypes = {
   setToken: PropTypes.func.isRequired
 
