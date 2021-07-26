@@ -46,39 +46,7 @@ export default class Entry extends Component{
     return(
       <div> 
         <h1 class="mx-5" id="demographic-data"> Demographic Data</h1>
-     {/*<form>
-        <h1 id="demographic-data"> Demographic Data</h1>
-        <div class="mt-5">
-          <label>
-              <p>อายุ</p>
-                <input type="number"/>
-              </label>
-              <p>เพศ</p>
-              <select>
-                  <option value="m">Male</option>
-                  <option value="f">Female</option>
-                  <option value="o">Others</option>
-              </select>
-              <label>
-                <p>อาขีพ</p>
-                <input type="text" />
-              </label>
-              <label>
-                <p>คณะที่กำลังศึกษา (หากเป็นนิสิต/นักศึกษา)</p>
-                <input type="text" />
-              </label>
-              <label>
-                <p>ชั้นปีที่กำลังศึกษา</p>
-                <input type="number" />
-              </label>
-              <label>
-              <p></p>
-              <button type="submit">Submit</button>
-              </label>
-        </div>  
-        </form>
-        as="textarea" rows={1}
-     */}
+     
 
 <FormWithConstraints
         ref={form => this.form = form}

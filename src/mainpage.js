@@ -1,11 +1,33 @@
 import { Form, Button, Container, Col, Row, Modal, FormCheck, FormLabel, FormSelect } from 'react-bootstrap';
-import {React, useState} from 'react';
+import React, {useState} from 'react';
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 import './mainpage.css';
 import rosa11 from './rosa11.png';
+import ReactDOM from 'react-dom';
 
 export default class Mainpage extends Component{
+
+   /*
+   function signOut() {  
+        const handleSubmit = (e) => {
+            e.preventDefault();
+            localStorage.removeItem('token');
+            window.location.reload();
+        };
+    }
+    */
+
+    handleClick = e => {
+        
+        localStorage.clear();
+        e.preventDefault();
+        this.props.history.push('/');
+        window.location.reload();
+      
+    }
+
     render() {
         return(
             <div>         
@@ -32,7 +54,7 @@ export default class Mainpage extends Component{
                             <a class="nav-link" href="#">Intervention and Prevention</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="#" id="signout">Sign Out</a>
+                            <a class="nav-link" href="/" id="signout" type="submit" onClick={this.handleClick}>Sign Out</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -41,10 +63,14 @@ export default class Mainpage extends Component{
                         <span class="navbar-text">
                             Signed in as: <a href="#login">Mark Otto</a>
                         </span>
-                    </div>
+                    </div> 
+                                           
                 </div>
                 </nav>
 
+                <div class="mt-4">
+                <button class="btn btn-login" type="submit" onClick={this.handleClick}><b> Log out </b></button>
+                </div>
             </div>
         )
     }

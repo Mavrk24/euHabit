@@ -1,8 +1,11 @@
+import { Form, Button, Container, Col, Row, Modal, FormControl, InputGroup, FormSelect } from 'react-bootstrap';
 import React, {useState} from 'react';
 import './Login.css';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 import {validatePassword} from '../src/validate';
 import image from './image.png';
+
 
 async function loginUser(credentials) {
   return fetch('http://localhost:8080/register', {
@@ -15,6 +18,11 @@ async function loginUser(credentials) {
     .then(data => data.json())
 }
 
+/* เสนอวิธีแก้ว่า ถ้าเรา set ให้ password กับ password2 ในตอนแรกมีค่าต่างๆกัน 
+แล้วค่อยเปลี่ยน value ของมันเมื่อคนกรอกข้อมูลแล้ว ถ้าหากว่าเค้ายังไม่กรอก เราก็ตั้งเงื่อนไขว่าถ้า password != password2 ก็ให้กรอกใหม่ */
+
+/*มันทำได้มั้ย*/
+
 export default function Register({setToken}) {
   const [email, setEmail] = useState();
   const [username, setUserName] = useState();
@@ -22,21 +30,48 @@ export default function Register({setToken}) {
   const [password2, setPassword2] = useState();
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (match == 1){
     localStorage.removeItem('token');
     window.location.reload();
-
+    }
   }
-
+  var match = 2;
 
 function matchPassword() {  
   if(password != password2){   
         alert("Passwords did not match");  
+        match = 0;      
     } 
+  else if(!password || !password2 || !email || !username){ /* หาวิธีทำให้ ถ้า ค่า password == null แล้วจะไม่ไปหน้าถึดไป แต่ยังหาไม่ได้*/
+        alert("Please fill in the form");
+        match = 0;
+  }
   else {  
-        alert("Account created successfully");  
+        alert("Account created successfully");
+        match = 1;  
     }
 }
 
+ // Validation จาก Bootstrap
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
 
 
   return(
@@ -53,30 +88,44 @@ function matchPassword() {
               <h1 class="title"><strong>euHabit.</strong></h1>
             </div>
             <div class="col paragraph-body username d-flex">
-            <form onSubmit={handleSubmit} id="myform">
-            <ul>
-              <p>E-mail</p>
-              <input type="text" onChange={e => setEmail(e.target.value)}/>
+
+            {/* Form แบบใช้ bootstrap ทำได้แล้ว*/}
+              
+            <form onSubmit={handleSubmit} class="needs-validation " id="myform" noValidate>
+              <ul>
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control form-control-sm" id="validationCustom03 email" required onChange={e => setEmail(e.target.value)}/>
+                <div class="invalid-feedback hello">
+                  Please fill in your E-mail.
+                </div>
               </ul>
               <ul>
-              <p>Username</p>
-              <input type="text" onChange={e => setUserName(e.target.value)}/>
+                <label for="validationCustom01">Username</label>
+                <input type="text" class="form-control form-control-sm" id="validationCustom01" required onChange={e => setUserName(e.target.value)}/>
+                <div class="invalid-feedback hello">
+                  Please fill in your username.
+                </div>
               </ul>
               <ul>
-              <p>Password</p>
-              <input type="password" onChange={e => setPassword(e.target.value)}/>
+                <label for="validationCustom01">Password</label>
+                <input type="password" class="form-control form-control-sm" id="validationCustom01" required onChange={e => setPassword(e.target.value)}/>
+                <div class="invalid-feedback hello">
+                  Please confirm your password.
+                </div>
               </ul>
               <ul>
-              <p>Confirm Password</p>
-              <input type="password" onChange={e => setPassword2(e.target.value)}/>
+                <label for="validationCustom01">Confirm Password</label>
+                <input type="password" class="form-control form-control-sm" id="validationCustom01" required onChange={e => setPassword2(e.target.value)}/>
+                <div class="invalid-feedback hello">
+                  Please confirm your password.
+                </div>
               </ul>
               <ul>
               <div class="mt-4">
               <button class="btn btn-login" onClick={matchPassword} type="submit"><b> Confirm </b></button>
               </div>
               </ul>
-            </form> 
-         
+            </form>
             </div>
         </div>
         </div>

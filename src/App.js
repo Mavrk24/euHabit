@@ -130,12 +130,13 @@ function Application() {
 
 function App() {
   const { token, setToken } = useToken();
-if (!token) {
+  if (!token) {
     return <Login setToken={setToken} />
   }
-  else { 
+  else if (token == "register") { 
     return <Register /> 
-  }    
+  }   
+  
 
   return(
     <BrowserRouter>
