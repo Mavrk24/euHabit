@@ -5,6 +5,8 @@ import {Button} from 'react-bootstrap';
 import './result.css';
 import rosa11 from './rosa11.png';
 
+
+
 export default class Result extends Component{
     render() {
     return(

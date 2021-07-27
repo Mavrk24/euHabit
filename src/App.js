@@ -15,6 +15,8 @@ import {useHistory} from 'react-router-dom'
 import NDI from './ndi-rosa';
 import ROSA from './rosa';
 import Mainpage from './mainpage';
+import Profile from './userprofile';
+import Intervention from './intervention';
 
 function Application() {
   const [show, setShow] = useState(false);
@@ -156,6 +158,8 @@ function App() {
     <Route exact path='/rosa' component={ROSA} />
     <Route exact path='/result' component={Result} />
     <Route exact path='/mainpage' component={Mainpage} />
+    <Route exact path='/userprofile' component={Profile} />
+    <Route exact path='/intervention' component={Intervention} />
     </Switch>
 
   </BrowserRouter>
