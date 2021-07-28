@@ -9,15 +9,6 @@ import ReactDOM from 'react-dom';
 
 export default class Mainpage extends Component{
 
-   /*
-   function signOut() {  
-        const handleSubmit = (e) => {
-            e.preventDefault();
-            localStorage.removeItem('token');
-            window.location.reload();
-        };
-    }
-    */
 
     handleClick = e => {
         
@@ -30,7 +21,7 @@ export default class Mainpage extends Component{
 
     render() {
         return(
-            <div>         
+            <div>        
                 <nav class="navbar navbar-light c">
                 <div class="container-fluid">
                     <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
@@ -45,19 +36,22 @@ export default class Mainpage extends Component{
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/rosa">Home</a>
+                            <a class="nav-link active" aria-current="page" href="/mainpage">Home</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="#">Profile</a>
+                            <a class="nav-link" href="/userprofile">Profile</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="#">Intervention and Prevention</a>
+                            <a class="nav-link" href="/intervention">Intervention and Prevention</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="/entry">Demographic Data</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="/workplace">Workplace formm</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="/" id="signout" type="submit" onClick={this.handleClick}>Sign Out</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                             </li>
                         </ul>
                         <span class="navbar-text">
@@ -68,9 +62,8 @@ export default class Mainpage extends Component{
                 </div>
                 </nav>
 
-                <div class="mt-4">
-                <button class="btn btn-login" type="submit" onClick={this.handleClick}><b> Log out </b></button>
-                </div>
+                <p> Home </p> 
+
             </div>
         )
     }
