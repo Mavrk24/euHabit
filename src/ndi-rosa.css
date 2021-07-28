@@ -41,3 +41,10 @@ body{
     font-size: 12px;
     
 }
+
+#Nxtbutton1{
+    align-items: center;
+    position: relative;
+    top: 2%;
+    text-align: center;
+}

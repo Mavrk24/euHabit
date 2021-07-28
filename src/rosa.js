@@ -15,7 +15,8 @@ import rosa41 from './rosa41.png';
 import rosa42 from './rosa42.png';
 import rosa43 from './rosa43.png';
 import rosa44 from './rosa44.png';
-import rosa45 from './rosa45.png';
+import rosa45 from './rosa45.png'; 
+
 import './rosa.css';
 import Figure from 'react-bootstrap/Figure'
 export default class ROSA extends Component{
@@ -279,6 +280,9 @@ export default class ROSA extends Component{
                     </Form.Group>
                 </Form>
 
+                <p id="Nxtbutton2">
+                    <Button class="btn" id="btn-login" type="submit" href="/result"><b>Next</b></Button>
+                </p>
             </div>
         )
     }

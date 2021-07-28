@@ -1,12 +1,17 @@
 import {React, useState} from 'react';
 import { Component } from 'react';
-import './App.css';
+import Navbar from 'react-bootstrap/Navbar';
+import {Button} from 'react-bootstrap';
+import './result.css';
+import rosa11 from './rosa11.png';
+
+
 
 export default class Result extends Component{
     render() {
     return(
         <div className="welcome"> 
-            <h1>Screening result:</h1>
+            <h1 id="screening-result">Screening result:</h1>
             <p class="mt-5" id="text-welcome">ระดับความเสี่ยงของคุณ <br/>อยู่ในเกณฑ์ {(() => {
         if (1>2) {
           return (
@@ -17,11 +22,25 @@ export default class Result extends Component{
             <a  id="no-risk">มีความเสี่ยงต่ำ</a>
           )
         }
-      })()}
-      </p>
+          })()}
+            </p>
+
+        <p id="go-to-main-page">
+          <Button class="btn" id="btn-login" type="submit" href="/mainpage"><b>Next</b></Button>
+        </p>
+
+
         </div>
+
+
         
-    
+
+
+        
+
+
+
+
     )
     }
 }

@@ -66,43 +66,17 @@ export default class Entry extends Component{
       console.log('form is valid: submit');
     }
   }
+
+  myFunction() {
+    var x = document.getElementById("age").value;
+    document.getElementById("demo").innerHTML = x;
+  }
+
   render() {
     return(
       <div> 
         <h1 class="mx-5" id="demographic-data"> Demographic Data</h1>
-     {/*<form>
-        <h1 id="demographic-data"> Demographic Data</h1>
-        <div class="mt-5">
-          <label>
-              <p>อายุ</p>
-                <input type="number"/>
-              </label>
-              <p>เพศ</p>
-              <select>
-                  <option value="m">Male</option>
-                  <option value="f">Female</option>
-                  <option value="o">Others</option>
-              </select>
-              <label>
-                <p>อาขีพ</p>
-                <input type="text" />
-              </label>
-              <label>
-                <p>คณะที่กำลังศึกษา (หากเป็นนิสิต/นักศึกษา)</p>
-                <input type="text" />
-              </label>
-              <label>
-                <p>ชั้นปีที่กำลังศึกษา</p>
-                <input type="number" />
-              </label>
-              <label>
-              <p></p>
-              <button type="submit">Submit</button>
-              </label>
-        </div>  
-        </form>
-        as="textarea" rows={1}
-     */}
+     
 
 <FormWithConstraints
         ref={form => this.form = form}
@@ -165,7 +139,13 @@ export default class Entry extends Component{
               </Form.Group>
 
 
-        
+              <button onclick="myFunction()">Try it</button>
+
+              <p id="demo"></p>
+
+              <p id="Nxtbutton2">
+                    <Button class="btn" id="btn-login" type="submit" href="/mainpage"><b>mainpage</b></Button>
+              </p>
 
          <p id="Nxtbutton">
           <button class="btn" id="btn-login" type="submit" onClick={this.contactSubmit}><b>Next</b></button>
