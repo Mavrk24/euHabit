@@ -26,12 +26,11 @@ export default class Workplace extends Component{
 
                 
 {/*Q1 ข้อ 1*/}       <Form.Group className="mb-3 px-4">
-                        <Form.Label id="question"> ข้อใดเป็นจริงเกี่ยวกัยโต๊ะของท่าน </Form.Label>
-                        {['checkbox'].map((type) => (
-                            <div key={`default-${type}`} className="mb-3">
+                        <Form.Label id="question">1. ข้อใดเป็นจริงเกี่ยวกัยโต๊ะของท่าน </Form.Label>
+                            <div className="mb-3">
         {/* = 1 point */}       <Form.Check                      
                                     type="radio"
-                                    id={`default-${type}`}
+                                    id="q11"
                                     name="q11"
                                     label="ท่านต้องก้มหลังเมื่อต้องการทำงานที่โต๊ะ"
                                 />
@@ -40,7 +39,7 @@ export default class Workplace extends Component{
                                 </svg>
         {/* = 2 point */}       <Form.Check 
                                     type="radio"
-                                    id={`default-${type}`}
+                                    id="q11"
                                     name="q11"
                                     label="ท่านรู้สึกสบายเมื่อทำงานที่โต๊ะ"
                                 />
@@ -49,7 +48,7 @@ export default class Workplace extends Component{
                                 </svg>
         {/* = 3 point */}       <Form.Check
                                     type="radio"
-                                    id={`default-${type}`}
+                                    id="q11"
                                     name="q11"
                                     label="ท่านรู้สึกว่าไหล่ของท่านยกเมื่อทำงานที่โต๊ะ"
                                 />
@@ -62,7 +61,7 @@ export default class Workplace extends Component{
 
                 
 {/*Q1 ข้อ 2*/}       <Form.Group className="mb-3 px-4">
-                        <Form.Label id="question"> ข้อใดสอดคล้องกับความจริงมากที่สุด </Form.Label>
+                        <Form.Label id="question">2. ข้อใดสอดคล้องกับความจริงมากที่สุด </Form.Label>
                         {['checkbox'].map((type) => (
                             <div key={`default-${type}`} className="mb-3">
         {/* = 1 point */}       <Form.Check                      
@@ -99,7 +98,7 @@ export default class Workplace extends Component{
                     <p className="mb-2 pt-2" id="qtitle"> หน้าจอคอมพิวเตอร์หรือแท็บเลต </p>   
 
 {/*Q2 ข้อ 1*/}       <Form.Group className="mb-3 px-4">
-                        <Form.Label id="question"> เมื่อท่านมองหน้าจอท่านพบว่า </Form.Label>
+                        <Form.Label id="question">1. เมื่อท่านมองหน้าจอท่านพบว่า </Form.Label>
                         {['checkbox'].map((type) => (
                             <div key={`default-${type}`} className="mb-3">
         {/* = 1 point */}       <Form.Check                      
@@ -134,7 +133,7 @@ export default class Workplace extends Component{
                     </Form.Group>
 
 {/*Q2 ข้อ 2*/}       <Form.Group className="mb-3 px-4">
-                        <Form.Label id="question"> ระยะห่างระหว่างท่านกับหน้าจอมีระยะประมาณ </Form.Label>
+                        <Form.Label id="question">2. ระยะห่างระหว่างท่านกับหน้าจอมีระยะประมาณ </Form.Label>
                         {['checkbox'].map((type) => (
                             <div key={`default-${type}`} className="mb-3">
         {/* = 1 point */}       <Form.Check                      
@@ -169,7 +168,7 @@ export default class Workplace extends Component{
                     </Form.Group>
 
 {/*Q2 ข้อ 3*/}       <Form.Group className="mb-3 px-4">
-                        <Form.Label id="question"> ขณะมองหน้าจอ ศีรษะของท่านตรงและอยู่กลางไหล่ทั้งสองข้าง (ไม่ต้องเอียงคอ) </Form.Label>
+                        <Form.Label id="question">3. ขณะมองหน้าจอ ศีรษะของท่านตรงและอยู่กลางไหล่ทั้งสองข้าง (ไม่ต้องเอียงคอ) </Form.Label>
                         {['checkbox'].map((type) => (
                             <div key={`default-${type}`} className="mb-3">
         {/* = 1 point */}       <Form.Check                      
@@ -197,7 +196,7 @@ export default class Workplace extends Component{
                     <p className="mb-2 pt-2" id="qtitle"> การเขียนหนังสือ </p>   
 
 {/*Q3 ข้อ 1*/}       <Form.Group className="mb-3 px-4">
-                        <Form.Label id="question"> แขนสองข้างขนานกับพื้นหรือเอียงน้อย และข้อศอกอยู่ข้างลำตัว </Form.Label>
+                        <Form.Label id="question">1. แขนสองข้างขนานกับพื้นหรือเอียงน้อย และข้อศอกอยู่ข้างลำตัว </Form.Label>
                         {['checkbox'].map((type) => (
                             <div key={`default-${type}`} className="mb-3">
         {/* = 1 point */}       <Form.Check                      
@@ -223,7 +222,7 @@ export default class Workplace extends Component{
                     </Form.Group>
 
 {/*Q3 ข้อ 2*/}       <Form.Group className="mb-3 px-4">
-                        <Form.Label id="question"> ข้อมืองอมากจนรู้สึกปวดเมื่อย </Form.Label>
+                        <Form.Label id="question">2. ข้อมืองอมากจนรู้สึกปวดเมื่อย </Form.Label>
                         {['checkbox'].map((type) => (
                             <div key={`default-${type}`} className="mb-3">
         {/* = 1 point */}       <Form.Check                      
@@ -249,7 +248,7 @@ export default class Workplace extends Component{
                     </Form.Group>
 
 {/*Q3 ข้อ 3*/}       <Form.Group className="mb-3 px-4">
-                        <Form.Label id="question"> เหยียดแขนขณะเขียนหนังสือ </Form.Label>
+                        <Form.Label id="question">3. เหยียดแขนขณะเขียนหนังสือ </Form.Label>
                         {['checkbox'].map((type) => (
                             <div key={`default-${type}`} className="mb-3">
         {/* = 1 point */}       <Form.Check                      
@@ -275,7 +274,7 @@ export default class Workplace extends Component{
                     </Form.Group>
 
 {/*Q3 ข้อ 4*/}       <Form.Group className="mb-3 px-4">
-                        <Form.Label id="question"> ข้อศอกทำมุมฉากหรือ 90 องศากัน </Form.Label>
+                        <Form.Label id="question">4. ข้อศอกทำมุมฉากหรือ 90 องศากัน </Form.Label>
                         {['checkbox'].map((type) => (
                             <div key={`default-${type}`} className="mb-3">
         {/* = 1 point */}       <Form.Check                      
@@ -301,7 +300,7 @@ export default class Workplace extends Component{
                     </Form.Group>
 
 {/*Q3 ข้อ 5*/}       <Form.Group className="mb-3 px-4">
-                        <Form.Label id="question"> เกร็งข้อมือขณะจับปากกา </Form.Label>
+                        <Form.Label id="question">5. เกร็งข้อมือขณะจับปากกา </Form.Label>
                         {['checkbox'].map((type) => (
                             <div key={`default-${type}`} className="mb-3">
         {/* = 1 point */}       <Form.Check                      
@@ -330,7 +329,7 @@ export default class Workplace extends Component{
                     <p className="mb-2 pt-2" id="qtitle"> ระยะเวลาในการใช้งานอุปกรณ์อิเล็กทรอนิกส์ </p>   
 
 {/*Q4 ข้อ 1*/}       <Form.Group className="mb-3 px-4">
-                        <Form.Label id="question"> ท่านนั่งเป็นเวลากี่ชั่วโมงต่อวัน (กรุณาตอบเป็น หน่วย ชั่วโมง และ นาที เช่น 1 ชั้วโมง 30 นาที ให้ตอบเป็น 1:30) </Form.Label>
+                        <Form.Label id="question">1. ท่านนั่งเป็นเวลากี่ชั่วโมงต่อวัน (กรุณาตอบเป็น หน่วย ชั่วโมง และ นาที เช่น 1 ชั้วโมง 30 นาที ให้ตอบเป็น 1:30) </Form.Label>
                             <input name="duration"id="duration" type="text" size="30" placeholder="ชั่วโมง:นาที" required 
                             className="form-control mb-3" />
                     </Form.Group>
