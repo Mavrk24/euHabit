@@ -111,9 +111,10 @@ export default class Entry extends Component{
           <Row className="">
           <Form.Group as={Col} className="mb-3" controlId="exampleForm.ControlTextarea1">
           <Form.Label >อายุ*</Form.Label>
-                <input name="age"id="age" type="number" size="30" placeholder="อายุ"
+                <input id="TEST" name="age"id="age" type="number" size="30" placeholder="30"
                  required onChange={this.handleChange}
                  className="form-control mb-3" />
+                
           <FieldFeedbacks for="age">
             <FieldFeedback when="*" class="mb-3"/>
           </FieldFeedbacks>    
