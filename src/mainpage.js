@@ -45,6 +45,12 @@ export default class Mainpage extends Component{
                             <a class="nav-link" href="/intervention">Intervention and Prevention</a>
                             </li>
                             <li class="nav-item">
+                            <a class="nav-link" href="/entry">Demographic Data</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="/workplace">Workplace formm</a>
+                            </li>
+                            <li class="nav-item">
                             <a class="nav-link" href="/" id="signout" type="submit" onClick={this.handleClick}>Sign Out</a>
                             </li>
                         </ul>
