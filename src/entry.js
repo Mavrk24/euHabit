@@ -113,11 +113,6 @@ export default class Entry extends Component{
                 </Form.Text>
               </Form.Group>
 
-
-              <button onclick="myFunction()">Try it</button>
-
-              <p id="demo"></p>
-
               <p id="Nxtbutton2">
                     <Button class="btn" id="btn-login" type="submit" href="/mainpage"><b>mainpage</b></Button>
               </p>

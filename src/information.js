@@ -1,15 +1,13 @@
-import { Form, Button, Container, Col, Row, Modal, FormCheck, FormLabel, FormSelect } from 'react-bootstrap';
 import React, {useState} from 'react';
 import { Component } from 'react';
-import PropTypes from 'prop-types';
-import { useHistory } from 'react-router-dom';
-import './mainpage.css';
-import rosa11 from './rosa11.png';
-import ReactDOM from 'react-dom';
+import LgIFMSA from './LgIFMSA.png';
+import LgThaihealth from './LgThaihealth.png';
+import Lg20yrs from './Lg20yrs.png';
 import LgeuHabit from './LgeuHabit.png';
+import LgFamMed from './LgFamMed.png';
+import './information.css';
 
-export default class Mainpage extends Component{
-
+export default class Information extends Component{
 
     handleClick = e => {
         
@@ -22,7 +20,9 @@ export default class Mainpage extends Component{
 
     render() {
         return(
-            <div>        
+            <div>       
+
+{/* NavBar */} 
                 <nav class="navbar navbar-light c">
                 <div class="container-fluid">
                     <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
@@ -66,9 +66,47 @@ export default class Mainpage extends Component{
                 </div>
                 </nav>
 
-                <p> Home </p> 
+{/* Information */}
+
+                <p id="supported_by">Supported By</p>
+
+                <div class="d-flex flex-column support">
+                    <div id="img_center">
+                        <svg width="100" height="100">
+                            <image href={LgIFMSA} width="100" height="100"/ >
+                        </svg>
+                    </div>
+                    <div id="img_center">
+                        <svg width="100" height="100">
+                            <image href={LgThaihealth} width="100" height="100"/ >
+                        </svg>
+                    </div>
+                    <div id="img_center">
+                        <svg width="150" height="150">
+                            <image href={Lg20yrs} width="150" height="150"/ >
+                        </svg>
+                    </div>
+                
+                    <div id="img_center">
+                        <svg width="100" height="100">
+                            <image href={LgFamMed} width="100" height="100"/ >
+                        </svg>
+                    </div>
+                
+{/*                        
+                        <img src={LgIFMSA} id="imgprofile1" alt="IFMSA" />
+                           
+                        <img src={LgThaihealth} id="imgprofile2" alt="Thaihealth" />
+                
+                        <img src={Lg20yrs} id="imgprofile2" alt="20yrs" />
+
+                        <img src={LgeuHabit} id="imgprofile1" alt="IFMSA" />
+*/}
+                </div> 
 
             </div>
         )
+
     }
+
 }

@@ -6,8 +6,19 @@ import { useHistory } from 'react-router-dom';
 import './mainpage.css';
 import rosa11 from './rosa11.png';
 import ReactDOM from 'react-dom';
+import LgeuHabit from './LgeuHabit.png';
 
 export default class Intervention extends Component{
+
+    handleClick = e => {
+        
+        localStorage.clear();
+        e.preventDefault();
+        this.props.history.push('/');
+        window.location.reload();
+      
+    }
+    
     render() {
         return(
             <div>       
@@ -15,7 +26,7 @@ export default class Intervention extends Component{
             <div class="container-fluid">
                 <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
                     <svg width="30" height="24" class="d-inline-block align-text-top">
-                        <image href={rosa11} height="30" width="24"/ >
+                        <image href={LgeuHabit} height="30" width="24"/ >
                     </svg>
                     euHabit.
                 </a>
@@ -37,7 +48,10 @@ export default class Intervention extends Component{
                         <a class="nav-link" href="/entry">Demographic Data</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="/workplace">Workplace formm</a>
+                        <a class="nav-link" href="/workplace">Workplace form</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/information">Information</a>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="/" id="signout" type="submit" onClick={this.handleClick}>Sign Out</a>
