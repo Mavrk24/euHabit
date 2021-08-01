@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
-import './mainpage.css';
+import './intervention.css';
 import rosa11 from './rosa11.png';
 import ReactDOM from 'react-dom';
 import LgeuHabit from './LgeuHabit.png';
@@ -21,7 +21,8 @@ export default class Intervention extends Component{
     
     render() {
         return(
-            <div>       
+            <div>   
+{/* NavBar */}    
             <nav class="navbar navbar-light c">
             <div class="container-fluid">
                 <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
@@ -39,10 +40,19 @@ export default class Intervention extends Component{
                         <a class="nav-link active" aria-current="page" href="/mainpage">Home</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/userprofile">Profile</a>
+                        <a class="nav-link active" href="/userprofile">Profile</a>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="/intervention">Intervention and Prevention</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Prevention and Intervention
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="intervention">Ergonomics setting</a></li>
+                                <li><a class="dropdown-item" href="stretching">Stretching</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="/entry">Demographic Data</a>
@@ -64,8 +74,59 @@ export default class Intervention extends Component{
                                        
             </div>
             </nav>
+{/* Ergonomics setting */}
+            <h1 id="profile2"> Ergonomics Setting </h1>  
+                <div class="d-flex flex-row">
+                    <p id="clickbutton1"> Click on the blue button </p>
+                    <a class="btn btn-primary btn_size">
+                    </a>
+                    <p id="clickbutton2"> to see the information </p> 
+                </div>
+                <p id="Nxtbutton2">
+                        <Button class="btn" id="btn-login" type="submit" href="/stretching"><b>stretching</b></Button>
+                </p>
 
-            <p> Intervention </p>  
+                <svg width="200" height="200" id="photo">
+                    <image href={rosa11} height="200" width="200"/ >
+                </svg>
+{/* ทำปุ่มคลิ๊กบนรูป แล้วใส่ข้อมูลใน offcanva แล้วก็เสร็จ */}
+                <div class="container">
+                {/*ลองใช้ SVG ดู แทน img*/}
+                    <img src={rosa11} alt="Snow" / >
+                    <button class="btn">Button</button>
+                    <a class="button btn-primary btn_size" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"> 
+                    </a>
+                </div>
+
+                <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    Link with href
+                </a>
+{/*                
+            <button class="btn btn-primary btn_size" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                Button with data-bs-target
+            </button>
+*/}
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title offcanvatext" id="offcanvasExampleLabel">Offcanvas</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body offcanvatext">
+                <div>
+                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                </div>
+                <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                    Dropdown button
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                </div>
+            </div>
+            </div>
         </div>
         )
     }
