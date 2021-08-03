@@ -77,7 +77,7 @@ export default class Intervention extends Component{
 {/* Ergonomics setting */}
             <h1 id="profile2"> Ergonomics Setting </h1>  
                 <div class="d-flex flex-row">
-                    <p id="clickbutton1"> Click on the blue button </p>
+                    <p id="clickbutton1"> Click on the grey button </p>
                     <a class="btn btn-primary btn_size">
                     </a>
                     <p id="clickbutton2"> to see the information </p> 

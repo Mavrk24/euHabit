@@ -9,6 +9,7 @@ export default class Stretching extends Component {
     render() {
         return(
             <div>
+{/* NavbBar */}
                 <nav class="navbar navbar-light c">
             <div class="container-fluid">
                 <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
@@ -57,7 +58,215 @@ export default class Stretching extends Component {
                                        
             </div>
             </nav>
-            <p id="profile">Stretching</p>
+
+{/* Stetching */}
+
+            <p id="profile3">Stretching</p>
+{/*
+            <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    Link with href
+            </a>
+*/}
+            
+            <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title offcanvatext" id="offcanvasExample2">Offcanvas</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body offcanvatext_body">
+                <div>
+                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                </div>
+                <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                    Dropdown button
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                </div>
+            </div>
+            </div>
+
+
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title offcanvatext" id="offcanvasExampleLabel">Offcanvas</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body offcanvatext">
+                <div>
+                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                </div>
+                <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                    Dropdown button
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                </div>
+            </div>
+            </div> 
+
+{/* Stretching Card */}
+    <div class="d-flex row mx-0 mb-4 g-4">
+        <div class="col">
+            <div class="card stretch_card h-100">
+            {/* เอาภาพใน card */}
+            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
+                <img class="card-img-top" src={LgeuHabit} />
+            </button>
+            {/* */}
+                <div class="card-body card_text">
+                    <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card stretch_card h-100">
+            {/* เอาภาพใน card */}
+            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
+                <img class="card-img-top" src={LgeuHabit} />
+            </button>
+            {/* */}
+                <div class="card-body card_text">
+                    <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card stretch_card h-100">
+            {/* เอาภาพใน card */}
+            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
+                <img class="card-img-top" src={LgeuHabit} />
+            </button>
+            {/* */}
+                <div class="card-body card_text">
+                    <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card stretch_card h-100">
+            {/* เอาภาพใน card */}
+            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
+                <img class="card-img-top" src={LgeuHabit} />
+            </button>
+            {/* */}
+                <div class="card-body card_text">
+                    <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card stretch_card h-100">
+            {/* เอาภาพใน card */}
+            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
+                <img class="card-img-top" src={LgeuHabit} />
+            </button>
+            {/* */}
+                <div class="card-body card_text">
+                    <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card stretch_card h-100">
+            {/* เอาภาพใน card */}
+            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
+                <img class="card-img-top" src={LgeuHabit} />
+            </button>
+            {/* */}
+                <div class="card-body card_text">
+                    <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card stretch_card h-100">
+            {/* เอาภาพใน card */}
+            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
+                <img class="card-img-top" src={LgeuHabit} />
+            </button>
+            {/* */}
+                <div class="card-body card_text">
+                    <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card stretch_card h-100">
+            {/* เอาภาพใน card */}
+            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
+                <img class="card-img-top" src={LgeuHabit} />
+            </button>
+            {/* */}
+                <div class="card-body card_text">
+                    <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+            
+{/*Stretching Card*/} 
+ {/*           
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card stretch_card">
+                        <img src={LgeuHabit} class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card stretch_card">
+                        <img src={LgeuHabit} class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card stretch_card">
+                        <img src={LgeuHabit} class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card stretch_card">
+                        <img src={LgeuHabit} class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+*/}
+
             </div>
         )
     }
