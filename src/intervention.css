@@ -11,3 +11,90 @@
 .c{
     background-color: #eee3c4;
 }
+
+/*text in offcanva*/
+.offcanvatext{
+    color: #575757;
+}
+
+
+#clickbutton1{
+    margin-left: 15px;
+    padding-right: 5px;
+    font-family: Quicksand, Verdana, sans-serif;
+    color: #eee3c4;
+    font-size: 14px;
+}
+
+#clickbutton2{
+    margin-left: 5px;
+    padding-right: 5px;
+    font-family: Quicksand, Verdana, sans-serif;
+    color: #eee3c4;
+    font-size: 14px;
+}
+#profile2{
+    text-align: center;
+    font-family: Quicksand, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #eee3c4; 
+    margin-top: 18px;   
+}
+
+.btn_size{
+    width: 20px;
+    height: 20px;
+    font-size: 5px;
+    background-color: #555;
+    border: none;
+}
+
+/*ทำbuttonบน image*/
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+.container img {
+    width: 100%;
+    height: auto;
+  }
+  
+.container .btn {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+ 
+.container .button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+    
+.container .btn:hover {
+    background-color: black;
+  }

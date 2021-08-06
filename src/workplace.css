@@ -39,11 +39,20 @@ body{
 
 #qtitle{
     font-size: 14px;
+    font-weight: bold;
 }
 
 #question{
     font-size: 14px;
+    letter-spacing: 80%;
     /*background-color: rgba(248, 215, 28, 0.952);*/
+}
+
+#question2{
+    font-size: 14px;
+    color:rgb(220, 226, 231);
+    padding-bottom: 10px;
+    padding-top: 1px;
 }
 
 #photo{
@@ -60,8 +69,23 @@ body{
     text-align: center;
 }
 
-input[type=radio] {
-    border: 0px;
-    width: 100%;
-    height: 2em;
+.yesbutton{
+    margin-left: 30px;
+    width: 60px;
+    background-color: #5c9b57;
+    color: rgb(232, 233, 224);
 }
+
+.nobutton{
+    margin-left: 30px;
+    width: 60px;
+    background-color: #d43b3b;
+    color: rgb(204, 218, 230);
+}
+
+input[type=radio] {
+    transform:scale(1.25);
+}
+
+
+

@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(180deg, #befff7 0%, #d8ecea 100%);
+    /*background: linear-gradient(180deg, #befff7 0%, #d8ecea 100%);*/
     font-family: "Bai Jamjuree", Verdana, sans-serif;
 }
 /*
@@ -14,6 +14,13 @@ body{
     padding-bottom: 50px;
     border-style: solid;
 } */
+
+#question1{
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 80%;
+    color: #f1e0b1;
+}
 
 #demographic-data1{
     text-align: left;
@@ -39,7 +46,6 @@ body{
 #screening-form1{
     padding: 20px;
     font-size: 12px;
-    
 }
 
 #Nxtbutton1{
@@ -47,4 +53,12 @@ body{
     position: relative;
     top: 2%;
     text-align: center;
+}
+
+.choice{
+    padding-bottom: 50px;
+}
+
+input[type=radio] {
+    transform:scale(1.25);
 }

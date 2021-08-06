@@ -18,6 +18,9 @@ import Mainpage from './mainpage';
 import Profile from './userprofile';
 import Intervention from './intervention';
 import Workplace from './workplace';
+import Information from './information';
+import Stretching from './stretching';
+
 
 function Application() {
   const [show, setShow] = useState(false);
@@ -162,6 +165,9 @@ function App() {
     <Route exact path='/userprofile' component={Profile} />
     <Route exact path='/intervention' component={Intervention} />
     <Route exact path='/workplace' component={Workplace} />
+    <Route exact path='/information' component={Information} />
+    <Route exact path='/stretching' component={Stretching} />
+  
     </Switch>
 
   </BrowserRouter>
