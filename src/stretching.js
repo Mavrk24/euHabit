@@ -1,16 +1,30 @@
 import React, {useState} from 'react';
 import { Component } from 'react';
+import ReactPlayer from 'react-player';
 import './stretching.css';
 import rosa11 from './rosa11.png';
 import ReactDOM from 'react-dom';
 import LgeuHabit from './LgeuHabit.png';
+import stretching_1 from './stretching_1.mp4';
+import stretching_2 from './stretching_2.mp4';
+import stretching_3 from './stretching_3.mp4';
+import stretching_4 from './stretching_4.mp4';
+import stretching_5 from './stretching_5.mp4';
+import stretching_6 from './stretching_6.mp4';
+import stretching_7 from './stretching_7.mp4';
+import stretching_8 from './stretching_8.mp4';
+import stretching_9 from './stretching_9.mp4';
+import stretching_10 from './stretching_10.mp4';
+
+
+
 
 export default class Stretching extends Component {
     render() {
         return(
             <div>
 {/* NavbBar */}
-                <nav class="navbar navbar-light c">
+        <nav class="navbar navbar-light c">
             <div class="container-fluid">
                 <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
                     <svg width="30" height="24" class="d-inline-block align-text-top">
@@ -57,169 +71,522 @@ export default class Stretching extends Component {
                 </div> 
                                        
             </div>
-            </nav>
+        </nav>
 
 {/* Stetching */}
 
             <p id="profile3">Stretching</p>
-{/*
-            <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                    Link with href
-            </a>
-*/}
-            
-            <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel">
+
+{/* Stretching Card */}
+
+    <div class="d-flex row mx-0 mb-4 g-4">
+
+{/*C1 ท่ามองซ้าย/ขวา stretching_1*/}    
+        <div class="col">
+            <div class="card stretch_card h-100">
+            {/* เอาภาพใน card */}
+            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample1" aria-controls="offcanvasExample2">
+                <img class="card-img-top" src={LgeuHabit} />
+            </button>
+            {/* */}
+                <div class="card-body card_text">
+                    <h5 class="card-title">ท่ามองซ้าย/ขวา</h5>
+                </div>
+            </div>
+        </div>
+
+{/*C2 ท่าเงยหน้าขึ้น/ลง stretching_2*/}    
+        <div class="col">
+            <div class="card stretch_card h-100">
+            {/* เอาภาพใน card */}
+            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
+                <img class="card-img-top" src={LgeuHabit} />
+            </button>
+            {/* */}
+                <div class="card-body card_text">
+                    <h5 class="card-title">ท่าเงยหน้าขึ้น/ลง</h5>
+                </div>
+            </div>
+        </div>
+
+{/*C3 ท่ายืดเหยียดคอทีละด้าน stretching_8*/}    
+        <div class="col">
+            <div class="card stretch_card h-100">
+            {/* เอาภาพใน card */}
+            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample3" aria-controls="offcanvasExample2">
+                <img class="card-img-top" src={LgeuHabit} />
+            </button>
+            {/* */}
+                <div class="card-body card_text">
+                    <h5 class="card-title">ท่ายืดเหยียดคอทีละด้าน</h5>
+                </div>
+            </div>
+        </div>
+
+{/*C4 ท่าบริหารต้นคอ stretching_9*/}    
+        <div class="col">
+            <div class="card stretch_card h-100">
+            {/* เอาภาพใน card */}
+            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample4" aria-controls="offcanvasExample2">
+                <img class="card-img-top" src={LgeuHabit} />
+            </button>
+            {/* */}
+                <div class="card-body card_text">
+                    <h5 class="card-title">ท่าบริหารต้นคอ</h5>
+                </div>
+            </div>
+        </div>
+
+{/*C5 ท่ายกไหล่กล้ามเนื้อ stretching_4*/}    
+        <div class="col">
+            <div class="card stretch_card h-100">
+            {/* เอาภาพใน card */}
+            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample5" aria-controls="offcanvasExample2">
+                <img class="card-img-top" src={LgeuHabit} />
+            </button>
+            {/* */}
+                <div class="card-body card_text">
+                    <h5 class="card-title">ท่ายกไหล่กล้ามเนื้อ</h5>
+                </div>
+            </div>
+        </div>
+
+{/*C6 ท่าหมุนไหล่ stretching_6*/}    
+        <div class="col">
+            <div class="card stretch_card h-100">
+            {/* เอาภาพใน card */}
+            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample6" aria-controls="offcanvasExample2">
+                <img class="card-img-top" src={LgeuHabit} />
+            </button>
+            {/* */}
+                <div class="card-body card_text">
+                    <h5 class="card-title">ท่าหมุนไหล่</h5>
+                </div>
+            </div>
+        </div>
+
+{/*C7 ท่ายืดไหล่ดึงข้อศอก stretching_5*/}    
+        <div class="col">
+            <div class="card stretch_card h-100">
+            {/* เอาภาพใน card */}
+            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample7" aria-controls="offcanvasExample2">
+                <img class="card-img-top" src={LgeuHabit} />
+            </button>
+            {/* */}
+                <div class="card-body card_text">
+                    <h5 class="card-title">ท่ายืดไหล่ดึงข้อศอก</h5>
+                </div>
+            </div>
+        </div>
+
+{/*C8 ท่าเอามือไขว้หลัง stretching_7*/}    
+        <div class="col">
+            <div class="card stretch_card h-100">
+            {/* เอาภาพใน card */}
+            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample8" aria-controls="offcanvasExample2">
+                <img class="card-img-top" src={LgeuHabit} />
+            </button>
+            {/* */}
+                <div class="card-body card_text">
+                    <h5 class="card-title">ท่าเอามือไขว้หลัง</h5>
+                </div>
+            </div>
+        </div>
+
+{/*C9 ท่ายืดกล้ามเนื้อไหล่และต้นแขน stretching_10*/}    
+        <div class="col">
+            <div class="card stretch_card h-100">
+            {/* เอาภาพใน card */}
+            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample9" aria-controls="offcanvasExample2">
+                <img class="card-img-top" src={LgeuHabit} />
+            </button>
+            {/* */}
+                <div class="card-body card_text">
+                    <h5 class="card-title">ท่ายืดกล้ามเนื้อไหล่และต้นแขน</h5>
+                </div>
+            </div>
+        </div>
+
+{/*C10 ท่่าบริหารกล้ามเนื้อไหล่ stretching_3*/}   
+        <div class="col">
+            <div class="card stretch_card h-100">
+            {/* เอาภาพใน card */}
+            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample10" aria-controls="offcanvasExample2">
+                <img class="card-img-top" src={LgeuHabit} />
+            </button>
+            {/* */}
+                <div class="card-body card_text">
+                    <h5 class="card-title">ท่าบริหารกล้ามเนื้อไหล่</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+{/* Inside each Offcanva*/}
+
+{/* C1 ท่ามองซ้ายขวา stretching_1*/}  
+        <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample1" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title offcanvatext" id="offcanvasExample2">Offcanvas</h5>
+                <h5 class="offcanvas-title offcanvatext" id="offcanvasExample1">ท่ามองซ้ายขวา</h5>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body offcanvatext_body">
-                <div>
-                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+            {/*Stretching Video without download button*/}
+                <div class="embed-responsive embed-responsive-16by9">
+                <ReactPlayer
+                    // Disable download button
+                    config={{ file: { attributes: { controlsList: 'nodownload' } } }}
+
+                    // Disable right click
+                    onContextMenu={e => e.preventDefault()}
+
+                    // Your props
+                    url={stretching_1}
+                    className="react-player"
+                    controls
+                    width="100%"
+                    height="100%"
+                />
                 </div>
-                <div class="dropdown mt-3">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                    Dropdown button
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                <div class="stretch_info">
+                    <p id="firstline"></p>
+                    <p id="secondline"> 
+                    1.	เริ่มต้นจากตามองตรง แล้วหมุนคอมองไป
+                        ด้านขวามือช้าๆ แล้วหมุนกลับที่เดิม <br/>
+                    2.	หมุนคอไปทางซ้ายมือ แล้วหมุนกลับที่เดิม 
+                        ทำสลับซ้าย/ขวา <br/>
+                    3.	ทำ 3-4รอบ
+                    </p>
                 </div>
             </div>
-            </div>
+        </div>
 
-
-
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+{/* C2 ท่าเงยหน้าขึ้น/ลง stretching_2*/}  
+        <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title offcanvatext" id="offcanvasExampleLabel">Offcanvas</h5>
+                <h5 class="offcanvas-title offcanvatext" id="offcanvasExample2">ท่าเงยหน้าขึ้น/ลง</h5>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body offcanvatext">
-                <div>
-                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-                </div>
-                <div class="dropdown mt-3">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                    Dropdown button
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-                </div>
-            </div>
-            </div> 
+            <div class="offcanvas-body offcanvatext_body">
+            {/*Stretching Video without download button*/}
+                <div class="embed-responsive embed-responsive-16by9">
+                <ReactPlayer
+                    // Disable download button
+                    config={{ file: { attributes: { controlsList: 'nodownload' } } }}
 
-{/* Stretching Card */}
-    <div class="d-flex row mx-0 mb-4 g-4">
-        <div class="col">
-            <div class="card stretch_card h-100">
-            {/* เอาภาพใน card */}
-            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
-                <img class="card-img-top" src={LgeuHabit} />
-            </button>
-            {/* */}
-                <div class="card-body card_text">
-                    <h5 class="card-title">Card title</h5>
+                    // Disable right click
+                    onContextMenu={e => e.preventDefault()}
+
+                    // Your props
+                    url={stretching_2}
+                    className="react-player"
+                    controls
+                    width="100%"
+                    height="100%"
+                />
+                </div>
+                <div class="stretch_info">
+                    <p id="firstline"></p>
+                    <p id="secondline"> 
+                    1.	เริ่มจากท่านั่งศีรษะตรง ค่อยๆ ก้มศีรษะลงไป
+                        ข้างหน้า เก็บคาง เงยหน้าขึ้นอยู่ในท่าเริ่มต้น <br/>
+                    2.	ใช้แขนข้างใดข้างหนึ่งหรือทั้งสองข้างวางที่หลัง
+                        ต้นคอ ค่อยๆ เงยหน้าขึ้น ให้ศีรษะเอนไปทาง
+                        ด้านหลัง แล้วก้มหน้าลงมาอยู่ในท่าเดิม
+                    </p>
                 </div>
             </div>
         </div>
 
-        <div class="col">
-            <div class="card stretch_card h-100">
-            {/* เอาภาพใน card */}
-            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
-                <img class="card-img-top" src={LgeuHabit} />
-            </button>
-            {/* */}
-                <div class="card-body card_text">
-                    <h5 class="card-title">Card title</h5>
+{/* C3 ท่ายืดเหยียดคอทีละด้าน stretching_8*/}  
+        <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample3" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title offcanvatext" id="offcanvasExample3">ท่ายืดเหยียดคอทีละด้าน</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body offcanvatext_body">
+            {/*Stretching Video without download button*/}
+                <div class="embed-responsive embed-responsive-16by9">
+                <ReactPlayer
+                    // Disable download button
+                    config={{ file: { attributes: { controlsList: 'nodownload' } } }}
+
+                    // Disable right click
+                    onContextMenu={e => e.preventDefault()}
+
+                    // Your props
+                    url={stretching_8}
+                    className="react-player"
+                    controls
+                    width="100%"
+                    height="100%"
+                />
+                </div>
+                    <p id="firstline"></p>
+                    <p id="secondline"> 
+                        1.	เริ่มจากหน้าตรง ตามองไปข้างหน้า แล้วค่อยๆ
+                        เอียงคอไปทางขวามือแล้วกลับมาอยู่ท่าเดิม <br/>
+                        2.	เอียงคอไปทางซ้ายมือ แล้วกลับมาอยู่ในท่าเดิม
+                        อีกครั้ง (ระวังอย่าให้คอเหยียดตึงจนเกินไป)
+                        ทำสลับซ้าย/ขวา <br/>
+                        3.	ทำ 3-4 รอบ
+                    </p>
+            </div>
+        </div>
+
+{/* C4 ท่าบริหารต้นคอ stretching_9*/}  
+        <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample4" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title offcanvatext" id="offcanvasExample4">ท่าบริหารต้นคอ</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body offcanvatext_body">
+            {/*Stretching Video without download button*/}
+                <div class="embed-responsive embed-responsive-16by9">
+                <ReactPlayer
+                    // Disable download button
+                    config={{ file: { attributes: { controlsList: 'nodownload' } } }}
+
+                    // Disable right click
+                    onContextMenu={e => e.preventDefault()}
+
+                    // Your props
+                    url={stretching_9}
+                    className="react-player"
+                    controls
+                    width="100%"
+                    height="100%"
+                />
+                </div>
+                <div class="stretch_info">
+                    <p id="firstline"></p>
+                    <p id="secondline2"> 
+                        เริ่มจากนำมือข้างซ้ายอ้อมไปจับศีรษะด้านขวา
+                        ดึงมาทางด้านซ้ายจนรู้สึกตึง นับ 1-10 สลับใช้มือข้างขวาอ้อม
+                        จับศีรษะด้านซ้ายทำเช่นเดียวกัน นับ 1-10 จากนั้นประสาน
+                        มือบริเวณท้ายทอย ดันไปด้านหน้าจนรู้สึกตึง นับ 1-10
+                    </p>
                 </div>
             </div>
         </div>
 
-        <div class="col">
-            <div class="card stretch_card h-100">
-            {/* เอาภาพใน card */}
-            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
-                <img class="card-img-top" src={LgeuHabit} />
-            </button>
-            {/* */}
-                <div class="card-body card_text">
-                    <h5 class="card-title">Card title</h5>
+{/* C5 ท่ายกไหล่กล้ามเนื้อ stretching_4*/}  
+        <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample5" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title offcanvatext" id="offcanvasExample5">ท่ายกไหล่กล้ามเนื้อ</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body offcanvatext_body">
+            {/*Stretching Video without download button*/}
+                <div class="embed-responsive embed-responsive-16by9">
+                <ReactPlayer
+                    // Disable download button
+                    config={{ file: { attributes: { controlsList: 'nodownload' } } }}
+
+                    // Disable right click
+                    onContextMenu={e => e.preventDefault()}
+
+                    // Your props
+                    url={stretching_4}
+                    className="react-player"
+                    controls
+                    width="100%"
+                    height="100%"
+                />
+                </div>
+                <div class="stretch_info">
+                    <p id="firstline"></p>
+                    <p id="secondline2"> 
+                        นั่งหลังตรง จากนั้นยกไหล่ขึ้นให้สูงขึ้นทั้ง 2 ข้างค้างไว้ประมาณ 3-5 วินาทีทำ 3 ครั้ง
+                        ท่านี้จะช่วยในเรื่องหลังส่วนบน ลำคอ และหัวไหล่
+                    </p>
                 </div>
             </div>
         </div>
 
-        <div class="col">
-            <div class="card stretch_card h-100">
-            {/* เอาภาพใน card */}
-            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
-                <img class="card-img-top" src={LgeuHabit} />
-            </button>
-            {/* */}
-                <div class="card-body card_text">
-                    <h5 class="card-title">Card title</h5>
+{/* C6 ท่าหมุนไหล่ stretching_6*/}  
+        <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample6" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title offcanvatext" id="offcanvasExample6">ท่าหมุนไหล่</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body offcanvatext_body">
+            {/*Stretching Video without download button*/}
+                <div class="embed-responsive embed-responsive-16by9">
+                <ReactPlayer
+                    // Disable download button
+                    config={{ file: { attributes: { controlsList: 'nodownload' } } }}
+
+                    // Disable right click
+                    onContextMenu={e => e.preventDefault()}
+
+                    // Your props
+                    url={stretching_6}
+                    className="react-player"
+                    controls
+                    width="100%"
+                    height="100%"
+                />
+                </div>
+                <div class="stretch_info">
+                    <p id="firstline"></p>
+                    <p id="secondline"> 
+                        1.	ให้พับไหล ่ทั้งสองข้างไปด้านหลังแล้วยกขึ้น
+                        ก่อนที่จะหมุนไหล่เป็นวงกลมไปข้างหน้า ทำซ้ำ
+                        แบบเดิม 8-10 ครั้ง <br/>
+                        2.	เปลี่ยนเป็นพับไหล ่ไปด้านหน้า ยกไหล ่ขึ้น
+                        ก่อนที่จะหมุนเป็นวงกลมไปด้านหลัง ทำซ้ำ
+                        แบบเดิม 8-10 ครั้ง
+                    </p>
                 </div>
             </div>
         </div>
 
-        <div class="col">
-            <div class="card stretch_card h-100">
-            {/* เอาภาพใน card */}
-            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
-                <img class="card-img-top" src={LgeuHabit} />
-            </button>
-            {/* */}
-                <div class="card-body card_text">
-                    <h5 class="card-title">Card title</h5>
+{/* C7 ท่ายืดไหล่ดึงข้อศอก stretching_5*/}  
+        <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample7" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title offcanvatext" id="offcanvasExample7">ท่ายืดไหล่ดึงข้อศอก</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body offcanvatext_body">
+            {/*Stretching Video without download button*/}
+                <div class="embed-responsive embed-responsive-16by9">
+                <ReactPlayer
+                    // Disable download button
+                    config={{ file: { attributes: { controlsList: 'nodownload' } } }}
+
+                    // Disable right click
+                    onContextMenu={e => e.preventDefault()}
+
+                    // Your props
+                    url={stretching_5}
+                    className="react-player"
+                    controls
+                    width="100%"
+                    height="100%"
+                />
+                </div>
+                <div class="stretch_info">
+                    <p id="firstline"></p>
+                    <p id="secondline"> 
+                        1.	วางมือขวาลงบนไหล่ซ้าย ขณะที่ศอกขวายกขึ้นขนานกับพื้น
+                        2.	ใช้มือซ้ายดึงศอกขวาเข้าหาตัวจากนั้นกลับไปท่าเริ่มต้น
+                        3.	เปลี่ยนข้างทำสลับซ้าย/ขวา
+                    </p>
                 </div>
             </div>
         </div>
 
-        <div class="col">
-            <div class="card stretch_card h-100">
-            {/* เอาภาพใน card */}
-            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
-                <img class="card-img-top" src={LgeuHabit} />
-            </button>
-            {/* */}
-                <div class="card-body card_text">
-                    <h5 class="card-title">Card title</h5>
+{/* C8 ท่าเอามือไขว้หลัง stretching_7*/}  
+        <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample8" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title offcanvatext" id="offcanvasExample8">ท่าเอามือไขว้หลัง</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body offcanvatext_body">
+            {/*Stretching Video without download button*/}
+                <div class="embed-responsive embed-responsive-16by9">
+                <ReactPlayer
+                    // Disable download button
+                    config={{ file: { attributes: { controlsList: 'nodownload' } } }}
+
+                    // Disable right click
+                    onContextMenu={e => e.preventDefault()}
+
+                    // Your props
+                    url={stretching_7}
+                    className="react-player"
+                    controls
+                    width="100%"
+                    height="100%"
+                />
+                </div>
+                <div class="stretch_info">
+                    <p id="firstline"></p>
+                    <p id="secondline2"> 
+                        เอามือไขว้ด้านหลังจากนั้นใช้มืออีกข้างดึงข้อมือ และเอียงคอไปด้านที่ถูกดึง
+                        ทำข้างละ 10-12 วินาทีช่วยยืดหลังส่วนล่างและลำคอ
+                    </p>
                 </div>
             </div>
         </div>
 
-        <div class="col">
-            <div class="card stretch_card h-100">
-            {/* เอาภาพใน card */}
-            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
-                <img class="card-img-top" src={LgeuHabit} />
-            </button>
-            {/* */}
-                <div class="card-body card_text">
-                    <h5 class="card-title">Card title</h5>
-                </div>
+{/* C9 ท่ายืดกล้ามเนื้อไหล่และต้นแขน stretching_10*/}  
+        <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample9" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title offcanvatext" id="offcanvasExample9">ท่ายืดกล้ามเนื้อไหล่และต้นแขน</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-        </div>
+            <div class="offcanvas-body offcanvatext_body">
+            {/*Stretching Video without download button*/}
+                <div class="embed-responsive embed-responsive-16by9">
+                <ReactPlayer
+                    // Disable download button
+                    config={{ file: { attributes: { controlsList: 'nodownload' } } }}
 
-        <div class="col">
-            <div class="card stretch_card h-100">
-            {/* เอาภาพใน card */}
-            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
-                <img class="card-img-top" src={LgeuHabit} />
-            </button>
-            {/* */}
-                <div class="card-body card_text">
-                    <h5 class="card-title">Card title</h5>
+                    // Disable right click
+                    onContextMenu={e => e.preventDefault()}
+
+                    // Your props
+                    url={stretching_10}
+                    className="react-player"
+                    controls
+                    width="100%"
+                    height="100%"
+                />
+                </div>
+                <div class="stretch_info">
+                    <p id="firstline"></p>
+                    <p id="secondline2"> 
+                        ยืดกล้ามเนื้อไหล่และต้นแขน โดยการประสานมือ จากนั้นยืดแขนและหันฝ่ามือออก
+                        พยายามยืดแขนให้สุดให้เหมือนมีคนมาดึงมือเราไว้และนั่งหลังตรง ทำค้างไว้ 10-15 วินาที
+                    </p>
                 </div>
             </div>
-        </div>
-    </div>
+            </div>
+
+{/* C10 ท่าบริหารกล้ามเนื้อไหล่ stretching_3*/} 
+        <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample10" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title offcanvatext" id="offcanvasExample10">ท่าบริหารกล้ามเนื้อไหล่</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body offcanvatext_body">
+            {/*Stretching Video without download button*/}
+                <div class="embed-responsive embed-responsive-16by9">
+                <ReactPlayer
+                    // Disable download button
+                    config={{ file: { attributes: { controlsList: 'nodownload' } } }}
+
+                    // Disable right click
+                    onContextMenu={e => e.preventDefault()}
+
+                    // Your props
+                    url={stretching_3}
+                    className="react-player"
+                    controls
+                    width="100%"
+                    height="100%"
+                />
+                </div>
+                <div class="stretch_info">
+                    <p id="firstline"></p>
+                    <p id="secondline2"> 
+                        ยกไหล่ขึ้นไปจนสุด แล้วเกร็งค้างไว้
+                        นับ 1-10 จากนั้นกดไหล่ลงไปให้สุด
+                        แล้วเกร็งค้างไว้นับ 1-10 ท่านี้สำหรับ
+                        ผู้ที่มีปัญหาเรื่องของการปวดไหล ่
+                        เป็นประจำ
+                    </p>
+                </div>
+            </div>
+            </div>            
+
+
+
+
             
 {/*Stretching Card*/} 
  {/*           

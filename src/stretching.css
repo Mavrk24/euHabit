@@ -12,6 +12,9 @@
     margin: 0px;
 }
 
+.stretch_info{
+}
+
 .card_text{
     color: #575757;
 }
@@ -26,8 +29,25 @@
     color: #575757;
     background-color: antiquewhite;
 }
-/* */
 
+#firstline{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+#secondline{
+    margin: 0px;
+    padding-top: 0px;
+}
+
+#secondline2{
+    text-indent: 20px;
+    margin: 0px;
+    padding-top: 0px;
+}
+/* */
 
 #Nxtbutton{
     align-items: center;

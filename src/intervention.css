@@ -15,6 +15,12 @@
 /*text in offcanva*/
 .offcanvatext{
     color: #575757;
+    background-color: azure;
+}
+
+.offcanvatext_body{
+    color: #575757;
+    background-color: antiquewhite;
 }
 /* */ 
 
@@ -42,6 +48,7 @@
     margin-top: 18px;   
 }
 
+
 .btn_size{
     width: 20px;
     height: 20px;
@@ -55,15 +62,25 @@
 .container {
     position: relative;
     width: 100%;
-    max-width: 400px;
-  }
+    max-width: 500px;
+}
   
 .container img {
     width: 100%;
-    height: auto;
-  }
-  
-.container .btn {
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container .ergopic {
+    width: 600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*button*/
+.container #button1 {
     position: absolute;
     top: 25%;
     left: 25%;
@@ -77,9 +94,10 @@
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
-  }
+
+}
  
-.container .button {
+.container #button2 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -93,8 +111,87 @@
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
-  }
-    
+}
+
+.container #button3 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.container #button4 {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.container #button5 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.container #button6 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.container #button7 {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
 .container .btn:hover {
     background-color: black;
-  }
+}
