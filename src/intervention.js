@@ -43,9 +43,6 @@ export default class Intervention extends Component{
                         <li class="nav-item">
                         <a class="nav-link active" href="/userprofile">Profile</a>
                         </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="/intervention">Intervention and Prevention</a>
-                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Prevention and Intervention
