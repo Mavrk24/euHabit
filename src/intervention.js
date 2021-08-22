@@ -6,6 +6,7 @@ import { useHistory } from 'react-router-dom';
 import './intervention.css';
 import ReactDOM from 'react-dom';
 import LgeuHabit from './LgeuHabit.png';
+import ergonomics from './ergonomics picture.png';
 import ergo from './ergo.jpg';
 
 export default class Intervention extends Component{
@@ -77,9 +78,9 @@ export default class Intervention extends Component{
 {/* Ergonomics setting */}
             <h1 id="profile2"> Ergonomics Setting </h1>  
             <div class="d-flex flex-row">
-                <p id="clickbutton1"> Click on the grey button </p>
+                <p id="clickbutton1"> Click on the button (</p>
                 <a class="btn btn-primary btn_size"> </a>
-                <p id="clickbutton2"> to see the information </p> 
+                <p id="clickbutton2">) to see the information </p> 
             </div>
             <p id="Nxtbutton2">
                 <Button class="btn" id="btn-login" type="submit" href="/stretching"> <b> stretching </b> </Button>
@@ -88,7 +89,7 @@ export default class Intervention extends Component{
 {/* ทำปุ่มคลิ๊กบนรูป แล้วใส่ข้อมูลใน offcanva แล้วก็เสร็จ */}
             <div class="container">
                 {/*ลองใช้ SVG ดู แทน img*/}
-                <img src={ergo} alt="ergonomics setting" / > 
+                <img src={ergonomics} alt="ergonomics setting" / > 
                 {/* แบบ svg ใช้ได้เหมือนกัน แต่ไม่รู้ว่าภาพจริงใช้อันไหนจะชัดกว่ากัน */}    
                 {/*  <svg class="ergopic" id="photo">
                         <image class="ergopic" href={ergo} / >

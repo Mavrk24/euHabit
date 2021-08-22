@@ -1,5 +1,6 @@
 .stretch_card{
-    width: 9rem;
+    min-width: 7rem;
+    max-width: 10rem;
     height: 10%;
     margin-left: 4px;
     margin-right: 1px;
@@ -12,11 +13,13 @@
     margin: 0px;
 }
 
-.stretch_info{
-}
-
 .card_text{
-    color: #575757;
+    background-color: #eee3c4;
+    color: #333333;
+    font-weight: 500;
+    font-size: 14px;
+    padding-top: 10%;
+    padding-bottom: 1%;
 }
 
 /*text in offcanva*/

@@ -5,6 +5,7 @@ import './stretching.css';
 import rosa11 from './rosa11.png';
 import ReactDOM from 'react-dom';
 import LgeuHabit from './LgeuHabit.png';
+/*video*/
 import stretching_1 from './stretching_1.mp4';
 import stretching_2 from './stretching_2.mp4';
 import stretching_3 from './stretching_3.mp4';
@@ -15,7 +16,17 @@ import stretching_7 from './stretching_7.mp4';
 import stretching_8 from './stretching_8.mp4';
 import stretching_9 from './stretching_9.mp4';
 import stretching_10 from './stretching_10.mp4';
-
+/*card picture*/
+import stretch1 from './stretch1.png';
+import stretch2 from './stretch2.png';
+import stretch3 from './stretch3.png';
+import stretch4 from './stretch4.png';
+import stretch5 from './stretch5.png';
+import stretch6 from './stretch6.png';
+import stretch7 from './stretch7.png';
+import stretch8 from './stretch8.png';
+import stretch9 from './stretch9.png';
+import stretch10 from './stretch10.png';
 
 
 
@@ -79,18 +90,18 @@ export default class Stretching extends Component {
 
 {/* Stretching Card */}
 
-    <div class="d-flex row mx-0 mb-4 g-4">
+    <div class="d-flex row row-cols-2 row-cols-md-4 row-cols-lg-5 mx-0 mb-4 g-4">
 
 {/*C1 ท่ามองซ้าย/ขวา stretching_1*/}    
         <div class="col">
             <div class="card stretch_card h-100">
             {/* เอาภาพใน card */}
-            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample1" aria-controls="offcanvasExample2">
-                <img class="card-img-top" src={LgeuHabit} />
+            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample1" aria-controls="offcanvasExample1">
+                <img class="card-img-top" src={stretch1} />
             </button>
             {/* */}
                 <div class="card-body card_text">
-                    <h5 class="card-title">ท่ามองซ้าย/ขวา</h5>
+                    <p class="card-title" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample1" aria-controls="offcanvasExample1">ท่ามองซ้าย/ขวา</p>
                 </div>
             </div>
         </div>
@@ -99,40 +110,27 @@ export default class Stretching extends Component {
         <div class="col">
             <div class="card stretch_card h-100">
             {/* เอาภาพใน card */}
-            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
-                <img class="card-img-top" src={LgeuHabit} />
-            </button>
+                <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
+                    <img class="card-img-top" src={stretch2} />
+                </button>
             {/* */}
                 <div class="card-body card_text">
-                    <h5 class="card-title">ท่าเงยหน้าขึ้น/ลง</h5>
+                    <p class="card-title" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2">ท่าเงยหน้าขึ้น/ลง</p>
                 </div>
             </div>
         </div>
 
-{/*C3 ท่ายืดเหยียดคอทีละด้าน stretching_8*/}    
-        <div class="col">
-            <div class="card stretch_card h-100">
-            {/* เอาภาพใน card */}
-            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample3" aria-controls="offcanvasExample2">
-                <img class="card-img-top" src={LgeuHabit} />
-            </button>
-            {/* */}
-                <div class="card-body card_text">
-                    <h5 class="card-title">ท่ายืดเหยียดคอทีละด้าน</h5>
-                </div>
-            </div>
-        </div>
 
 {/*C4 ท่าบริหารต้นคอ stretching_9*/}    
         <div class="col">
             <div class="card stretch_card h-100">
             {/* เอาภาพใน card */}
-            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample4" aria-controls="offcanvasExample2">
-                <img class="card-img-top" src={LgeuHabit} />
-            </button>
+                <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample4" aria-controls="offcanvasExample4">
+                    <img class="card-img-top" src={stretch9} />
+                </button>
             {/* */}
                 <div class="card-body card_text">
-                    <h5 class="card-title">ท่าบริหารต้นคอ</h5>
+                    <p class="card-title" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample4">ท่าบริหารต้นคอ</p>
                 </div>
             </div>
         </div>
@@ -141,12 +139,12 @@ export default class Stretching extends Component {
         <div class="col">
             <div class="card stretch_card h-100">
             {/* เอาภาพใน card */}
-            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample5" aria-controls="offcanvasExample2">
-                <img class="card-img-top" src={LgeuHabit} />
-            </button>
+                <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample5" aria-controls="offcanvasExample5">
+                    <img class="card-img-top" src={stretch4} />
+                </button>
             {/* */}
                 <div class="card-body card_text">
-                    <h5 class="card-title">ท่ายกไหล่กล้ามเนื้อ</h5>
+                    <p class="card-title" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample5">ท่ายกไหล่กล้ามเนื้อ</p>
                 </div>
             </div>
         </div>
@@ -155,12 +153,12 @@ export default class Stretching extends Component {
         <div class="col">
             <div class="card stretch_card h-100">
             {/* เอาภาพใน card */}
-            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample6" aria-controls="offcanvasExample2">
-                <img class="card-img-top" src={LgeuHabit} />
-            </button>
+                <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample6" aria-controls="offcanvasExample6">
+                    <img class="card-img-top" src={stretch6} />
+                </button>
             {/* */}
                 <div class="card-body card_text">
-                    <h5 class="card-title">ท่าหมุนไหล่</h5>
+                    <p class="card-title" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample6">ท่าหมุนไหล่</p>
                 </div>
             </div>
         </div>
@@ -169,12 +167,12 @@ export default class Stretching extends Component {
         <div class="col">
             <div class="card stretch_card h-100">
             {/* เอาภาพใน card */}
-            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample7" aria-controls="offcanvasExample2">
-                <img class="card-img-top" src={LgeuHabit} />
-            </button>
+                <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample7" aria-controls="offcanvasExample7">
+                    <img class="card-img-top" src={stretch5} />
+                </button>
             {/* */}
                 <div class="card-body card_text">
-                    <h5 class="card-title">ท่ายืดไหล่ดึงข้อศอก</h5>
+                    <p class="card-title" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample7">ท่ายืดไหล่ดึงข้อศอก</p>
                 </div>
             </div>
         </div>
@@ -183,12 +181,12 @@ export default class Stretching extends Component {
         <div class="col">
             <div class="card stretch_card h-100">
             {/* เอาภาพใน card */}
-            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample8" aria-controls="offcanvasExample2">
-                <img class="card-img-top" src={LgeuHabit} />
-            </button>
+                <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample8" aria-controls="offcanvasExample8">
+                    <img class="card-img-top" src={stretch7} />
+                </button>
             {/* */}
                 <div class="card-body card_text">
-                    <h5 class="card-title">ท่าเอามือไขว้หลัง</h5>
+                    <p class="card-title" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample8">ท่าเอามือไขว้หลัง</p>
                 </div>
             </div>
         </div>
@@ -197,29 +195,17 @@ export default class Stretching extends Component {
         <div class="col">
             <div class="card stretch_card h-100">
             {/* เอาภาพใน card */}
-            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample9" aria-controls="offcanvasExample2">
-                <img class="card-img-top" src={LgeuHabit} />
-            </button>
+                <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample9" aria-controls="offcanvasExample9">
+                    <img class="card-img-top" src={stretch10} />
+                </button>
             {/* */}
                 <div class="card-body card_text">
-                    <h5 class="card-title">ท่ายืดกล้ามเนื้อไหล่และต้นแขน</h5>
+                    <p class="card-title" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample9">ท่ายืดกล้ามเนื้อไหล่และต้นแขน</p>
                 </div>
             </div>
         </div>
 
-{/*C10 ท่่าบริหารกล้ามเนื้อไหล่ stretching_3*/}   
-        <div class="col">
-            <div class="card stretch_card h-100">
-            {/* เอาภาพใน card */}
-            <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample10" aria-controls="offcanvasExample2">
-                <img class="card-img-top" src={LgeuHabit} />
-            </button>
-            {/* */}
-                <div class="card-body card_text">
-                    <h5 class="card-title">ท่าบริหารกล้ามเนื้อไหล่</h5>
-                </div>
-            </div>
-        </div>
+
 
     </div>
 
@@ -587,52 +573,7 @@ export default class Stretching extends Component {
 
 
 
-            
-{/*Stretching Card*/} 
- {/*           
-
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                    <div class="card stretch_card">
-                        <img src={LgeuHabit} class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card stretch_card">
-                        <img src={LgeuHabit} class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card stretch_card">
-                        <img src={LgeuHabit} class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card stretch_card">
-                        <img src={LgeuHabit} class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-
-*/}
+        
 
             </div>
         )
