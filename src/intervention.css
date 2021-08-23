@@ -15,8 +15,14 @@
 /*text in offcanva*/
 .offcanvatext{
     color: #575757;
+    background-color: azure;
 }
 
+.offcanvatext_body{
+    color: #575757;
+    background-color: antiquewhite;
+}
+/* */ 
 
 #clickbutton1{
     margin-left: 15px;
@@ -42,11 +48,14 @@
     margin-top: 18px;   
 }
 
+
 .btn_size{
     width: 20px;
     height: 20px;
+    padding: 5px;
     font-size: 5px;
-    background-color: #555;
+    background-color: rgb(248, 195, 96);
+    border-radius: 100%;
     border: none;
 }
 
@@ -55,46 +64,157 @@
 .container {
     position: relative;
     width: 100%;
-    max-width: 400px;
-  }
+    max-width: 500px;
+}
   
 .container img {
     width: 100%;
-    height: auto;
-  }
-  
-.container .btn {
+    height: 300%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container .ergopic {
+    width: 600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*button*/
+/*Canva1 ศีรษะ*/  
+.container #button1 {
     position: absolute;
-    top: 25%;
-    left: 25%;
+    top: 22%;
+    left: 79%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: #555;
+    background-color: rgb(248, 195, 96);
     color: white;
     font-size: 16px;
-    padding: 12px 24px;
+    padding: 7px 7px;
+    width: 20px;
+    height: 20px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 100%;
     text-align: center;
-  }
- 
-.container .button {
+
+}
+
+/*Canva2 แขน ไหล่ ศอก*/
+.container #button2 {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 80%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: #555;
+    background-color: rgb(248, 195, 96);
     color: white;
     font-size: 16px;
-    padding: 12px 24px;
+    padding: 7px 7px;
+    width: 20px;
+    height: 20px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 100%;
     text-align: center;
-  }
-    
+}
+
+/*Canva3 ขา เท้า*/
+.container #button3 {
+    position: absolute;
+    top: 90%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(248, 195, 96);
+    color: white;
+    font-size: 16px;
+    padding: 7px 7px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 100%;
+    text-align: center;
+}
+
+/*Canva4 ข้อมือ มือ*/
+.container #button4 {
+    position: absolute;
+    top: 52%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(248, 195, 96);
+    color: white;
+    font-size: 16px;
+    padding: 7px 7px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 100%;
+    text-align: center;
+}
+
+/*Canva5 หลัง*/
+.container #button5 {
+    position: absolute;
+    top: 55%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(248, 195, 96);
+    color: white;
+    font-size: 16px;
+    padding: 7px 7px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 100%;
+    text-align: center;
+}
+
+/*Canva6 ตา*/
+.container #button6 {
+    position: absolute;
+    top: 29%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(248, 195, 96);
+    color: white;
+    font-size: 16px;
+    padding: 7px 7px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 100%;
+    text-align: center;
+}
+
+/*Canva7 เวลา*/
+.container #button7 {
+    position: absolute;
+    top: 20%;
+    left: 17%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(248, 195, 96);
+    color: white;
+    font-size: 16px;
+    padding: 7px 7px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 100%;
+    text-align: center;
+}
 .container .btn:hover {
-    background-color: black;
-  }
+    background-color: rgb(189, 151, 151);
+}
