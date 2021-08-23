@@ -32,6 +32,11 @@ export default function Login({setToken,history}) {
     });
     setToken(token);
   }
+
+  const handleClick = (e) => { 
+    e.preventDefault();
+    setToken({"token":"register"});
+  }
   return(
     <div className="login d-flex"> 
       <div class="container-fluid b-0">
