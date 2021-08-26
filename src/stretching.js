@@ -31,6 +31,22 @@ import stretch10 from './stretch10.png';
 
 
 export default class Stretching extends Component {
+
+    handleClick = e => {
+        
+    localStorage.clear();
+    e.preventDefault();
+    this.props.history.push('/');
+    window.location.reload();
+  
+    }
+
+    handlePause = () => {
+        document.getElementById("myPlayer").pause();
+        document.getElementById("myPlayer").currentTime = 0;
+    }
+
+
     render() {
         return(
             <div>
@@ -213,10 +229,12 @@ export default class Stretching extends Component {
 {/* Inside each Offcanva*/}
 
 {/* C1 ท่ามองซ้ายขวา stretching_1*/}  
-        <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample1" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample1" 
+        aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title offcanvatext" id="offcanvasExample1">ท่ามองซ้ายขวา</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" 
+                onClick={this.handlePause}></button>
             </div>
             <div class="offcanvas-body offcanvatext_body">
             {/*Stretching Video without download button*/}
@@ -230,6 +248,7 @@ export default class Stretching extends Component {
 
                     // Your props
                     url={stretching_1}
+                    id="myPlayer"
                     className="react-player"
                     controls
                     width="100%"
