@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import {validatePassword} from '../src/validate';
 import image from './image.png';
-
+import LgeuHabit_black from './LgeuHabit-black.png';
 
 async function loginUser(credentials) {
   return fetch('http://localhost:8080/register', {
@@ -52,6 +52,12 @@ function matchPassword() {
     }
 }
 
+function backtoLogin()  {
+  if(!password || !password2 || !email || !username){
+    match = 1;
+  }
+}
+
  // Validation จาก Bootstrap
 (function () {
   'use strict'
@@ -85,7 +91,8 @@ function matchPassword() {
         <div class="login-block">
         <div class="row">
             <div class="col">
-              <h1 class="title"><strong>euHabit.</strong></h1>
+              <img class="LgeuHabit" width ="400" src={LgeuHabit_black} />
+            {/*  <h1 class="title"><strong>euHabit.</strong></h1> */}
             </div>
             <div class="col paragraph-body username d-flex">
 
@@ -121,8 +128,13 @@ function matchPassword() {
                 </div>
               </ul>
               <ul>
-              <div class="mt-4">
-              <button class="btn btn-login" onClick={matchPassword} type="submit"><b> Confirm </b></button>
+              <div class="mt-4 row">
+                <div class="col">
+                  <button class="btn btn-login" onClick={matchPassword} type="submit"><b> Confirm </b></button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-login" onClick={backtoLogin} type="submit"><b> Back </b></button>
+                </div>
               </div>
               </ul>
             </form>

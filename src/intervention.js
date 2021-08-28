@@ -7,7 +7,7 @@ import './intervention.css';
 import ReactDOM from 'react-dom';
 import LgeuHabit from './LgeuHabit.png';
 import ergonomics from './ergonomics picture.png';
-import ergo from './ergo.jpg';
+
 
 export default class Intervention extends Component{
 
@@ -27,8 +27,8 @@ export default class Intervention extends Component{
             <nav class="navbar navbar-light c">
             <div class="container-fluid">
                 <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
-                    <svg width="30" height="24" class="d-inline-block align-text-top">
-                        <image href={LgeuHabit} height="30" width="24"/ >
+                    <svg width="30" height="30" class="d-inline-block align-text-top Logo">
+                        <image href={LgeuHabit} width="30" height="30"/ >
                     </svg>
                     euHabit.
                 </a>

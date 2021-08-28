@@ -59,26 +59,26 @@ body {
 
 .username{
     text-align: left;
-    margin-top: 70px;
+    /*margin-top: 70px;*/
+    margin-top: 0px;
     margin-right: 50px;
-    margin-left: 50px;
-    padding-left: 0px;
+    margin-left: 10px;
+    padding-left: 2px;
     padding-top: 20px;
 }
 
 
 /* Hello, MNT Meditech*/
 .logo{
-
-text-align: right;
-font-family: Quicksand, Verdana, sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 13px;
-line-height: 13px;
-color: #F9F2DF;
-position: relative;
-right: 22px;
+    text-align: right;
+    font-family: Quicksand, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 13px;
+    color: #F9F2DF;
+    position: relative;
+    right: 22px;
 
 }
 
@@ -91,6 +91,28 @@ right: 22px;
     background: linear-gradient(to right, #fdd360, #faeecc );
 }
 
+.LgeuHabit{
+    max-width: 100%;
+    min-width: 15rem;
+    height: auto;
+    margin-bottom: 0px;
+    margin-top: 50px;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+@media (max-width: 600px) {
+    .LgeuHabit{
+        max-width: 15rem;
+        justify-content: center;
+        height: auto;
+        margin-bottom: 0px;
+        margin-top: 50px;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    
+}
 #submit_btn{
     text-align: center;
 }

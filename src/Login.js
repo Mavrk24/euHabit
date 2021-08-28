@@ -6,6 +6,7 @@ import image from './image.png';
 import {useHistory} from 'react-router-dom';
 import {withRouter} from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
+import LgeuHabit_black from './LgeuHabit-black.png';
 
 
 
@@ -43,13 +44,14 @@ async function loginUser(credentials) {
       <div class="container-fluid b-0">
         <div class="row">
           <div class="col">
-          <p class="logo w-100 mt-4 mx-2">MNT Meditech</p>
+            <p class="logo w-100 mt-4 mx-2">MNT Meditech</p>
           </div>
         </div>
         <div class="login-block">
         <div class="row">
             <div class="col">
-              <h1 class="title"><strong>euHabit.</strong></h1>
+              <img class="LgeuHabit" width ="400" src={LgeuHabit_black} />
+            {/*  <h1 class="title"><strong>euHabit.</strong></h1> */}
             </div>
             <div class="col paragraph-body username d-flex">
               <form onSubmit={handleSubmit} id="myform">
@@ -75,8 +77,6 @@ async function loginUser(credentials) {
                   New to euHabit? Register now. </a>
                 </ul>
               </form>
-              
-
             </div>
         </div>
         </div>

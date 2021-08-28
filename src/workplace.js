@@ -5,6 +5,9 @@ import Image from 'react-bootstrap/Image';
 import rosa11 from './rosa11.png';
 import rosa12 from './rosa12.png';
 import rosa13 from './rosa13.png';
+import headup from './head up.jpg';
+import headstraight from './head straight.jpg';
+import headdown from './head down.jpg';
 import './workplace.css';
 
 export default class Workplace extends Component{
@@ -96,7 +99,7 @@ export default class Workplace extends Component{
                                     label="ท่านต้องเงยหน้าเพื่อมองหน้าจอ"
                                 />
                                 <svg width="75" height="75" id="photo">
-                                    <image href={rosa13} height="75" width="75"/ >
+                                    <image href={headup} height="75" width="75"/ >
                                 </svg>
                             </div>
                             <div className="mb-3">
@@ -107,7 +110,7 @@ export default class Workplace extends Component{
                                     label="ท่านสามารถมองหน้าจอด้วยสายตาในแนวระดับหรือเหลือบลงเล็กน้อย"
                                 />
                                 <svg width="75" height="75" id="photo">
-                                    <image href={rosa11} height="75" width="75"/ >
+                                    <image href={headstraight} height="75" width="75"/ >
                                 </svg>
                             </div>
                             <div className="mb-3">
@@ -118,7 +121,7 @@ export default class Workplace extends Component{
                                     label="ท่านต้องก้มลงเพื่อมองหน้าจอ"
                                 />
                                 <svg width="75" height="75" id="photo">
-                                    <image href={rosa12} height="75" width="75"/ >
+                                    <image href={headdown} height="75" width="75"/ >
                                 </svg>
                             </div>
                     </Form.Group>

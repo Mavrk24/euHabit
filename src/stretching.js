@@ -41,11 +41,55 @@ export default class Stretching extends Component {
   
     }
 
-    handlePause = () => {
-        document.getElementById("myPlayer").pause();
-        document.getElementById("myPlayer").currentTime = 0;
+    handlePause1 = () => {
+        this.refs.vidRef1.pause();
+        this.refs.vidRef1.currentTime = 0;
     }
 
+    handlePause2 = () => {
+        this.refs.vidRef2.pause();
+        this.refs.vidRef2.currentTime = 0;
+    }
+
+    handlePause3 = () => {
+        this.refs.vidRef3.pause();
+        this.refs.vidRef3.currentTime = 0;
+    }
+
+    handlePause4 = () => {
+        this.refs.vidRef4.pause();
+        this.refs.vidRef4.currentTime = 0;
+    }
+
+    handlePause5 = () => {
+        this.refs.vidRef5.pause();
+        this.refs.vidRef5.currentTime = 0;
+    }
+
+    handlePause6 = () => {
+        this.refs.vidRef6.pause();
+        this.refs.vidRef6.currentTime = 0;
+    }
+
+    handlePause7 = () => {
+        this.refs.vidRef7.pause();
+        this.refs.vidRef7.currentTime = 0;
+    }
+
+    handlePause8 = () => {
+        this.refs.vidRef8.pause();
+        this.refs.vidRef8.currentTime = 0;
+    }
+
+    handlePause9 = () => {
+        this.refs.vidRef9.pause();
+        this.refs.vidRef9.currentTime = 0;
+    }
+
+    handlePause10 = () => {
+        this.refs.vidRef10.pause();
+        this.refs.vidRef10.currentTime = 0;
+    }
 
     render() {
         return(
@@ -54,8 +98,8 @@ export default class Stretching extends Component {
         <nav class="navbar navbar-light c">
             <div class="container-fluid">
                 <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
-                    <svg width="30" height="24" class="d-inline-block align-text-top">
-                        <image href={LgeuHabit} height="30" width="24"/ >
+                    <svg width="30" height="30" class="d-inline-block align-text-top Logo">
+                        <image href={LgeuHabit} width="30" height="30"/ >
                     </svg>
                     euHabit
                 </a>
@@ -102,7 +146,7 @@ export default class Stretching extends Component {
 
 {/* Stetching */}
 
-            <p id="profile3">Stretching</p>
+<p id="profile3">Stretching</p>
 
 {/* Stretching Card */}
 
@@ -117,7 +161,7 @@ export default class Stretching extends Component {
             </button>
             {/* */}
                 <div class="card-body card_text">
-                    <p class="card-title" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample1" aria-controls="offcanvasExample1">ท่ามองซ้าย/ขวา</p>
+                    <p class="card-title" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample1" aria-controls="offcanvasExample1" >ท่ามองซ้าย/ขวา</p>
                 </div>
             </div>
         </div>
@@ -126,7 +170,7 @@ export default class Stretching extends Component {
         <div class="col">
             <div class="card stretch_card h-100">
             {/* เอาภาพใน card */}
-                <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
+                <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2" >
                     <img class="card-img-top" src={stretch2} />
                 </button>
             {/* */}
@@ -136,12 +180,11 @@ export default class Stretching extends Component {
             </div>
         </div>
 
-
 {/*C4 ท่าบริหารต้นคอ stretching_9*/}    
         <div class="col">
             <div class="card stretch_card h-100">
             {/* เอาภาพใน card */}
-                <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample4" aria-controls="offcanvasExample4">
+                <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample4" aria-controls="offcanvasExample4" >
                     <img class="card-img-top" src={stretch9} />
                 </button>
             {/* */}
@@ -222,7 +265,6 @@ export default class Stretching extends Component {
         </div>
 
 
-
     </div>
 
 
@@ -234,12 +276,14 @@ export default class Stretching extends Component {
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title offcanvatext" id="offcanvasExample1">ท่ามองซ้ายขวา</h5>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" 
-                onClick={this.handlePause}></button>
+                onClick={this.handlePause1} ></button>
             </div>
             <div class="offcanvas-body offcanvatext_body">
             {/*Stretching Video without download button*/}
                 <div class="embed-responsive embed-responsive-16by9">
-                <ReactPlayer
+                    <video controls controlsList="nodownload" onContextMenu={e => e.preventDefault()}
+                    ref="vidRef1" type="video/mp4" src={stretching_1} ></video>
+                {/*<ReactPlayer
                     // Disable download button
                     config={{ file: { attributes: { controlsList: 'nodownload' } } }}
 
@@ -247,13 +291,12 @@ export default class Stretching extends Component {
                     onContextMenu={e => e.preventDefault()}
 
                     // Your props
-                    url={stretching_1}
-                    id="myPlayer"
+                    url={stretching_4}
                     className="react-player"
                     controls
                     width="100%"
                     height="100%"
-                />
+                />*/} 
                 </div>
                 <div class="stretch_info">
                     <p id="firstline"></p>
@@ -272,25 +315,14 @@ export default class Stretching extends Component {
         <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title offcanvatext" id="offcanvasExample2">ท่าเงยหน้าขึ้น/ลง</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
+                onClick={this.handlePause2}></button>
             </div>
             <div class="offcanvas-body offcanvatext_body">
             {/*Stretching Video without download button*/}
                 <div class="embed-responsive embed-responsive-16by9">
-                <ReactPlayer
-                    // Disable download button
-                    config={{ file: { attributes: { controlsList: 'nodownload' } } }}
-
-                    // Disable right click
-                    onContextMenu={e => e.preventDefault()}
-
-                    // Your props
-                    url={stretching_2}
-                    className="react-player"
-                    controls
-                    width="100%"
-                    height="100%"
-                />
+                    <video controls controlsList="nodownload" onContextMenu={e => e.preventDefault()}
+                    ref="vidRef2" type="video/mp4" src={stretching_2} ></video>
                 </div>
                 <div class="stretch_info">
                     <p id="firstline"></p>
@@ -304,30 +336,18 @@ export default class Stretching extends Component {
                 </div>
             </div>
         </div>
-
 {/* C3 ท่ายืดเหยียดคอทีละด้าน stretching_8*/}  
         <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample3" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title offcanvatext" id="offcanvasExample3">ท่ายืดเหยียดคอทีละด้าน</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
+                onClick={this.handlePause3}></button>
             </div>
             <div class="offcanvas-body offcanvatext_body">
             {/*Stretching Video without download button*/}
                 <div class="embed-responsive embed-responsive-16by9">
-                <ReactPlayer
-                    // Disable download button
-                    config={{ file: { attributes: { controlsList: 'nodownload' } } }}
-
-                    // Disable right click
-                    onContextMenu={e => e.preventDefault()}
-
-                    // Your props
-                    url={stretching_8}
-                    className="react-player"
-                    controls
-                    width="100%"
-                    height="100%"
-                />
+                    <video controls controlsList="nodownload" onContextMenu={e => e.preventDefault()}
+                    ref="vidRef3" type="video/mp4" src={stretching_8} ></video>
                 </div>
                     <p id="firstline"></p>
                     <p id="secondline"> 
@@ -345,25 +365,14 @@ export default class Stretching extends Component {
         <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample4" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title offcanvatext" id="offcanvasExample4">ท่าบริหารต้นคอ</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
+                onClick={this.handlePause4}></button>
             </div>
             <div class="offcanvas-body offcanvatext_body">
             {/*Stretching Video without download button*/}
                 <div class="embed-responsive embed-responsive-16by9">
-                <ReactPlayer
-                    // Disable download button
-                    config={{ file: { attributes: { controlsList: 'nodownload' } } }}
-
-                    // Disable right click
-                    onContextMenu={e => e.preventDefault()}
-
-                    // Your props
-                    url={stretching_9}
-                    className="react-player"
-                    controls
-                    width="100%"
-                    height="100%"
-                />
+                    <video controls controlsList="nodownload" onContextMenu={e => e.preventDefault()}
+                    ref="vidRef4" type="video/mp4" src={stretching_9} ></video>
                 </div>
                 <div class="stretch_info">
                     <p id="firstline"></p>
@@ -381,25 +390,14 @@ export default class Stretching extends Component {
         <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample5" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title offcanvatext" id="offcanvasExample5">ท่ายกไหล่กล้ามเนื้อ</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
+                onClick={this.handlePause5}></button>
             </div>
             <div class="offcanvas-body offcanvatext_body">
             {/*Stretching Video without download button*/}
                 <div class="embed-responsive embed-responsive-16by9">
-                <ReactPlayer
-                    // Disable download button
-                    config={{ file: { attributes: { controlsList: 'nodownload' } } }}
-
-                    // Disable right click
-                    onContextMenu={e => e.preventDefault()}
-
-                    // Your props
-                    url={stretching_4}
-                    className="react-player"
-                    controls
-                    width="100%"
-                    height="100%"
-                />
+                    <video controls controlsList="nodownload" onContextMenu={e => e.preventDefault()}
+                    ref="vidRef5" type="video/mp4" src={stretching_4} ></video>
                 </div>
                 <div class="stretch_info">
                     <p id="firstline"></p>
@@ -415,25 +413,14 @@ export default class Stretching extends Component {
         <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample6" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title offcanvatext" id="offcanvasExample6">ท่าหมุนไหล่</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
+                onClick={this.handlePause6}></button>
             </div>
             <div class="offcanvas-body offcanvatext_body">
             {/*Stretching Video without download button*/}
                 <div class="embed-responsive embed-responsive-16by9">
-                <ReactPlayer
-                    // Disable download button
-                    config={{ file: { attributes: { controlsList: 'nodownload' } } }}
-
-                    // Disable right click
-                    onContextMenu={e => e.preventDefault()}
-
-                    // Your props
-                    url={stretching_6}
-                    className="react-player"
-                    controls
-                    width="100%"
-                    height="100%"
-                />
+                <video controls controlsList="nodownload" onContextMenu={e => e.preventDefault()}
+                    ref="vidRef6" type="video/mp4" src={stretching_6} ></video>
                 </div>
                 <div class="stretch_info">
                     <p id="firstline"></p>
@@ -453,25 +440,14 @@ export default class Stretching extends Component {
         <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample7" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title offcanvatext" id="offcanvasExample7">ท่ายืดไหล่ดึงข้อศอก</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
+                onClick={this.handlePause7}></button>
             </div>
             <div class="offcanvas-body offcanvatext_body">
             {/*Stretching Video without download button*/}
                 <div class="embed-responsive embed-responsive-16by9">
-                <ReactPlayer
-                    // Disable download button
-                    config={{ file: { attributes: { controlsList: 'nodownload' } } }}
-
-                    // Disable right click
-                    onContextMenu={e => e.preventDefault()}
-
-                    // Your props
-                    url={stretching_5}
-                    className="react-player"
-                    controls
-                    width="100%"
-                    height="100%"
-                />
+                <video controls controlsList="nodownload" onContextMenu={e => e.preventDefault()}
+                    ref="vidRef7" type="video/mp4" src={stretching_5} ></video>
                 </div>
                 <div class="stretch_info">
                     <p id="firstline"></p>
@@ -488,25 +464,14 @@ export default class Stretching extends Component {
         <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample8" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title offcanvatext" id="offcanvasExample8">ท่าเอามือไขว้หลัง</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
+                onClick={this.handlePause8}></button>
             </div>
             <div class="offcanvas-body offcanvatext_body">
             {/*Stretching Video without download button*/}
                 <div class="embed-responsive embed-responsive-16by9">
-                <ReactPlayer
-                    // Disable download button
-                    config={{ file: { attributes: { controlsList: 'nodownload' } } }}
-
-                    // Disable right click
-                    onContextMenu={e => e.preventDefault()}
-
-                    // Your props
-                    url={stretching_7}
-                    className="react-player"
-                    controls
-                    width="100%"
-                    height="100%"
-                />
+                <video controls controlsList="nodownload" onContextMenu={e => e.preventDefault()}
+                    ref="vidRef8" type="video/mp4" src={stretching_7} ></video>
                 </div>
                 <div class="stretch_info">
                     <p id="firstline"></p>
@@ -522,25 +487,14 @@ export default class Stretching extends Component {
         <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample9" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title offcanvatext" id="offcanvasExample9">ท่ายืดกล้ามเนื้อไหล่และต้นแขน</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
+                onClick={this.handlePause9}></button>
             </div>
             <div class="offcanvas-body offcanvatext_body">
             {/*Stretching Video without download button*/}
                 <div class="embed-responsive embed-responsive-16by9">
-                <ReactPlayer
-                    // Disable download button
-                    config={{ file: { attributes: { controlsList: 'nodownload' } } }}
-
-                    // Disable right click
-                    onContextMenu={e => e.preventDefault()}
-
-                    // Your props
-                    url={stretching_10}
-                    className="react-player"
-                    controls
-                    width="100%"
-                    height="100%"
-                />
+                <video controls controlsList="nodownload" onContextMenu={e => e.preventDefault()}
+                    ref="vidRef9" type="video/mp4" src={stretching_10} ></video>
                 </div>
                 <div class="stretch_info">
                     <p id="firstline"></p>
@@ -556,25 +510,14 @@ export default class Stretching extends Component {
         <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample10" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title offcanvatext" id="offcanvasExample10">ท่าบริหารกล้ามเนื้อไหล่</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
+                onClick={this.handlePause10}></button>
             </div>
             <div class="offcanvas-body offcanvatext_body">
             {/*Stretching Video without download button*/}
                 <div class="embed-responsive embed-responsive-16by9">
-                <ReactPlayer
-                    // Disable download button
-                    config={{ file: { attributes: { controlsList: 'nodownload' } } }}
-
-                    // Disable right click
-                    onContextMenu={e => e.preventDefault()}
-
-                    // Your props
-                    url={stretching_3}
-                    className="react-player"
-                    controls
-                    width="100%"
-                    height="100%"
-                />
+                <video controls controlsList="nodownload" onContextMenu={e => e.preventDefault()}
+                    ref="vidRef10" type="video/mp4" src={stretching_3} ></video>
                 </div>
                 <div class="stretch_info">
                     <p id="firstline"></p>
@@ -592,10 +535,10 @@ export default class Stretching extends Component {
 
 
 
-        
+
 
             </div>
         )
     }
 
-}
+} 

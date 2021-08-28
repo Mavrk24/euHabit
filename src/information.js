@@ -26,8 +26,8 @@ export default class Information extends Component{
                 <nav class="navbar navbar-light c">
                 <div class="container-fluid">
                     <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
-                        <svg width="30" height="24" class="d-inline-block align-text-top">
-                            <image href={LgeuHabit} width="30" height="24"/ >
+                        <svg width="30" height="30" class="d-inline-block align-text-top Logo">
+                            <image href={LgeuHabit} width="30" height="30"/ >
                         </svg>
                         euHabit.
                     </a>
