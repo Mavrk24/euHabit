@@ -76,7 +76,7 @@ export default class Profile extends Component{
 
                 <div class="d-flex flex-column content">
                     <div>
-                    <img src={rosa11} id="imgprofile" alt="rosa" />
+                    <img src={rosa11} id="imgprofile" alt="Profile picture" />
                     </div>
                     <div class="d-flex flex-column">
                         <div class="d-flex justify-content-center">

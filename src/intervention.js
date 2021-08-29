@@ -74,10 +74,10 @@ export default class Intervention extends Component{
             </nav>
 {/* Ergonomics setting */}
             <h1 id="profile2"> Ergonomics Setting </h1>  
-            <div class="d-flex flex-row">
-                <p id="clickbutton1"> Click on the button (</p>
-                <a class="btn btn-primary btn_size"> </a>
-                <p id="clickbutton2">) to see the information </p> 
+            <div class="row d-flex">
+                <div class="flex-column">
+                <p id="clickbutton1"> Click on the button ( <a class="btn btn-primary btn_size"> </a> ) to see the information</p>
+                </div>
             </div>
             <p id="Nxtbutton2">
                 <Button class="btn" id="btn-login" type="submit" href="/stretching"> <b> stretching </b> </Button>

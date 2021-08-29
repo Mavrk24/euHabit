@@ -98,9 +98,8 @@ export default class Workplace extends Component{
                                     name="q21"
                                     label="ท่านต้องเงยหน้าเพื่อมองหน้าจอ"
                                 />
-                                <svg width="75" height="75" id="photo">
-                                    <image href={headup} height="75" width="75"/ >
-                                </svg>
+                            {/* image */}
+                                <img src={headup} id="photo"  alt="head up" / >
                             </div>
                             <div className="mb-3">
         {/* = 2 point */}       <Form.Check 
@@ -109,9 +108,7 @@ export default class Workplace extends Component{
                                     name="q21"
                                     label="ท่านสามารถมองหน้าจอด้วยสายตาในแนวระดับหรือเหลือบลงเล็กน้อย"
                                 />
-                                <svg width="75" height="75" id="photo">
-                                    <image href={headstraight} height="75" width="75"/ >
-                                </svg>
+                                <img src={headstraight} id="photo"  alt="head straight" / >
                             </div>
                             <div className="mb-3">
         {/* = 3 point */}       <Form.Check
@@ -120,9 +117,12 @@ export default class Workplace extends Component{
                                     name="q21"
                                     label="ท่านต้องก้มลงเพื่อมองหน้าจอ"
                                 />
-                                <svg width="75" height="75" id="photo">
-                                    <image href={headdown} height="75" width="75"/ >
+                                <img src={headdown} id="photo"  alt="head down" / >
+                             {/*       
+                                <svg width="150" height="150" id="photo">
+                                    <image href={headdown} id="photo" height="150" width="150" alt="head straight" / >
                                 </svg>
+                             */}
                             </div>
                     </Form.Group>
 
