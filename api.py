@@ -4,6 +4,7 @@ from bayes  import BayesClf, PredictBC
 app = Flask(__name__)
 CORS(app)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+screen_route = str (hash("screening"))
 
 @app.route("/username", methods=['POST'])
 def login():
@@ -17,3 +18,12 @@ def api():
     k = session.get("username") 
     #m = 'eu' + k['username']
     return {'username': PredictBC(int(k['username']),int(k['symptoms']))[-1]}
+
+@app.route("/subentry" , methods=['POST'])
+def sub():
+    entry = request.get_json()
+    return entry 
+
+@app.route("/request")
+def getreq():
+    return {'r_key': [0,0,0,0,0] }

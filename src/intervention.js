@@ -7,7 +7,7 @@ import './intervention.css';
 import ReactDOM from 'react-dom';
 import LgeuHabit from './LgeuHabit.png';
 import ergonomics from './ergonomics picture.png';
-import ergo from './ergo.jpg';
+
 
 export default class Intervention extends Component{
 
@@ -27,8 +27,8 @@ export default class Intervention extends Component{
             <nav class="navbar navbar-light c">
             <div class="container-fluid">
                 <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
-                    <svg width="30" height="24" class="d-inline-block align-text-top">
-                        <image href={LgeuHabit} height="30" width="24"/ >
+                    <svg width="30" height="30" class="d-inline-block align-text-top Logo">
+                        <image href={LgeuHabit} width="30" height="30"/ >
                     </svg>
                     euHabit.
                 </a>
@@ -74,10 +74,10 @@ export default class Intervention extends Component{
             </nav>
 {/* Ergonomics setting */}
             <h1 id="profile2"> Ergonomics Setting </h1>  
-            <div class="d-flex flex-row">
-                <p id="clickbutton1"> Click on the button (</p>
-                <a class="btn btn-primary btn_size"> </a>
-                <p id="clickbutton2">) to see the information </p> 
+            <div class="row d-flex">
+                <div class="flex-column">
+                <p id="clickbutton1"> Click on the button ( <a class="btn btn-primary btn_size"> </a> ) to see the information</p>
+                </div>
             </div>
             <p id="Nxtbutton2">
                 <Button class="btn" id="btn-login" type="submit" href="/stretching"> <b> stretching </b> </Button>

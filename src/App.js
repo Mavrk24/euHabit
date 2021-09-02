@@ -22,6 +22,7 @@ import Information from './information';
 import Stretching from './stretching';
 
 
+
 function Application() {
   const [show, setShow] = useState(false);
   const [checked, setChecked] = useState(false);

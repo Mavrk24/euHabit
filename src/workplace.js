@@ -5,6 +5,9 @@ import Image from 'react-bootstrap/Image';
 import rosa11 from './rosa11.png';
 import rosa12 from './rosa12.png';
 import rosa13 from './rosa13.png';
+import headup from './head up.jpg';
+import headstraight from './head straight.jpg';
+import headdown from './head down.jpg';
 import './workplace.css';
 
 export default class Workplace extends Component{
@@ -95,9 +98,8 @@ export default class Workplace extends Component{
                                     name="q21"
                                     label="ท่านต้องเงยหน้าเพื่อมองหน้าจอ"
                                 />
-                                <svg width="75" height="75" id="photo">
-                                    <image href={rosa13} height="75" width="75"/ >
-                                </svg>
+                            {/* image */}
+                                <img src={headup} id="photo"  alt="head up" / >
                             </div>
                             <div className="mb-3">
         {/* = 2 point */}       <Form.Check 
@@ -106,9 +108,7 @@ export default class Workplace extends Component{
                                     name="q21"
                                     label="ท่านสามารถมองหน้าจอด้วยสายตาในแนวระดับหรือเหลือบลงเล็กน้อย"
                                 />
-                                <svg width="75" height="75" id="photo">
-                                    <image href={rosa11} height="75" width="75"/ >
-                                </svg>
+                                <img src={headstraight} id="photo"  alt="head straight" / >
                             </div>
                             <div className="mb-3">
         {/* = 3 point */}       <Form.Check
@@ -117,9 +117,12 @@ export default class Workplace extends Component{
                                     name="q21"
                                     label="ท่านต้องก้มลงเพื่อมองหน้าจอ"
                                 />
-                                <svg width="75" height="75" id="photo">
-                                    <image href={rosa12} height="75" width="75"/ >
+                                <img src={headdown} id="photo"  alt="head down" / >
+                             {/*       
+                                <svg width="150" height="150" id="photo">
+                                    <image href={headdown} id="photo" height="150" width="150" alt="head straight" / >
                                 </svg>
+                             */}
                             </div>
                     </Form.Group>
 

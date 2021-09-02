@@ -26,8 +26,8 @@ export default class Mainpage extends Component{
                 <nav class="navbar navbar-light c">
                 <div class="container-fluid">
                     <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
-                        <svg width="30" height="24" class="d-inline-block align-text-top">
-                            <image href={LgeuHabit} width="30" height="24"/ >
+                        <svg width="30" height="30" class="d-inline-block align-text-top Logo">
+                            <image href={LgeuHabit} width="30" height="30"/ >
                         </svg>
                         euHabit.
                     </a>
@@ -42,10 +42,6 @@ export default class Mainpage extends Component{
                             <li class="nav-item">
                             <a class="nav-link" href="/userprofile">Profile</a>
                             </li>
-{/*                         <li class="nav-item">
-                            <a class="nav-link" href="/intervention">Intervention and Prevention</a>
-                            </li>
-*/}
                             <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Prevention and Intervention
