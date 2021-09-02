@@ -150,9 +150,6 @@ router.post('/demographic',verifyToken,(req,res)=>{
       //Forbidden
       res.sendErr(403);
     } else {
-
-      console.log(JSON.stringify(req.body))
-
       async function update_demographic(){
         const username = authData.username
         
@@ -170,8 +167,6 @@ router.post('/demographic',verifyToken,(req,res)=>{
             faculty: req.body.faculty,
             year: req.body.year,
           });
-          console.log(user.demographic)
-          console.log(user)
           user.save();
         });
 
@@ -191,6 +186,35 @@ router.get('/logout', (req, res) =>{
   res.redirect('/');
 });
 
+// @route GET api/users/get_Profile
+// @desc return user using Header 
+// @access login-required
+router.get('/get_Profile',verifyToken,(req,res)=>{
+  jwt.verify(req.token,keys.secretOrKey ,(err,authData)=>{
+    if(err){
+
+      //Forbidden
+      res.sendErr(403);
+    } else {
+      async function show_profile(){
+        const username = authData.username
+        
+        // Find user by username
+        const user_profile = await User.findOne({ username }).then(user => {
+
+          // Check if user exists
+          if (!user) {
+            return res.status(404).json({ usernotfound: "Username not found" });
+          } 
+          return user;
+        });
+        //console.log('done')
+        return res.send(user_profile)
+      }
+      show_profile();
+    }
+  });
+});
 
 //Verify Token
 function verifyToken(req,res,next){
@@ -199,11 +223,10 @@ function verifyToken(req,res,next){
 // แก้ token Authorization
     //check if bearer is undefined
     if(typeof bearerHeader !== 'undefined'){
-
         //split the space at the bearer
-        const bearer = bearerHeader.split(' ');
+        const bearerToken = bearerHeader.split(' ')[1];
         //Get token from string
-        const bearerToken = bearer[1];
+        //const bearerToken = bearer[1];
         //set the token
         req.token = bearerToken;
 
@@ -212,7 +235,7 @@ function verifyToken(req,res,next){
 
     }else{
         //Fobidden
-        res.send('403');
+        res.send("Error 403");
     }
 }
 
