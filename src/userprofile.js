@@ -124,7 +124,7 @@ export default class Profile extends Component{
                         <div class="alignment">
                             <div class="d-flex">
                                 <p id="heading"> Age: </p>
-                                <p> 16 </p>    {/* ข้อมูลที่จะดึง */}v
+                                <p> 16 </p>    {/* ข้อมูลที่จะดึง */}
                             </div>      
                             <div class="d-flex">
                                 <p id="heading"> Biological sex: </p>
