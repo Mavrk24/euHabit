@@ -39,7 +39,7 @@ export default class Workplace extends Component{
                 console.log(
                 this.state.arr +
                 ' duration1: '+ document.getElementById('duration').value
-                +'duration2: ' + document.getElementById('duration2').value);
+                +' duration2: ' + document.getElementById('duration2').value);
               }
         }
     render() {
@@ -201,7 +201,7 @@ export default class Workplace extends Component{
 
 {/*Q2 ข้อ 3*/}       <Form.Label id="question" class="mb-3 px-4"> 3. ขณะมองหน้าจอ ศีรษะของท่านตรงและอยู่กลางไหล่ทั้งสองข้าง (ไม่ต้องเอียงคอ)  </Form.Label> <br/>
                         <div>
-                            <input name="q23" variant="success" id="0" type="button" class="btn yesbutton" value="ใช่"  onClick={this.send} / > {' '}
+                            <input name="q23" variant="success" id={"0"} type="button" class="btn yesbutton" value="ใช่"  onClick={this.send} / > {' '}
                             <input name="q23" variant="danger" id={1} type="button" class="btn nobutton" value="ไม่ใช่"  onClick={this.send} / > 
                         </div>
 
@@ -222,8 +222,8 @@ export default class Workplace extends Component{
                 
 {/*Q3 ข้อ 3*/}       <Form.Label id="question" class="mb-3 mt-3 px-4"> 3. ข้อศอกทำมุมฉากหรือ 90 องศากัน </Form.Label> <br/>
                         <div>
-                            <input name="q33" variant="success" id="0" type="button" class="btn yesbutton" value="ใช่" / > {' '}
-                            <input name="q33" variant="danger" id={1} type="button" class="btn nobutton" value="ไม่ใช่" / > 
+                            <input name="q33" variant="success" id="0" type="button" class="btn yesbutton" value="ใช่" onClick={this.send} / > {' '}
+                            <input name="q33" variant="danger" id={1} type="button" class="btn nobutton" value="ไม่ใช่"  onClick={this.send}/ > 
                         </div>
 
                     <p className="mb-2 mt-2 pt-2" id="qtitle"> ระยะเวลาในการใช้งานอุปกรณ์อิเล็กทรอนิกส์ </p>   
@@ -243,7 +243,7 @@ export default class Workplace extends Component{
                     </Form.Group>
 
                 </Form>
-                <Button class="btn" name="btn" id="0" type="submit" onClick={this.send}>Finish อรุ่มเจ๊าะ</Button>
+                <Button class="btn" name="btn" id="0" type="submit" onClick={this.send}>Finish</Button>
                 <p id="Nxtbutton2">
                     <Button class="btn" id="btn-login" type="submit" href="/mainpage"><b>mainpage</b></Button>
                 </p>
