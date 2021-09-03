@@ -1,0 +1,66 @@
+import React from 'react'
+
+const quote =  [
+      "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover."
+      ,"Just don't give up trying to do what you really want to do. Where there is love and inspiration, I do not think you can go wrong."
+      , "If there is no struggle, there is no progress."
+      ,"Do the best you can until you know better. Then when you know better, do better."
+      , "Be not afraid of growing slowly; be afraid only of standing still."
+];
+const author = ["Mark Twain","Ella Fitzgerald","Frederick Douglass","Maya Angelou","Chinese Proverb"]
+const i_msg = []
+for (let i = 0; i < author.length; i++) {
+      i_msg[i] = [quote[i],author[i]]
+}; 
+const nd = [""
+      ,"- Your monitor distance is too far, try bringing your seat closer or bringing the monitor closer"
+      //
+      ,"- หน้าจอคอมพิวเตอร์ของคุณอยู่ไกลเกินไป ลองทำให้หน้าจอมาอยู่ใกล้ขึ้นอีกนิดสิ"
+      ,"- Your monitor distance is too close, try to move it further"
+      //
+      ,"- หน้าจอคอมพิวเตอร์ของคุณอยู้ใกล้เกินไป ลองขยับจอออกไปอีกนิดนะ"];
+
+// ใต้ // คือversion ภาษาไทย
+const nr = ["","- หน้าจอคอมพิวเตอร์ของคุณทำให้คุณต้องเอี้ยวตัวมากเกินไป ลองย้ายมันให้อยู่ในท่าที่สบายนะ"];
+
+//
+const ns = ["","- แถวหน้าจอคอมพิวเตอร์ของคุณมีพื้นที่น้อยไปนะ ลองจัดระเบียบมันดูสิ"];
+//
+
+//
+const nb = ["","- หน้าจอของคุณสว่างไปนะ ลองลดมันหน่อย"];
+
+//
+const nt = ["","- คุณใช้เวลาอยู่กับหน้าจอมากเกินไป, ลองพักจากจอแล้วไปยืดเส้นยืดสายดูนะ"]
+const n_msg = [nd,nr,ns,nb,nt];
+const md = [""
+      ,"- Your mouse distance is too far, try bringing your seat closer or bringing the mouse closer"
+      //
+      ,"- เม้าส์ของคุณอยู่ห่างจากตัวของคุณมากเกินไป ขยับเม้าส์ของคุณเข้ามาใกล้หน่อยนะ"
+      ,"- Your mouse distance is too close, try to move it further"
+      ,"- "];
+
+const mr = ["","- The mouse is causing you to rotate too much, try moving it where you will be more comfortable"];
+const mg = ["","- Your mouse grip is causing you strain, try relaxing to move more freely"];
+const mt = ["","- Too much time spent clicking, try relaxing your palm once in a while to avoid strain"];
+const mp = ["","- Try using a mouse pad; if possible"]
+const m_msg = [md,mr,mg,mt,mp];
+const kd = [""
+      ,"- Your keyboard distance is too high, try raising your seat higher or bringing the keyboard lower"
+      ,"- Your keyboard distance is too low, try to move it higher"];
+const kr = ["","- The keyboard is causing you to rotate too much, try moving it where you will be more comfortable"];
+const kf = ["","- Your keyboard is fixed; try using the one that is adjustable "];
+const ks = ["","- There isn't enough space for the keyboard, try clearing things up"]
+const kt = ["","- Too much time spent typing, try relaxing your wrist once in a while to avoid strain"];
+const k_msg = [kd,kr,kf,ks,kt];
+const c_msg = ["Change your sitting or working position every twenty or thirty minutes Stretch the muscles in your arms, hands, wrists and legs every hour. Make sure your wrists are in a straight position; do not bend or twist them too often. Give your eyes a rest from the computer every ten minutes."];
+
+
+
+
+const value = [i_msg,n_msg,m_msg,k_msg,c_msg]
+const Messages = () => {
+      return value
+}
+
+export default Messages();

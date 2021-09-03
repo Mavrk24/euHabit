@@ -22,7 +22,8 @@ export default class Mainpage extends Component{
 
     render() {
         return(
-            <div>        
+            <div>
+{/*NavBar*/}        
                 <nav class="navbar navbar-light c">
                 <div class="container-fluid">
                     <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
@@ -52,13 +53,7 @@ export default class Mainpage extends Component{
                             </ul>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="/entry">Demographic Data</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="/workplace">Workplace form</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="/information">Information</a>
+                            <a class="nav-link" href="/Information">Information</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="/" id="signout" type="submit" onClick={this.handleClick}>Sign Out</a>

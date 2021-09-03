@@ -113,10 +113,6 @@ export default class Entry extends Component{
                 </Form.Text>
               </Form.Group>
 
-              <p id="Nxtbutton2">
-                    <Button class="btn" id="btn-login" type="submit" href="/mainpage"><b>mainpage</b></Button>
-              </p>
-
          <p id="Nxtbutton">
           <button class="btn" id="btn-login" type="submit" onClick={this.contactSubmit}><b>Next</b></button>
           </p>

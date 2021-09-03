@@ -201,7 +201,7 @@ export default class Workplace extends Component{
                 </Form>
 
                 <p id="Nxtbutton2">
-                    <Button class="btn" id="btn-login" type="submit" href="/mainpage"><b>mainpage</b></Button>
+                    <Button class="btn" id="btn-login" type="submit" href="/result"><b>Submit</b></Button>
                 </p>
             </div>
         )

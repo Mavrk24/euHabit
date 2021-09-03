@@ -53,13 +53,7 @@ export default class Intervention extends Component{
                             </ul>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="/entry">Demographic Data</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="/workplace">Workplace form</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="/information">Information</a>
+                        <a class="nav-link" href="/information">Information</a>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="/" id="signout" type="submit" onClick={this.handleClick}>Sign Out</a>
@@ -93,19 +87,19 @@ export default class Intervention extends Component{
                     </svg>
                 */}
                   {/*ไม่ใช่แล้ว  <button class="btn">Button</button> */}
-{/*button 1*/}  <a class="btn-primary btn_size" id="button1" data-bs-toggle="offcanvas" href="#offcanvasExample1" role="button" aria-controls="offcanvasExample"> 1 </a>
+{/*button 1*/}  <a class="btn-primary btn_size" id="button1" data-bs-toggle="offcanvas" href="#offcanvasExample1" role="button" aria-controls="offcanvasExample">  </a>
 
-{/*button 2*/}  <a class="btn-primary btn_size" id="button2" data-bs-toggle="offcanvas" href="#offcanvasExample2" role="button" aria-controls="offcanvasExample"> 2 </a>
+{/*button 2*/}  <a class="btn-primary btn_size" id="button2" data-bs-toggle="offcanvas" href="#offcanvasExample2" role="button" aria-controls="offcanvasExample">  </a>
 
-{/*button 3*/}  <a class="btn-primary btn_size" id="button3" data-bs-toggle="offcanvas" href="#offcanvasExample3" role="button" aria-controls="offcanvasExample"> 3 </a>            
+{/*button 3*/}  <a class="btn-primary btn_size" id="button3" data-bs-toggle="offcanvas" href="#offcanvasExample3" role="button" aria-controls="offcanvasExample">  </a>            
             
-{/*button 4*/}  <a class="btn-primary btn_size" id="button4" data-bs-toggle="offcanvas" href="#offcanvasExample4" role="button" aria-controls="offcanvasExample"> 4 </a>            
+{/*button 4*/}  <a class="btn-primary btn_size" id="button4" data-bs-toggle="offcanvas" href="#offcanvasExample4" role="button" aria-controls="offcanvasExample">  </a>            
 
-{/*button 5*/}  <a class="btn-primary btn_size" id="button5" data-bs-toggle="offcanvas" href="#offcanvasExample5" role="button" aria-controls="offcanvasExample"> 5 </a>            
+{/*button 5*/}  <a class="btn-primary btn_size" id="button5" data-bs-toggle="offcanvas" href="#offcanvasExample5" role="button" aria-controls="offcanvasExample">  </a>            
 
-{/*button 6*/}  <a class="btn-primary btn_size" id="button6" data-bs-toggle="offcanvas" href="#offcanvasExample6" role="button" aria-controls="offcanvasExample"> 6 </a>            
+{/*button 6*/}  <a class="btn-primary btn_size" id="button6" data-bs-toggle="offcanvas" href="#offcanvasExample6" role="button" aria-controls="offcanvasExample">  </a>            
 
-{/*button 7*/}  <a class="btn-primary btn_size" id="button7" data-bs-toggle="offcanvas" href="#offcanvasExample7" role="button" aria-controls="offcanvasExample"> 7 </a>            
+{/*button 7*/}  <a class="btn-primary btn_size" id="button7" data-bs-toggle="offcanvas" href="#offcanvasExample7" role="button" aria-controls="offcanvasExample">  </a>            
 
             </div>
 

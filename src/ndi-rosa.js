@@ -583,7 +583,7 @@ export default class NDI extends Component{
                 </Form>
             
                 <p id="Nxtbutton1">
-                    <Button class="btn" id="btn-login" type="submit" href="/rosa"><b>Next</b></Button>
+                    <Button class="btn" id="btn-login" type="submit" href="/workplace"><b>Next</b></Button>
                 </p>
 
             </div>

@@ -52,12 +52,6 @@ export default class Information extends Component{
                             </ul>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="/entry">Demographic Data</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="/workplace">Workplace form</a>
-                            </li>
-                            <li class="nav-item">
                             <a class="nav-link" href="/information">Information</a>
                             </li>
                             <li class="nav-item">
@@ -87,18 +81,18 @@ export default class Information extends Component{
                             <image href={LgThaihealth} width="100" height="100"/ >
                         </svg>
                     </div>
-                    <div id="img_center">
+                    <div id="img_center1">
                         <svg width="150" height="150">
                             <image href={Lg20yrs} width="150" height="150"/ >
                         </svg>
                     </div>
-                
+{/*                
                     <div id="img_center">
                         <svg width="100" height="100">
                             <image href={LgFamMed} width="100" height="100"/ >
                         </svg>
                     </div>
-                
+*/}                
 {/*                        
                         <img src={LgIFMSA} id="imgprofile1" alt="IFMSA" />
                            
