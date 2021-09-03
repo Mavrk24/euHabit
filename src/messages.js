@@ -62,5 +62,3 @@ const value = [i_msg,n_msg,m_msg,k_msg,c_msg]
 const Messages = () => {
       return value
 }
-
-export default Messages();

@@ -30,5 +30,5 @@ def sub():
 
 @app.route("/request")
 def getreq():
-    key = [2,[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],0] #sample_data
+    key = [1,[1,0,1,0,1],[1,0,1,0,1],[1,0,1,0,1],0] #sample_data
     return {'r_key': key }
