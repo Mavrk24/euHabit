@@ -124,13 +124,7 @@ export default class Stretching extends Component {
                             </ul>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="/entry">Demographic Data</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="/workplace">Workplace form</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="/information">Information</a>
+                        <a class="nav-link" href="/Information">Information</a>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="/" id="signout" type="submit" onClick={this.handleClick}>Sign Out</a>

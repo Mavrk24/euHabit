@@ -14,15 +14,32 @@ for (let i = 0; i < author.length; i++) {
 }; 
 const nd = [""
       ,"- Your monitor distance is too far, try bringing your seat closer or bringing the monitor closer"
-      ,"- Your monitor distance is too close, try to move it further"];
-const nr = ["","- The monitor is causing you to rotate too much, try moving it where you will be more comfortable"];
-const ns = ["","- There isn't enough space for the monitor, try clearing things up"];
-const nb = ["","- Too much brightness in the monitor, try adjusting it down"];
-const nt = ["","- Too much time spent over monitor, try spending more time doing other activities"];
+      //
+      ,"- หน้าจอคอมพิวเตอร์ของคุณอยู่ไกลเกินไป ลองทำให้หน้าจอมาอยู่ใกล้ขึ้นอีกนิดสิ"
+      ,"- Your monitor distance is too close, try to move it further"
+      //
+      ,"- หน้าจอคอมพิวเตอร์ของคุณอยู้ใกล้เกินไป ลองขยับจอออกไปอีกนิดนะ"];
+
+// ใต้ // คือversion ภาษาไทย
+const nr = ["","- หน้าจอคอมพิวเตอร์ของคุณทำให้คุณต้องเอี้ยวตัวมากเกินไป ลองย้ายมันให้อยู่ในท่าที่สบายนะ"];
+
+//
+const ns = ["","- แถวหน้าจอคอมพิวเตอร์ของคุณมีพื้นที่น้อยไปนะ ลองจัดระเบียบมันดูสิ"];
+//
+
+//
+const nb = ["","- หน้าจอของคุณสว่างไปนะ ลองลดมันหน่อย"];
+
+//
+const nt = ["","- คุณใช้เวลาอยู่กับหน้าจอมากเกินไป, ลองพักจากจอแล้วไปยืดเส้นยืดสายดูนะ"]
 const n_msg = [nd,nr,ns,nb,nt];
 const md = [""
       ,"- Your mouse distance is too far, try bringing your seat closer or bringing the mouse closer"
-      ,"- Your mouse distance is too close, try to move it further"];
+      //
+      ,"- เม้าส์ของคุณอยู่ห่างจากตัวของคุณมากเกินไป ขยับเม้าส์ของคุณเข้ามาใกล้หน่อยนะ"
+      ,"- Your mouse distance is too close, try to move it further"
+      ,"- "];
+
 const mr = ["","- The mouse is causing you to rotate too much, try moving it where you will be more comfortable"];
 const mg = ["","- Your mouse grip is causing you strain, try relaxing to move more freely"];
 const mt = ["","- Too much time spent clicking, try relaxing your palm once in a while to avoid strain"];
@@ -45,5 +62,3 @@ const value = [i_msg,n_msg,m_msg,k_msg,c_msg]
 const Messages = () => {
       return value
 }
-
-export default Messages();
