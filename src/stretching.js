@@ -28,18 +28,11 @@ import stretch8 from './stretch8.png';
 import stretch9 from './stretch9.png';
 import stretch10 from './stretch10.png';
 
-
+import Navbar from './navbar';
 
 export default class Stretching extends Component {
 
-    handleClick = e => {
-        
-    localStorage.clear();
-    e.preventDefault();
-    this.props.history.push('/');
-    window.location.reload();
-  
-    }
+
 
     handlePause1 = () => {
         this.refs.vidRef1.pause();
@@ -94,7 +87,8 @@ export default class Stretching extends Component {
     render() {
         return(
             <div>
-{/* NavbBar */}
+                <Navbar />
+{/* NavbBar 
         <nav class="navbar navbar-light c">
             <div class="container-fluid">
                 <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
@@ -137,6 +131,7 @@ export default class Stretching extends Component {
                                        
             </div>
         </nav>
+
 
 {/* Stetching */}
 

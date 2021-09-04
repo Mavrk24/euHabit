@@ -7,23 +7,17 @@ import './intervention.css';
 import ReactDOM from 'react-dom';
 import LgeuHabit from './LgeuHabit.png';
 import ergonomics from './ergonomics picture.png';
+import Navbar from './navbar';
 
 
 export default class Intervention extends Component{
 
-    handleClick = e => {
-        
-        localStorage.clear();
-        e.preventDefault();
-        this.props.history.push('/');
-        window.location.reload();
-      
-    }
-    
+
     render() {
         return(
-        <div>   
-{/* NavBar */}    
+        <div> 
+            <Navbar />  
+{/* NavBar 
             <nav class="navbar navbar-light c">
             <div class="container-fluid">
                 <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
@@ -66,6 +60,7 @@ export default class Intervention extends Component{
                                        
             </div>
             </nav>
+*/}
 {/* Ergonomics setting */}
             <h1 id="profile2"> Ergonomics Setting </h1>  
             <div class="row d-flex">
