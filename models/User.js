@@ -6,11 +6,13 @@ const UserSchema = new Schema(
   {
     username: {
       type: String,
-      required: true
+      required: true,
+      default: "Username"
     },
     email: {
       type: String,
-      required: true
+      required: true,
+      default: "E-mail"
     },
     password: {
       type: String,
@@ -35,8 +37,13 @@ const UserSchema = new Schema(
     age: {
       type: String,
       require: false
-    }
+    },
+    workplace: {
+      type: String,
+      require: false
+    },
   },
+
   {
     // กำหนด collection ของ MongoDB หรือจะไม่กำหนดก็ได้
     collection: "user_data"

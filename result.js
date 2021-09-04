@@ -40,7 +40,7 @@ export default class Result extends Component{
 
     
     render() {
-        return(
+        return( 
         <div onLoad={this.request.bind(this)}>   
 {/* NavBar */}    
             <nav class="navbar navbar-light c">

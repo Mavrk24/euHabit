@@ -11,6 +11,19 @@ import headdown from './head down.jpg';
 import './workplace.css';
 
 export default class Workplace extends Component{
+
+    async updateDemographic(credentials) {
+        return fetch('http://localhost:8080/api/users/workplace', {
+          method: 'POST',
+          headers: {
+            token: localStorage.getItem("token"),
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(credentials)
+        })
+          .then(data => data.json())
+    }
+
     render() {
         return(
             <div> 

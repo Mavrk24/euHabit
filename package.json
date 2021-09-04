@@ -3,10 +3,6 @@
   "version": "0.1.0",
   "main": "server",
   "private": true,
-  "scripts": {
-    "start": "react-scripts start && yarn start",
-    "server": "nodemon server.js"
-  },
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@testing-library/jest-dom": "^5.14.1",
@@ -42,6 +38,20 @@
     "validator": "^13.6.0",
     "web-vitals": "^2.1.0",
     "yarn": "^1.22.11"
+  },
+  "scripts": {
+    "start-program": "node server.js && react-scripts start && yarn start-api",
+    "start": "react-scripts start",
+    "start-api": "cd src && set FLASK_APP=api.py && python -m flask run --no-debugger",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [

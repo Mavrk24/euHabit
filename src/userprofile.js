@@ -112,11 +112,11 @@ export default class Profile extends Component{
                     <div class="d-flex flex-column">
                         <div class="d-flex justify-content-center">
                             <p id="heading"> Username: </p>
-                            <p>hi</p> {/* ข้อมูลที่จะดึง */}
+                            <p>{this.state.user_data.username}</p> {/* ข้อมูลที่จะดึง */}
                         </div>
                         <div class="d-flex justify-content-center">
                             <p id="heading"> E-mail: </p>
-                            <p> abs@hotmail.com </p>   {/* ข้อมูลที่จะดึง */} 
+                            <p> {this.state.user_data.email} </p>   {/* ข้อมูลที่จะดึง */} 
                         </div>
                         <div class="d-flex justify-content-center">
                             <p><b> Demographic data </b> </p>   
@@ -124,23 +124,23 @@ export default class Profile extends Component{
                         <div class="alignment">
                             <div class="d-flex">
                                 <p id="heading"> Age: </p>
-                                <p> 16 </p>    {/* ข้อมูลที่จะดึง */}
+                                <p> {this.state.demographic.age} </p>    {/* ข้อมูลที่จะดึง */}
                             </div>      
                             <div class="d-flex">
                                 <p id="heading"> Biological sex: </p>
-                                <p> Male </p>    {/* ข้อมูลที่จะดึง */}
+                                <p> {this.state.demographic.sex} </p>    {/* ข้อมูลที่จะดึง */}
                             </div>  
                             <div class="d-flex">
                                 <p id="heading"> Occupation: </p>
-                                <p> Student </p>    {/* ข้อมูลที่จะดึง */}
+                                <p> {this.state.demographic.job} </p>    {/* ข้อมูลที่จะดึง */}
                             </div> 
                             <div class="d-flex">
                                 <p id="heading"> Faculty: </p>
-                                <p> Medicine </p>    {/* ข้อมูลที่จะดึง */}
+                                <p> {this.state.demographic.faculty} </p>    {/* ข้อมูลที่จะดึง */}
                             </div> 
                             <div class="d-flex">
                                 <p id="heading"> Study year: </p>
-                                <p> 2 </p>    {/* ข้อมูลที่จะดึง */}
+                                <p> {this.state.demographic.year} </p>    {/* ข้อมูลที่จะดึง */}
                             </div>       
                         </div>
                         <div class="d-flex justify-content-center">
