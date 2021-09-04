@@ -8,35 +8,38 @@ import {withRouter} from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import LgeuHabit_black from './LgeuHabit-black.png';
 
+
+
+
 async function loginUser(credentials) {
-  return fetch('http://localhost:8080/api/users/login', {
+  return fetch('http://localhost:8080/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(credentials) 
+    body: JSON.stringify(credentials)
   })
     .then(data => data.json())
-}
-
-export default function Login({setToken,history}) {
+ }
+  export default function Login({setToken,history}) {
   const [email, setEmail] = useState();
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
+  {/* Log in Submit */}
   const handleSubmit = async e => {
     e.preventDefault();
     const token = await loginUser({
-      email,
       username,
       password
     });
     setToken(token);
   }
-
+  
   const handleClick = (e) => { 
     e.preventDefault();
     setToken({"token":"register"});
   }
+
   return(
     <div className="login d-flex"> 
       <div class="container-fluid b-0">
@@ -82,8 +85,9 @@ export default function Login({setToken,history}) {
     </div>
   )
 }
-
 Login.propTypes = {
   setToken: PropTypes.func.isRequired
 
 }
+
+

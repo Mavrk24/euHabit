@@ -6,23 +6,18 @@ import Lg20yrs from './Lg20yrs.png';
 import LgeuHabit from './LgeuHabit.png';
 import LgFamMed from './LgFamMed.png';
 import './information.css';
+import Navbar from './navbar';
 
 export default class Information extends Component{
 
-    handleClick = e => {
-        
-        localStorage.clear();
-        e.preventDefault();
-        this.props.history.push('/');
-        window.location.reload();
-      
-    }
+
 
     render() {
         return(
             <div>       
+                <Navbar />
 
-{/* NavBar */} 
+{/* NavBar 
                 <nav class="navbar navbar-light c">
                 <div class="container-fluid">
                     <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
@@ -65,6 +60,7 @@ export default class Information extends Component{
                                            
                 </div>
                 </nav>
+*/}
 
 {/* Information */}
 

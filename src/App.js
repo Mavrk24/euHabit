@@ -20,6 +20,7 @@ import Intervention from './intervention';
 import Workplace from './workplace';
 import Information from './information';
 import Stretching from './stretching';
+import Navbar from './navbar';
 
 
 
@@ -168,6 +169,7 @@ function App() {
     <Route exact path='/workplace' component={Workplace} />
     <Route exact path='/information' component={Information} />
     <Route exact path='/stretching' component={Stretching} />
+    <Route exact path='/navbar' component={Navbar} />
   
     </Switch>
 

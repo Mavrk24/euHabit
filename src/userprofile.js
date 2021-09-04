@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import './userprofile.css';
 import rosa11 from './rosa11.png';
 import LgeuHabit from './LgeuHabit.png';
-
+import Navbar from './navbar';
 
 export default class Profile extends Component{
     
@@ -48,8 +48,9 @@ export default class Profile extends Component{
     
     render() {
         return(
-            <div>   
- {/* Nav */}    
+            <div>  
+                <Navbar /> 
+ {/* Nav 
                 <nav class="navbar navbar-light c">
                 <div class="container-fluid">
                     <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
@@ -89,16 +90,18 @@ export default class Profile extends Component{
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/" id="signout" type="submit" onClick={this.handleClick}>Sign Out</a>
-                        </li>
-                    </ul>
-                <span class="navbar-text">
-                    Signed in as: <a href="#login">{this.state.user_data.username}</a> {/* ข้อมูลที่จะดึง done*/}
-                </span>
-            </div> 
-                                   
-        </div>
-        </nav>
-        {/* Profile */}
+                            </li>
+                        </ul>
+                        <span class="navbar-text">
+                            Signed in as: <a href="#login">Mark Otto</a>
+                        </span>
+                    </div> 
+                                           
+                </div>
+                </nav>
+ */}
+ {/* Profile */}
+                
                 <h1 id="profile">  Profile </h1> 
 
                 <div class="d-flex flex-column content">

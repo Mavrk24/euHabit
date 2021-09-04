@@ -11,7 +11,6 @@ import headdown from './head down.jpg';
 import './workplace.css';
 
 
-
 export default class Workplace extends Component{
     constructor(props) {
         super(props);

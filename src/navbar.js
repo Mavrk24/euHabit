@@ -1,24 +1,17 @@
-import { Form, Button, Container, Col, Row, Modal, FormCheck, FormLabel, FormSelect } from 'react-bootstrap';
 import React, {useState} from 'react';
 import { Component } from 'react';
-import PropTypes from 'prop-types';
-import { useHistory } from 'react-router-dom';
-import './mainpage.css';
-import rosa11 from './rosa11.png';
-import ReactDOM from 'react-dom';
 import LgeuHabit from './LgeuHabit.png';
-import Navbar from './navbar.js';
+import './mainpage.css';
 import { withRouter } from 'react-router-dom';
 
-export default class Mainpage extends Component{
+class Navbar extends Component{
 
 
-
-        handleClick = e => {
+    handleClick = e => {
         
         localStorage.clear();
         e.preventDefault();
-        this.props.history.push('/navbar');
+        this.props.history.push('/');
         window.location.reload();
       
     }
@@ -26,8 +19,7 @@ export default class Mainpage extends Component{
     render() {
         return(
             <div>
-                <Navbar />
-
+{/*NavBar*/}        
                 <nav class="navbar navbar-light color">
                 <div class="container-fluid">
                     <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
@@ -74,13 +66,9 @@ export default class Mainpage extends Component{
                 </div>
                 </nav>
 
-                <p id="Nxtbutton2">
-                <Button class="btn" id="btn-login" type="submit" href="/navbar"> <b> navbar </b> </Button>
-                </p>
- 
-                <p> Home </p> 
-
             </div>
         )
     }
 }
+
+export default withRouter(Navbar); 
