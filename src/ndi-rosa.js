@@ -9,7 +9,8 @@ export default class NDI extends Component{
     super(props);
     this.state = {
       score: 0,
-      memory: ''
+      memory: '',
+      prev: 0,
     };
   }
     calculate=(ele)=>{
@@ -17,11 +18,17 @@ export default class NDI extends Component{
       this.setState(previousState => ({
         score: parseInt(parseInt(previousState.score) + parseInt(ele.target.id))
         }));
+        this.setState({
+            prev: parseInt(ele.target.id)
+            });
       }
       else{
+        this.setState(previousState => ({
+          score: parseInt(parseInt(previousState.score) - (this.state.prev) + parseInt(ele.target.id))
+          }));
         this.setState({
-          score: ele.target.id
-          });
+            prev: parseInt(ele.target.id)
+            });
       }
       this.setState({
         memory: ele.target.name
@@ -668,7 +675,7 @@ export default class NDI extends Component{
                 </Form>
                 <Button class="btn" id={0} type="submit" name="btn" onClick={this.calculate}>Finalize</Button>
                 <p id="Nxtbutton1">
-                    <Button class="btn" id="btn-login" type="submit" href="/workplace"><b>Next</b></Button>
+                    <Button class="btn" id="btn-login" type="submit" href="/rosa"><b>Next</b></Button>
                 </p>
 
             </div>
