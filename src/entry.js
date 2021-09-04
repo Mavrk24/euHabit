@@ -13,6 +13,18 @@ import {
 
 
 export default class Entry extends Component{
+  async updateDemographic(credentials) {
+    return fetch('http://localhost:8080/api/users/demographic', {
+      method: 'POST',
+      headers: {
+        token: localStorage.getItem("token"),
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(credentials)
+    })
+      .then(data => data.json())
+  }
+  
   sendform = (e) => {
     const data = {
       age: document.getElementById("age").value,
@@ -40,18 +52,6 @@ export default class Entry extends Component{
 
   handleChange = e => {
     this.form.validateFields(e.target);
-  }
-
-  async updateDemographic(credentials) {
-    return fetch('http://localhost:8080/api/users/demographic', {
-      method: 'POST',
-      headers: {
-        token: localStorage.getItem("token"),
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(credentials)
-    })
-      .then(data => data.json())
   }
 
   contactSubmit = e => {

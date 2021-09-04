@@ -10,6 +10,8 @@ import headstraight from './head straight.jpg';
 import headdown from './head down.jpg';
 import './workplace.css';
 
+
+
 export default class Workplace extends Component{
     constructor(props) {
         super(props);
@@ -17,8 +19,20 @@ export default class Workplace extends Component{
         arr: [],
         memory: '',
         }
-      }
-      send=(ele)=>{
+    }
+
+    async updateWorkplace(credentials) {
+        return fetch('http://localhost:8080/api/users/workplace', {
+          method: 'POST',
+          headers: {
+            token: localStorage.getItem("token"),
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(credentials)
+        })
+    }
+
+    send=(ele)=>{
         if (ele.target.name!=this.state.memory){
             this.setState({
                 arr: this.state.arr.concat(parseInt(ele.target.id))
@@ -36,11 +50,19 @@ export default class Workplace extends Component{
               memory: ele.target.name
               });
         if (ele.target.name == 'btn'){
-                console.log(
-                this.state.arr +
-                ' duration1: '+ document.getElementById('duration').value
-                +' duration2: ' + document.getElementById('duration2').value);
-              }
+            var data = this.state.arr
+            +' duration1: '+ document.getElementById('duration').value
+            +' duration2: ' + document.getElementById('duration2').value;
+
+            console.log(data);
+
+            // fetch here
+            this.updateWorkplace({
+                data_arr: Object.assign({}, this.state.arr),
+                duration1: document.getElementById('duration').value,
+                duration2: document.getElementById('duration2').value
+            })
+        }
         }
     render() {
         return(

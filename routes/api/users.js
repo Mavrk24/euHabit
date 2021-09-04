@@ -17,17 +17,29 @@ router.post("/register", (req, res) => {
 
   // Form validation
   const { errors, isValid } = validateRegisterInput(req.body);
+  // console.log(req.body)
 
   // Check validation
   if (!isValid) {
     return res.status(400).json(errors);
   }
-
+  
   User.findOne({ email: req.body.email }).then(user => {
       if (user) {
-        return res.status(400).json({ email: "Email already exists" });
+        return res.status(400).json({ 
+          isError: true,
+          type: "Email already exists.\nPlease try again." 
+        });
       } else {
-          const newUser = new User({
+
+        User.findOne({ username: req.body.username }).then(user =>{
+          if (user) {
+            return res.status(400).json({ 
+              isError: true,
+              type: "Username already exists.\nPlease try again." 
+            });
+          } else {
+             const newUser = new User({
             username: req.body.username,
             email: req.body.email,
             password: req.body.password
@@ -42,6 +54,13 @@ router.post("/register", (req, res) => {
               .then(user => res.json(user))
               .catch(err => console.log(err));
           });
+          console.log('successfully register')
+          return res.json({ 
+            isError: false,
+            type: 'Account created successfully' 
+          })
+          }
+        })
         }
   });
 });
@@ -97,6 +116,7 @@ router.post("/login", (req, res) => {
               });
             }
         );
+        console.log('Successfully login')
       } else {
           return res
             .status(400)
@@ -181,7 +201,7 @@ router.post('/demographic',verifyToken,(req,res)=>{
           });
           user.save();
         });
-
+        console.log('update demographic successfully')
         return res.send("Updated")
       }
       update_demographic();
@@ -210,17 +230,13 @@ router.post('/workplace',verifyToken,(req,res)=>{
           if (!user) {
             return res.status(404).json({ usernotfound: "Username not found" });
           }
-          user.workplace = JSON.stringify({
-            Q1: req.q1,
-            Q2: req.q2,
-            Q3: req.q3,
-            Q4: req.q4
-          });
+          user.workplace = req.body;
           user.save();
         });
 
         return res.send("Updated")
       }
+      console.log('Workplace data updated!')
       update_workplace();
     }
   });

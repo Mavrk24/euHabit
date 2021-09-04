@@ -7,15 +7,23 @@ import {validatePassword} from '../src/validate';
 import image from './image.png';
 import LgeuHabit_black from './LgeuHabit-black.png';
 
-async function loginUser(credentials) {
-  return fetch('http://localhost:8080/register', {
+async function registerUser(credentials) {
+  return fetch('http://localhost:8080/api/users/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(credentials)
   })
-    .then(data => data.json())
+  .then(data => data.json())
+  .then((res) => {
+    alert(res.type)
+    if (!res.isError) {
+      localStorage.removeItem('token');
+      window.location.reload();
+    }
+  })
+  
 }
 
 /* เสนอวิธีแก้ว่า ถ้าเรา set ให้ password กับ password2 ในตอนแรกมีค่าต่างๆกัน 
@@ -31,8 +39,8 @@ export default function Register({setToken}) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (match == 1){
-    localStorage.removeItem('token');
-    window.location.reload();
+      localStorage.removeItem('token');
+      window.location.reload();
     }
   }
   var match = 2;
@@ -47,8 +55,15 @@ function matchPassword() {
         match = 0;
   }
   else {  
-        alert("Account created successfully");
-        match = 1;  
+    registerUser({
+      username,
+      email,
+      password,
+      password2
+    });
+    //แก้เอา alert & if match =0 ไปใส่ใน registerUser แล้ว แยกด้วยว่า error แบบไหน
+    //alert("Account created successfully");
+    //match = 0;
     }
 }
 

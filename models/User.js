@@ -22,25 +22,24 @@ const UserSchema = new Schema(
       type: Date,
       default: Date.now
     },
-    screening: {
-      type: String,
-      require: false
-    },
     result: {
       type: Array,
-      require: false
+      require: true
     },
     demographic: {
-      type: String,
-      require: false
+      type: JSON,
+      require: true,
+      default: 0
     },
-    age: {
-      type: String,
-      require: false
+    ndi: {
+      type: JSON,
+      require: true,
+      default: 0
     },
     workplace: {
-      type: String,
-      require: false
+      type: JSON,
+      require: true,
+      default: 0 
     },
   },
 
