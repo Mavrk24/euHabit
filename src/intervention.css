@@ -3,14 +3,6 @@
     font-size: 20px;
     font-weight: bold;
 }
-  
-#signout{
-    color: rgb(255, 96, 96);
-}
-  
-.c{
-    background-color: #eee3c4;
-}
 
 /*text in offcanva*/
 .offcanvatext{
@@ -28,23 +20,25 @@
     margin-left: 30px;
     padding-right: 5px;
     font-family: Quicksand, Verdana, sans-serif;
-    color: #eee3c4;
+    color: #1c5744;
     font-size: 14px;
 }
 
-#clickbutton2{
-    margin-left: 5px;
-    padding-right: 5px;
-    font-family: Quicksand, Verdana, sans-serif;
-    color: #eee3c4;
-    font-size: 14px;
+#profile1{
+    text-align: right;
+    font-family: Bai Jamjuree, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #1c5744; 
+    margin-top: 18px;   
 }
+
 #profile2{
-    text-align: center;
+    text-align: left;
     font-family: Quicksand, Verdana, sans-serif;
     font-size: 20px;
     font-weight: bold;
-    color: #eee3c4; 
+    color: #1c5744; 
     margin-top: 18px;   
 }
 
@@ -54,7 +48,7 @@
     height: 20px;
     padding: 5px;
     font-size: 5px;
-    background-color: rgb(248, 195, 96);
+    background-color: #f3921c;
     border-radius: 100%;
     border: none;
 }
@@ -89,7 +83,8 @@
     left: 79%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: rgb(248, 195, 96);
+    /*background-color: rgb(248, 195, 96);*/
+    background-color: #f3921c;
     color: white;
     font-size: 16px;
     padding: 7px 7px;
@@ -109,7 +104,7 @@
     left: 80%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: rgb(248, 195, 96);
+    background-color: #f3921c;
     color: white;
     font-size: 16px;
     padding: 7px 7px;
@@ -128,7 +123,7 @@
     left: 60%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: rgb(248, 195, 96);
+    background-color: #f3921c;
     color: white;
     font-size: 16px;
     padding: 7px 7px;
@@ -147,7 +142,7 @@
     left: 67%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: rgb(248, 195, 96);
+    background-color: #f3921c;
     color: white;
     font-size: 16px;
     padding: 7px 7px;
@@ -166,7 +161,7 @@
     left: 90%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: rgb(248, 195, 96);
+    background-color: #f3921c;
     color: white;
     font-size: 16px;
     padding: 7px 7px;
@@ -185,7 +180,7 @@
     left: 70%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: rgb(248, 195, 96);
+    background-color: #f3921c;
     color: white;
     font-size: 16px;
     padding: 7px 7px;
@@ -204,7 +199,7 @@
     left: 17%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: rgb(248, 195, 96);
+    background-color: #f3921c;
     color: white;
     font-size: 16px;
     padding: 7px 7px;
@@ -217,4 +212,73 @@
 }
 .container .btn:hover {
     background-color: rgb(189, 151, 151);
+}
+
+@media (max-width: 600px) {
+    #profile2{
+        text-align: left;
+        font-family: Quicksand, Verdana, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        color: #1c5774;
+        margin-top: 18px;
+        margin-left: 0px;
+          
+    }
+    
+    #profile1{
+        text-align: right;
+        font-family: Bai Jamjuree, Verdana, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        color: #1c5774; 
+        margin-top: 18px; 
+        margin-right: 0px; 
+    }
+}
+
+@media (max-width: 400px) {
+    #profile2{
+        text-align: left;
+        font-family: Quicksand, Verdana, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        color: #1c5774;
+        margin-top: 18px;
+        margin-left: 0px;
+          
+    }
+    
+    #profile1{
+        text-align: right;
+        font-family: Bai Jamjuree, Verdana, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        color: #1c5774; 
+        margin-top: 18px; 
+        margin-right: 0px; 
+    }
+}
+
+@media (max-width: 350px) {
+    #profile2{
+        text-align: left;
+        font-family: Quicksand, Verdana, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #1c5774;
+        margin-top: 18px;
+        margin-left: 0px;
+          
+    }
+    
+    #profile1{
+        text-align: right;
+        font-family: Bai Jamjuree, Verdana, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #1c5774; 
+        margin-top: 18px; 
+        margin-right: 0px; 
+    }
 }

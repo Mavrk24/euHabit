@@ -11,6 +11,7 @@ import ergo from './ergo.jpg';
 import Messages from './messages';
 import useToken from '../src/useToken';
 import axios from 'axios';
+import Navbar from './navbar.js';
 
 export default class Result extends Component{
 

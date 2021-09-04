@@ -51,8 +51,9 @@ export default class Entry extends Component{
   render() {
     return(
       <div> 
-        <h1 class="mx-5" id="demographic-data"> Demographic Data</h1>
-     
+        <h1 class="mx-5 pb-3" id="demographic-data"> Demographic Data <br/> 
+        <p class="mt-2" id="survey"> ข้อมูลทั่วไป </p> </h1>
+        
 
 <FormWithConstraints
         ref={form => this.form = form}
@@ -65,7 +66,7 @@ export default class Entry extends Component{
                  required onChange={this.handleChange}
                  className="form-control mb-3" />
           <FieldFeedbacks for="age">
-            <FieldFeedback when="*" class="mb-3"/>
+            <FieldFeedback  id="feedback" when="*" class="mb-3"/>
           </FieldFeedbacks>    
           </Form.Group>
               <Form.Group as={Col} className="mb-3" controlId="exampleForm.ControlTextarea1">
@@ -76,7 +77,7 @@ export default class Entry extends Component{
                     <option>ชาย</option>
                   </Form.Control>
                   <FieldFeedbacks for="sex">
-            <FieldFeedback when="*" class="mt-3 mb-3"/>
+            <FieldFeedback id="feedback" when="*" class="mt-3 mb-3"/>
           </FieldFeedbacks> 
               </Form.Group>
           </Row>
@@ -113,8 +114,8 @@ export default class Entry extends Component{
                 </Form.Text>
               </Form.Group>
 
-         <p id="Nxtbutton">
-          <button class="btn" id="btn-login" type="submit" onClick={this.contactSubmit}><b>Next</b></button>
+          <p id="Nxtbutton">
+            <button class="btn" id="btn-login" type="submit" onClick={this.contactSubmit}><b>Next</b></button>
           </p>
           </ FormWithConstraints>
       </div>

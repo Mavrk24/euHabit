@@ -5,7 +5,6 @@ import './App.css';
 import Login from '../src/Login';
 import Register from '../src/register-login';
 import useToken from '../src/useToken';
-import Screening from '../src/Screening';
 import Main from '../src/Main'
 import {useState, setState} from 'react';
 import Result from './result';

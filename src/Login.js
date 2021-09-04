@@ -7,7 +7,7 @@ import {useHistory} from 'react-router-dom';
 import {withRouter} from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import LgeuHabit_black from './LgeuHabit-black.png';
-
+import LgeuHabit from './LgeuHabit.png';
 
 
 
@@ -51,7 +51,7 @@ async function loginUser(credentials) {
         <div class="login-block">
         <div class="row">
             <div class="col">
-              <img class="LgeuHabit" width ="400" src={LgeuHabit_black} />
+              <img class="LgeuHabit" width ="400" src={LgeuHabit} />
             {/*  <h1 class="title"><strong>euHabit.</strong></h1> */}
             </div>
             <div class="col paragraph-body username d-flex">
@@ -74,8 +74,8 @@ async function loginUser(credentials) {
                 </div>
                 </ul>
                 <ul>
-                <a style={{color: "#dff9f2"}} href="/register" onClick={handleClick}> 
-                  New to euHabit? Register now. </a>
+                <a style={{color: "27AE60"}} href="/register" onClick={handleClick}> 
+                  <strong> New to euHabit? Register now. </strong> </a>
                 </ul>
               </form>
             </div>

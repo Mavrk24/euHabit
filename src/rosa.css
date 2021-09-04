@@ -1,7 +1,4 @@
-body{
-    background: linear-gradient(180deg, #010A09 0%, #010A09 100%);
-    font-family: "Bai Jamjuree", Verdana, sans-serif;
-}
+
 
 #survey{
     font-family: "Bai Jamjuree", Verdana, sans-serif;
@@ -9,18 +6,7 @@ body{
 }
 
 
-#demographic-data{
-    text-align: left;
-    font-size: 16px;
-    color:rgb(17, 38, 56);
-    font-family: Quicksand, Verdana, sans-serif;
-    margin-top: 30px;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 50px;
-    border-style: solid;
-    background-color: rgb(204, 205, 207);
-}
+
 
 #instruction{
     text-align: center;

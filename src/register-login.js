@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import {validatePassword} from '../src/validate';
 import image from './image.png';
-import LgeuHabit_black from './LgeuHabit-black.png';
+import LgeuHabit from './LgeuHabit.png';
 
 async function loginUser(credentials) {
   return fetch('http://localhost:8080/register', {
@@ -91,7 +91,7 @@ function backtoLogin()  {
         <div class="login-block">
         <div class="row">
             <div class="col">
-              <img class="LgeuHabit" width ="400" src={LgeuHabit_black} />
+              <img class="LgeuHabit" width ="400" src={LgeuHabit} />
             {/*  <h1 class="title"><strong>euHabit.</strong></h1> */}
             </div>
             <div class="col paragraph-body username d-flex">
