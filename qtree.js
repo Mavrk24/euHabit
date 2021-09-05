@@ -90,10 +90,9 @@ export default class Display extends Component{
             </nav>
             <Button onClick={this.onYes.bind(this)}> Yes </Button>
             <Button onClick={this.onNo.bind(this)}> No </Button>
-            <Button onClick={this.request.bind(this)}> Next </Button>
             <Button onClick={this.postrequest.bind(this)}> Finish </Button>
             <Button onClick={this.resolve.bind(this)}> Intervention </Button>
-            {this.state.msg}
+            <div class="nob">{this.state.msg}</div>
         </div>
        )
     }
