@@ -14,66 +14,69 @@ import axios from 'axios';
 
 export default class Display extends Component{
 
-    constructor(props) {
-        super(props);
-        this.state = {
-        msg:'',
-        iter: 1,
-        arr: []
-        }
-        };
+  constructor(props) {
+    super(props);
+    this.state = {
+      msg:'',
+      iter: 1,
+      arr: []
+    }
+  };
         
-       postrequest = () =>{
-        let payload = {
-            payload: this.state.arr
-          };
-          axios({
-            url: '/subentry',
-            method: 'post',
-            data: payload
-          });
-       }
-       resolve = () =>{
-        axios.get("/intervention")
-      .then(response => {
-        console.log(response.data);
+  postrequest = () =>{
+    let payload = {
+      payload: this.state.arr
+    };
+    
+    axios({
+      url: '/subentry',
+      method: 'post',
+      data: payload
+    });
+  }
+       
+  resolve = () =>{
+    axios.get("/intervention")
+    .then(response => {
+      console.log(response.data);
+    });
+  };
+  
+  request = () =>{
+    axios.get("/display")
+    .then(response => {
+      console.log(response.data);
+      const text = response.data.text;
+      this.setState({ msg: text[this.state.iter]});
+      this.setState(previousState => ({
+        iter: parseInt(previousState.iter) +1 
+      }));
+    });
+  };
+      
+  onYes = () =>{
+    var array = this.state.arr
+    if (array.length < 26){
+      this.setState({
+        arr: this.state.arr.concat(1)
       });
-      };
-
-
-      request = () =>{
-        axios.get("/display")
-      .then(response => {
-        console.log(response.data);
-        const text = response.data.text;
-        this.setState({ msg: text[this.state.iter]});
-        this.setState(previousState => ({
-                iter: parseInt(previousState.iter) +1 
-                }));
+      this.request();
+      console.log(this.state.arr);
+    }
+  }
+      
+  onNo = () =>{
+    var array = this.state.arr
+    if (array.length <26){
+      this.setState({
+        arr: this.state.arr.concat(0)
       });
-      };
-      onYes = () =>{
-        var array = this.state.arr
-        if (array.length < 26){
-        this.setState({
-            arr: this.state.arr.concat(1)
-          });
-        this.request();
-        console.log(this.state.arr);
-        }
-      }
-      onNo = () =>{
-        var array = this.state.arr
-        if (array.length <26){
-        this.setState({
-            arr: this.state.arr.concat(0)
-          });
-        this.request();
-        console.log(this.state.arr);
-        }
-      }
+      this.request();
+      console.log(this.state.arr);
+    }
+  }
 
-    render() {
+  render() {
         return(
         <div onLoad={this.request.bind(this)}>   
             <h1 class="mx-5 pb-3" id="demographic-data">
