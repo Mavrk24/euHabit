@@ -13,47 +13,31 @@
 }
 
 /*questionnaire*/
-#question_title{
+.question_title{
     font-size: 14px;
     font-weight: bold;
+    color: #000000;
+    font-family: Quicksand, Verdana, sans-serif;
+}
+
+#q{
+    font-size: 16px;
     color: #1c5744;
 }
 
 .question_1{
-    border: solid;
-    width: 50%;
     text-align: right;
+    width: 50%;
+    padding-right: 10%
+   
 }
 
 .question_2{
-    border: solid;
     text-align: left;
     width: 50%;
+    padding-right: 10%
 }
 
-@media (max-width: 500px) {
-    .question_1{
-        border: solid;
-        padding-left: 25%;
-    }
-    
-    .question_2{
-        border: solid;
-        padding-left: 5%;
-    }
-}
-
-@media (max-width: 400px) {
-    .question_1{
-        border: solid;
-        padding-left: 15%;
-    }
-    
-    .question_2{
-        border: solid;
-        padding-left: 5%;
-    }
-}
 #Nxtbutton2{
     align-items: center;
     position: relative;
@@ -64,9 +48,12 @@
 /*yes-no buttoon*/
 #yesbutton{
     width: 60px;
-    background-color: #56b495;
+    background-color: #34a580;
     color: #ffffff;
     border: none;
+    justify-items: center;
+    margin-right: 0px;
+    font-family: Quicksand, Verdana, sans-serif;
 }
 
 #nobutton{
@@ -74,6 +61,9 @@
     background-color: #fc5241;
     color: #ffffff;
     border: none;
+    justify-items: center;
+    margin-left: 0px;
+    font-family: Quicksand, Verdana, sans-serif;
 }
 
 .left_side{
@@ -83,5 +73,16 @@
 .right_side{
     text-align: left;
 }
+
+#btn-intervention{
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    background-color: #f3921c;
+    border: none;
+    font-family: Quicksand, Verdana, sans-serif;
+}
+
 
 

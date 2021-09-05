@@ -88,15 +88,15 @@ export default class Display extends Component{
 
 {/*Questionnaire*/}   
 
-            <div class="mt-5 row d-flex">
-              <p class="col question_1"> Question: </p>
+            <div class="mt-5 row d-flex question_title">
+              <p class="col question_1" id="q"> Question : </p>
               <div class="col question_2">
                 {this.state.msg}
               </div>
                
             </div>
 
-            <div class="mt-5 row d-flex justify-content-center" >
+            <div class="mt-5 row d-flex" >
               <div class="col left_side">
                 <Button id="yesbutton" onClick={this.onYes.bind(this)}> Yes </Button>
               </div>
@@ -105,9 +105,15 @@ export default class Display extends Component{
               </div>
             
             </div>
-            <Button onClick={this.postrequest.bind(this)}> Finish </Button>
-            <Button onClick={this.resolve.bind(this)}> Intervention </Button>
+
+            <p class="mt-5" id="Nxtbutton2">
+              <Button id="btn-login" onClick={this.postrequest.bind(this)}> Finish </Button>
+            </p>
             
+            <p class="mt-3" id="Nxtbutton2">
+            <Button id="btn-intervention" onClick={this.resolve.bind(this)}> Intervention </Button>
+            </p>
+
         </div>
        )
     }
