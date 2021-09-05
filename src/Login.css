@@ -89,6 +89,7 @@ body {
     text-transform: uppercase;
     border-radius: 50px;
     background-color: #34a580;
+    font-family: Quicksand, Verdana, sans-serif;
 
    /* background: linear-gradient(to right, #fdd360, #faeecc ); */ /*ปุ่ม access สีเหลือง*/
 }
