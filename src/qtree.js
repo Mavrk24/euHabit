@@ -34,6 +34,10 @@ export default class Display extends Component{
       data: payload
     });
   }
+
+  componentDidMount = () =>{
+    this.request();
+  }
        
   resolve = () =>{
     axios.get("/intervention")
@@ -45,9 +49,9 @@ export default class Display extends Component{
   request = () =>{
     axios.get("/display")
     .then(response => {
-      console.log(response.data);
+      console.log(22);
       const text = response.data.text;
-      this.setState({ msg: text[this.state.iter]});
+      this.setState({ msg: '123'});
       this.setState(previousState => ({
         iter: parseInt(previousState.iter) +1 
       }));
