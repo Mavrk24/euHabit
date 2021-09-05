@@ -82,15 +82,15 @@ export default class Display extends Component{
 
 {/*Questionnaire*/}   
 
-            <div class="mt-5 row d-flex question_title">
-              <p class="col question_1" id="q"> Question : </p>
+            <div class="mt-5 row d-flex">
+              <p class="col question_1"> Question: </p>
               <div class="col question_2">
                 {this.state.msg}
               </div>
                
             </div>
 
-            <div class="mt-5 row d-flex" >
+            <div class="mt-5 row d-flex justify-content-center" >
               <div class="col left_side">
                 <Button id="yesbutton" onClick={this.onYes.bind(this)}> Yes </Button>
               </div>
