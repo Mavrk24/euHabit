@@ -14,66 +14,66 @@ import axios from 'axios';
 
 export default class Display extends Component{
 
-  state = {
-    msg:'',
-    iter: 1,
-    arr: []
-  }
+    constructor(props) {
+        super(props);
+        this.state = {
+        msg:'',
+        iter: 1,
+        arr: []
+        }
+        };
         
-  postrequest = () =>{
-    let payload = {
-      payload: this.state.arr
-    };
-    axios({
-      url: '/subentry',
-      method: 'post',
-      data: payload
-    });
-  }
-
-  resolve = () =>{
-    axios.get("/intervention")
-    .then(response => {
-      console.log(response.data);
-    });
-  };
-
-
-  request = () =>{
-    axios.get("/display")
-    .then(response => {
-      console.log(response.data);
-      const text = response.data.text;
-      this.setState({ msg: text[this.state.iter]});
-      this.setState(previousState => ({
-        iter: parseInt(previousState.iter) +1 
-      }));
-    });
-  };
-      
-  onYes = () =>{
-    var array = this.state.arr
-    if (array.length < 26){
-      this.setState({
-        arr: this.state.arr.concat(1)
+       postrequest = () =>{
+        let payload = {
+            payload: this.state.arr
+          };
+          axios({
+            url: '/subentry',
+            method: 'post',
+            data: payload
+          });
+       }
+       resolve = () =>{
+        axios.get("/intervention")
+      .then(response => {
+        console.log(response.data);
       });
-      this.request();
-      console.log(this.state.arr); 
-    }
-  }
-      
-  onNo = () =>{
-    var array = this.state.arr
-    if (array.length <26){
-      this.setState({
-        arr: this.state.arr.concat(0)
-      });
-      this.request();
-      console.log(this.state.arr);
-    }
-  }
+      };
 
-  render() {
+
+      request = () =>{
+        axios.get("/display")
+      .then(response => {
+        console.log(response.data);
+        const text = response.data.text;
+        this.setState({ msg: text[this.state.iter]});
+        this.setState(previousState => ({
+                iter: parseInt(previousState.iter) +1 
+                }));
+      });
+      };
+      onYes = () =>{
+        var array = this.state.arr
+        if (array.length < 26){
+        this.setState({
+            arr: this.state.arr.concat(1)
+          });
+        this.request();
+        console.log(this.state.arr);
+        }
+      }
+      onNo = () =>{
+        var array = this.state.arr
+        if (array.length <26){
+        this.setState({
+            arr: this.state.arr.concat(0)
+          });
+        this.request();
+        console.log(this.state.arr);
+        }
+      }
+
+    render() {
         return(
         <div onLoad={this.request.bind(this)}>   
             <h1 class="mx-5 pb-3" id="demographic-data">
@@ -88,15 +88,15 @@ export default class Display extends Component{
 
 {/*Questionnaire*/}   
 
-            <div class="mt-5 row d-flex question_title">
-              <p class="col question_1" id="q"> Question : </p>
+            <div class="mt-5 row d-flex">
+              <p class="col question_1"> Question: </p>
               <div class="col question_2">
                 {this.state.msg}
               </div>
                
             </div>
 
-            <div class="mt-5 row d-flex" >
+            <div class="mt-5 row d-flex justify-content-center" >
               <div class="col left_side">
                 <Button id="yesbutton" onClick={this.onYes.bind(this)}> Yes </Button>
               </div>
@@ -105,15 +105,9 @@ export default class Display extends Component{
               </div>
             
             </div>
-
-            <p class="mt-5" id="Nxtbutton2">
-              <Button id="btn-login" onClick={this.postrequest.bind(this)}> Finish </Button>
-            </p>
+            <Button onClick={this.postrequest.bind(this)}> Finish </Button>
+            <Button onClick={this.resolve.bind(this)}> Intervention </Button>
             
-            <p class="mt-3" id="Nxtbutton2">
-            <Button id="btn-intervention" onClick={this.resolve.bind(this)}> Intervention </Button>
-            </p>
-
         </div>
        )
     }
