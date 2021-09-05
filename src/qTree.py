@@ -36,14 +36,26 @@ for a in PreOrderIter(root):
 def getQ():
     return arr
 
+val = []
+for a in PreOrderIter(root):
+    val.append(a.depth)
 
-def returnQ(arr):
-    for i in arr:
-        if (i==1):
-            if (a.depth >= max):
-                max = a.depth
-                max_q = a.name
+def valuate():
+    return val
+
+def returnnotQ(arr):
+    array = []
+    for a in PreOrderIter(root):
+        array.append(a.name)
     return array
+
+def returnQ(t):
+    inputs = []
+    x = ''
+    for a in PreOrderIter(root):
+        x = a.name
+        inputs.append(x)
+    return inputs
 
 def returnofQ(arr):
     return len(arr)
