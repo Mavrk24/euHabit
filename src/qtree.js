@@ -82,8 +82,8 @@ export default class Display extends Component{
 
 {/*Questionnaire*/}   
 
-            <div class="mt-5 row d-flex">
-              <p class="col question_1"> Question: </p>
+            <div class="mt-5 row d-flex question_title">
+              <p class="col question_1" id="q"> Question: </p>
               <div class="col question_2">
                 {this.state.msg}
               </div>
