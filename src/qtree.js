@@ -4,12 +4,6 @@ import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 import './qtree.css';
-import ReactDOM from 'react-dom';
-import LgeuHabit from './LgeuHabit.png';
-import ergonomics from './ergonomics picture.png';
-import ergo from './ergo.jpg';
-import Messages from './messages';
-import useToken from '../src/useToken';
 import axios from 'axios';
 
 export default class Display extends Component{
