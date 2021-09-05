@@ -21,6 +21,7 @@ import Information from './information';
 import Stretching from './stretching';
 import Navbar from './navbar';
 import Display from './qtree';
+import Recommendation from './recommendation';
 
 
 
@@ -171,6 +172,7 @@ function App() {
     <Route exact path='/stretching' component={Stretching} />
     <Route exact path='/navbar' component={Navbar} />
     <Route exact path='/qtree' component={Display} />
+    <Route exact path='/recommendation' component={Recommendation} />
   
     </Switch>
 

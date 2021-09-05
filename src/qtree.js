@@ -4,12 +4,6 @@ import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 import './qtree.css';
-import ReactDOM from 'react-dom';
-import LgeuHabit from './LgeuHabit.png';
-import ergonomics from './ergonomics picture.png';
-import ergo from './ergo.jpg';
-import Messages from './messages';
-import useToken from '../src/useToken';
 import axios from 'axios';
 
 export default class Display extends Component{
@@ -95,8 +89,8 @@ export default class Display extends Component{
 
 {/*Questionnaire*/}   
 
-            <div class="mt-5 row d-flex">
-              <p class="col question_1"> Question: </p>
+            <div class="mt-5 row d-flex question_title">
+              <p class="col question_1" id="q"> Question: </p>
               <div class="col question_2">
                 {this.state.msg}
               </div>
@@ -112,9 +106,17 @@ export default class Display extends Component{
               </div>
             
             </div>
-            <Button onClick={this.postrequest.bind(this)}> Finish </Button>
-            <Button onClick={this.resolve.bind(this)}> Intervention </Button>
+
+            <p class="mt-5" id="Nxtbutton2">
+              <Button id="btn-finish" onClick={this.postrequest.bind(this)}> Finish </Button>
+            </p>
             
+          {/*
+            <p class="mt-3" id="Nxtbutton2">
+            <Button id="btn-intervention" onClick={this.resolve.bind(this)}> Intervention </Button>
+            </p>
+          */}
+
         </div>
        )
     }
