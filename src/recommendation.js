@@ -3,3 +3,19 @@ import React, {useState} from 'react';
 import { Component } from 'react';
 import './recommendation.css';
 import axios from 'axios';
+
+export default class Recommendation extends Component{
+
+    render() {
+        return(
+            <div>
+
+
+
+
+            </div>
+
+        )
+    }
+}
+    
