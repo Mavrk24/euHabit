@@ -70,3 +70,12 @@
     border: none;
     font-family: Quicksand, Verdana, sans-serif;
 }
+
+/*video*/
+.video_size{
+    width: 30%;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}

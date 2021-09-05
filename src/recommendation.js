@@ -21,8 +21,15 @@ export default class Recommendation extends Component{
         return(
             <div>
 
+            <h1 class="mx-5 pb-3" id="demographic-data">
+              Result and Recommendation <br/>
+              <p class="mt-2" id="survey"> ผลการประเมินสภาพแวดล้อมในการนั่งทำงาน </p>
+            </h1>
+
+
+
 {/* C2 ท่าเงยหน้าขึ้น/ลง stretching_2*/}   
-                <div class="embed-responsive embed-responsive-16by9">
+                <div class="embed-responsive embed-responsive-16by9 video_size">
                     <video controls controlsList="nodownload" onContextMenu={e => e.preventDefault()}
                     ref="vidRef2" type="video/mp4" src={stretching_2} ></video>
                 </div>
