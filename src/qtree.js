@@ -107,12 +107,14 @@ export default class Display extends Component{
             </div>
 
             <p class="mt-5" id="Nxtbutton2">
-              <Button id="btn-login" onClick={this.postrequest.bind(this)}> Finish </Button>
+              <Button id="btn-finish" onClick={this.postrequest.bind(this)}> Finish </Button>
             </p>
             
+          {/*
             <p class="mt-3" id="Nxtbutton2">
             <Button id="btn-intervention" onClick={this.resolve.bind(this)}> Intervention </Button>
             </p>
+          */}
 
         </div>
        )
