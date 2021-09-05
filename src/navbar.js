@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Component } from 'react';
 import LgeuHabit from './LgeuHabit.png';
+import LgeuHabit_white from './LgeuHabit-white.png';
 import './mainpage.css';
 import { withRouter } from 'react-router-dom';
 
@@ -24,7 +25,7 @@ class Navbar extends Component{
                 <div class="container-fluid">
                     <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
                         <svg width="30" height="30" class="d-inline-block align-text-top Logo">
-                            <image href={LgeuHabit} width="30" height="30"/ >
+                            <image href={LgeuHabit_white} width="30" height="30"/ >
                         </svg>
                         euHabit.
                     </a>

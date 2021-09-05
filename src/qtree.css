@@ -12,10 +12,11 @@
     letter-spacing: 80%;
 }
 
-#qtitle{
+#question_title{
     font-size: 14px;
     font-weight: bold;
     color: #1c5744;
+    text-align: center;
 }
 
 #question{
@@ -51,26 +52,13 @@
     text-align: center;
 }
 
-.yesbutton{
-    margin-left: 30px;
-    width: 60px;
-    background-color: #5c9b57;
-    color: rgb(232, 233, 224);
-}
-
-.nobutton{
-    margin-left: 30px;
-    width: 60px;
-    background-color: #d43b3b;
-    color: rgb(204, 218, 230);
-}
-
 #yesbutton{
     margin-left: 30px;
     width: 60px;
     background-color: #56b495;
     color: #ffffff;
     border: none;
+    
 }
 
 #nobutton{
@@ -80,10 +68,3 @@
     color: #ffffff;
     border: none;
 }
-
-input[type=radio] {
-    transform:scale(1.25);
-}
-
-
-

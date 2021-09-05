@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
-import './intervention.css';
+import './qtree.css';
 import ReactDOM from 'react-dom';
 import LgeuHabit from './LgeuHabit.png';
 import ergonomics from './ergonomics picture.png';
@@ -76,23 +76,35 @@ export default class Display extends Component{
     render() {
         return(
         <div onLoad={this.request.bind(this)}>   
-{/* NavBar */}    
-            <nav class="navbar navbar-light c">
-            <div class="container-fluid">
-                <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
-                    <svg width="30" height="24" class="d-inline-block align-text-top">
-                        <image href={LgeuHabit} height="30" width="24"/ >
-                    </svg>
-                    euHabit.
-                   
-                </a>
+            <h1 class="mx-5 pb-3" id="demographic-data">
+              Workplace condition <br/>
+              <p class="mt-2" id="survey"> แบบประเมินสภาพแวดล้อมในการนั่งทำงาน </p>
+            </h1>
+
+            <p class="mx-5 p-3" id="instruction1"> 
+              แบบสอบถามนี้ทำขึ้นเพื่อวิเคราะห์และท่าทางการนั่งทำงาน/เรียนกับคอมพิวเตอร์หรืออุปกรณ์อิเล็กทรอนิกส์โดยประเมินจาก <br/>
+              กรุณาเลือกคำตอบ <b>"ที่ตรงกับคุณมากที่สุด"</b>
+            </p>
+
+{/*Questionnaire*/}   
+
+            <div id="question_title">
+              <p> Question: </p>
+              {this.state.msg} 
             </div>
-            </nav>
-            <Button onClick={this.onYes.bind(this)}> Yes </Button>
-            <Button onClick={this.onNo.bind(this)}> No </Button>
+
+            <div class="flex-row d-flex">
+              <div >
+                <Button id="yesbutton" onClick={this.onYes.bind(this)}> Yes </Button>
+              </div>
+              <div >
+                <Button id="nobutton" onClick={this.onNo.bind(this)}> No </Button>
+              </div>
+            
+            </div>
             <Button onClick={this.postrequest.bind(this)}> Finish </Button>
             <Button onClick={this.resolve.bind(this)}> Intervention </Button>
-            <div class="nob">{this.state.msg}</div>
+            
         </div>
        )
     }

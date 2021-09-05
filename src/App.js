@@ -20,6 +20,7 @@ import Workplace from './workplace';
 import Information from './information';
 import Stretching from './stretching';
 import Navbar from './navbar';
+import Display from './qtree';
 
 
 
@@ -169,6 +170,7 @@ function App() {
     <Route exact path='/information' component={Information} />
     <Route exact path='/stretching' component={Stretching} />
     <Route exact path='/navbar' component={Navbar} />
+    <Route exact path='/qtree' component={Display} />
   
     </Switch>
 
