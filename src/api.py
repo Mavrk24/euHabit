@@ -3,7 +3,9 @@ from flask_cors import CORS
 from bayes  import BayesClf, PredictBC
 import numpy as np
 import json
-
+from anytree import Node, RenderTree,AsciiStyle,PreOrderIter
+from anytree.dotexport import RenderTreeGraph
+from qTree import display, getQ, returnQ
 
 app = Flask(__name__)
 CORS(app)
@@ -26,9 +28,30 @@ def api():
 @app.route("/subentry" , methods=['POST'])
 def sub():
     entry = request.get_json()
+    session["entry"]=entry
     return entry 
 
 @app.route("/request")
 def getreq():
     key = [1,[1,0,1,0,1],[1,0,1,0,1],[1,0,1,0,1],0] #sample_data
     return {'r_key': key }
+
+@app.route("/subrequest", methods=['POST'])
+def getarr():
+    arr = request.get_json
+    return arr
+
+@app.route("/display")
+def tree():
+    return {'text': getQ()}
+
+
+@app.route("/intervention")
+def intervent():
+    array=getQ()
+    blank=[]
+    arr = session.get("entry")['payload'] 
+    for i, a in enumerate(arr):
+        if (a==1):
+            blank.append(array[i])
+    return {'text': blank}
