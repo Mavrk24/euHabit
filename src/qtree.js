@@ -48,7 +48,16 @@ export default class Display extends Component{
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(payload.payload) //เขียนแบบนี้เพราะสร้าง payload ไว้ไม่ค่อยดี
-      })
+    })
+
+    //fetch to heroku for processing
+    fetch('http://euhabit-api.herokuapp.com/intervention', {
+      method: 'POST',
+      body: JSON.stringify(payload.payload) //เขียนแบบนี้เพราะสร้าง payload ไว้ไม่ค่อยดี
+    })
+
+    // payload.payload = this.state.arr => ex. [0, 1, 0, 1, ...] length=26
+
     this.resolve();
   }
        
