@@ -13,72 +13,95 @@ import useToken from '../src/useToken';
 import axios from 'axios';
 
 export default class Display extends Component{
-    componentDidMount() {
-        this.request();
-    }
+  componentDidMount() {
+    this.request();
+  }
     
-    constructor(props) {
-        super(props);
-        this.state = {
-        msg:'',
-        iter: 1,
-        arr: [],
-        type: ''
-        }
-        };
+  constructor(props) {
+    super(props);
+    this.state = {
+      msg:'',
+      iter: 1,
+      arr: [],
+      type: ''
+    }
+  };
         
 
-       postrequest = () =>{
-        let payload = {
-            payload: this.state.arr
-          };
-          console.log(payload)
-          axios({
-            url: '/subentry',
-            method: 'post',
-            data: payload
-          });
-          this.resolve();
-       }
-       resolve = () =>{
-        axios.get("/intervention")
-      .then(response => {
-        console.log(response.data);
-        const num = response.data.text[0][1];
-        const neck = [5,6,11,10,16,17,20,21]
-        const shoulder = [7,12,24]
-        var text = ''
-        if (neck.includes(num+1)==true) {
-            text = 'neck'
-        }
-        if (shoulder.includes(num+1)==true) {
-            text = 'shoulder'
-        }
-        let payload = {
-            payload: text
-        };
-        axios({
-            url: '/target here', /*ส่งตรงนี้ :D*/
-            method: 'post',
-            data: payload
-          });
-        console.log(payload)
-      });
+  postrequest = () =>{
+    let payload = {
+      // ตรงนี้ได้ payload = JSON ที่มีตัวแปร payload อยู่ข้างในอีกที
+      payload: this.state.arr
+    };
+    console.log(payload)
+    axios({
+      url: '/subentry',
+      method: 'post',
+      data: payload
+    });
+    
+    //fetch user answer for future usage
+    fetch('http://localhost:8080/api/users/qtree', {
+        method: 'POST',
+        headers: {
+          token: localStorage.getItem("token"),
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload.payload) //เขียนแบบนี้เพราะสร้าง payload ไว้ไม่ค่อยดี
+      })
+    .then(data => data.json())
+    this.resolve();
+  }
+       
+  resolve = () =>{
+    axios.get("/intervention")
+    .then(response => {
+      console.log('axios', response.data);
+      const num = response.data.text[0][1];
+      const neck = [5,6,11,10,16,17,20,21]
+      const shoulder = [7,12,24]
+      var text = ''
+
+      if (neck.includes(num+1)==true) {
+        text = 'neck'
+      }
+      
+      if (shoulder.includes(num+1)==true) {
+        text = 'shoulder'
+      }
+      
+      let payload2 = {
+        payload2: text
       };
+      //fetch recommendation
+      fetch('http://localhost:8080/api/users/RecIntervention', {
+      method: 'POST',
+      headers: {
+        token: localStorage.getItem("token"),
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify([payload2.payload2])
+      })
+      .then(data => data.json())
+      console.log(typeof(payload2))
+      console.log(typeof(payload2.payload2))
+    });
+  };
 
 
-      request = () =>{
-        axios.get("/display")
-      .then(response => {
-        console.log(response.data);
-        const text = response.data.text;
-        this.setState({ msg: text[this.state.iter]});
-        this.setState(previousState => ({
-                iter: parseInt(previousState.iter) +1 
-                }));
-      });
-      };
-      onYes = () =>{
+  request = () =>{
+    axios.get("/display")
+    .then(response => {
+      console.log('axios', response.data);
+      const text = response.data.text;
+      this.setState({ msg: text[this.state.iter]});
+      this.setState(previousState => ({
+        iter: parseInt(previousState.iter) +1 
+      }));
+    });
+  };
+      
+  onYes = () =>{
         var array = this.state.arr
         if (array.length < 26){
         this.setState({

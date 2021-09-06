@@ -5,37 +5,57 @@ import { useHistory } from 'react-router-dom';
 import './ndi-rosa.css';
 
 export default class NDI extends Component{
-  constructor(props) {
-    super(props);
-    this.state = {
-      score: 0,
-      memory: '',
-      prev: 0,
-    };
-  }
-    calculate=(ele)=>{
-      if (ele.target.name!=this.state.memory){
-      this.setState(previousState => ({
-        score: parseInt(parseInt(previousState.score) + parseInt(ele.target.id))
-        }));
-        this.setState({
-            prev: parseInt(ele.target.id)
+    constructor(props) {
+        super(props);
+        this.state = {
+        score: 0,
+        memory: '',
+        prev: 0,
+        Ans: ['empty']
+        };
+    }
+
+    // เพิ่ม"เก็บข้อมูลแต่ละข้อ"
+    setAns = () => {
+
+    } 
+  
+    calculate = (ele) => {
+
+        // ตัวแปรสำหรับเก็บ Ans ชั่วคราว
+        var tempAns = [0,1,2,3,4,5,6,7,8,9]
+        
+        if (ele.target.name!=this.state.memory){
+            
+            this.setState(previousState => ({
+                score: parseInt(parseInt(previousState.score) + parseInt(ele.target.id))
+            }));
+            this.setState({
+                prev: parseInt(ele.target.id)
             });
-      }
-      else{
-        this.setState(previousState => ({
-          score: parseInt(parseInt(previousState.score) - (this.state.prev) + parseInt(ele.target.id))
-          }));
-        this.setState({
-            prev: parseInt(ele.target.id)
+        } else {
+            this.setState(previousState => ({
+                score: parseInt(parseInt(previousState.score) - (this.state.prev) + parseInt(ele.target.id))
+            }));
+            
+            this.setState({
+                prev: parseInt(ele.target.id)
             });
-      }
-      this.setState({
-        memory: ele.target.name
+        }
+
+        //tempAns[parseInt(ele.target.id)] = parseInt(ele.target.id)
+
+        this.setState({
+            memory: ele.target.name
         });
-      if (ele.target.name == 'btn'){
-        console.log('NDI score: '+ this.state.score);
-      }
+
+        console.log(ele.target.name);
+        console.log(ele.target.name[3]);
+
+        if (ele.target.name == 'btn'){
+            console.log('NDI score: '+ this.state.score);
+            
+        }
     }
     
     render() {
@@ -673,9 +693,9 @@ export default class NDI extends Component{
                         ))}
                     </Form.Group>                
                 </Form>
-                <Button class="btn" id={0} type="submit" name="btn" onClick={this.calculate}>Finalize</Button>
-                <p id="Nxtbutton1">
-                    <Button class="btn" id="btn-login" type="submit" href="/workplace"><b>Next</b></Button>
+                <Button class="btn" id={0} type="submit" name="btn" onClick={this.calculate}>Finalize //อย่าลืมลบออก</Button>
+                    <p id="Nxtbutton1">
+                    <Button class="btn" id={0} type="submit" onClick={this.calculate} href="/rosa"><b>Next</b></Button>
                 </p>
 
             </div>

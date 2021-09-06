@@ -210,8 +210,6 @@ router.post('/demographic',verifyToken,(req,res)=>{
 });
 
 
-// @route PUT api/users/demographic
-// @desc update user.demographic using Header and req
 // @access login-required
 router.post('/workplace',verifyToken,(req,res)=>{
   jwt.verify(req.token,keys.secretOrKey ,(err,authData)=>{
@@ -238,6 +236,71 @@ router.post('/workplace',verifyToken,(req,res)=>{
       }
       console.log('Workplace data updated!')
       update_workplace();
+    }
+  });
+});
+
+// @access login-required
+router.post('/qtree',verifyToken,(req,res)=>{
+  console.log('qtree\n', typeof(req.body), req.body)
+  jwt.verify(req.token,keys.secretOrKey ,(err,authData)=>{
+    if(err){
+      //Forbidden
+      res.sendErr(403);
+    } else {
+      async function update_qtree(){
+        const username = authData.username
+        
+        // Find user by username
+        User.findOne({ username }).then(user => {
+          // Check if user exists
+          if (!user) {
+            return res.status(404).json({ usernotfound: "Username not found" });
+          }
+          var temp = user.qtree.push(req.body);
+          user.qtree.push = temp
+          user.save();
+        });
+
+        return res.send("Updated")
+      }
+      //console.log('Qtree data updated!')
+      update_qtree();
+    }
+  });
+});
+
+
+// @access login-required
+router.post('/RecIntervention',verifyToken,(req,res)=>{
+  // ส่งมาเป็น array
+  //console.log(req.body[0])
+  jwt.verify(req.token,keys.secretOrKey ,(err,authData)=>{
+    if(err){
+
+      //Forbidden
+      res.sendErr(403);
+    } else {
+      async function update_qtree(){
+        const username = authData.username
+        
+        // Find user by username
+        User.findOne({ username }).then(user => {
+
+          // Check if user exists
+          if (!user) {
+            return res.status(404).json({ usernotfound: "Username not found" });
+          }
+          // ส่งมาเป็น array
+          var temp = user.recommendation.push(req.body[0]);
+          user.recommendation.push = temp
+          user.save();
+        });
+
+        return res.send("Updated")
+      }
+      console.log('Recommendation updated!')
+      update_qtree();
     }
   });
 });

@@ -17,6 +17,25 @@ class Navbar extends Component{
       
     }
 
+    state = {
+        username: ''
+    }
+
+    componentDidMount = () => {
+        // get username
+        fetch('http://localhost:8080/api/users/get_Profile', {
+            method: 'GET',
+            headers: {
+                token: localStorage.getItem("token"),
+                'Content-Type': 'application/json'
+            }
+            })
+            .then(res => res.json())
+            .then(res => this.setState({ username: res.username }))
+            .catch((err) => console.error(err))
+    }
+
+
     render() {
         return(
             <div>
@@ -60,7 +79,7 @@ class Navbar extends Component{
                             </li>
                         </ul>
                         <span class="navbar-text">
-                            Signed in as: <a id="navoption" href="#login">Mark Otto</a>
+                            Signed in as: <a id="navoption" href="#login"> {this.state.username} </a>
                         </span>
                     </div> 
                                            

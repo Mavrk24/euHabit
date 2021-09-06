@@ -41,6 +41,16 @@ const UserSchema = new Schema(
       require: true,
       default: 0 
     },
+    qtree: {
+      type: Array,
+      require: true,
+      default: []
+    },
+    recommendation: {
+      type: Array,
+      require: true,
+      dafault: []
+    } // end here
   },
 
   {
