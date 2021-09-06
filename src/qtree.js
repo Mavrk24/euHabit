@@ -156,7 +156,7 @@ export default class Display extends Component{
               </div>
             
             </div>
-            <Button id="save" onClick={this.postrequest.bind(this)} hidden="hidden"> Finish </Button>
+            <Button id="save" onClick={this.postrequest.bind(this)} href= '/recommendation' hidden="hidden"> Finish </Button>
             
         </div>
        )

@@ -28,7 +28,6 @@ export default class Recommendation extends Component{
     // fetch recommendation มาใส่ t=state.target
     componentDidMount = () => {
         this.renderProfile();
-        this.getTarget();
     }
 
     renderProfile(){
