@@ -164,6 +164,7 @@ router.post('/screening',verifyToken,(req,res)=>{
 // @desc update user.demographic using Header and req
 // @access login-required
 router.post('/demographic',verifyToken,(req,res)=>{
+  console.log(req.body)
   jwt.verify(req.token,keys.secretOrKey ,(err,authData)=>{
     if(err){
 
@@ -192,13 +193,13 @@ router.post('/demographic',verifyToken,(req,res)=>{
           }
           // End check
 
-          user.demographic = JSON.stringify({
+          user.demographic = {
             age: req.body.age,
             sex: req.body.sex,
             job: req.body.job,
             faculty: req.body.faculty,
             year: req.body.year,
-          });
+          }
           user.save();
         });
         console.log('update demographic successfully')
@@ -242,7 +243,6 @@ router.post('/workplace',verifyToken,(req,res)=>{
 
 // @access login-required
 router.post('/qtree',verifyToken,(req,res)=>{
-  console.log('qtree\n', typeof(req.body), req.body)
   jwt.verify(req.token,keys.secretOrKey ,(err,authData)=>{
     if(err){
       //Forbidden
@@ -258,7 +258,6 @@ router.post('/qtree',verifyToken,(req,res)=>{
             return res.status(404).json({ usernotfound: "Username not found" });
           }
           var temp = user.qtree.push(req.body);
-          user.qtree.push = temp
           user.save();
         });
 
@@ -273,9 +272,8 @@ router.post('/qtree',verifyToken,(req,res)=>{
 
 // @access login-required
 router.post('/RecIntervention',verifyToken,(req,res)=>{
-  // ส่งมาเป็น array
-  //console.log(req.body[0])
-  jwt.verify(req.token,keys.secretOrKey ,(err,authData)=>{
+  
+  jwt.verify(req.token, keys.secretOrKey ,(err,authData)=>{
     if(err){
 
       //Forbidden
@@ -291,9 +289,9 @@ router.post('/RecIntervention',verifyToken,(req,res)=>{
           if (!user) {
             return res.status(404).json({ usernotfound: "Username not found" });
           }
-          // ส่งมาเป็น array
-          var temp = user.recommendation.push(req.body[0]);
-          user.recommendation.push = temp
+
+          var temp = user.recommendation.push(req.body[0]); //เพราะส่งมาเป็น Array
+          console.log(temp)
           user.save();
         });
 
@@ -301,6 +299,35 @@ router.post('/RecIntervention',verifyToken,(req,res)=>{
       }
       console.log('Recommendation updated!')
       update_qtree();
+    }
+  });
+});
+
+// @access login-required
+router.post('/ndi',verifyToken,(req,res)=>{
+  jwt.verify(req.token,keys.secretOrKey ,(err,authData)=>{
+    if(err){
+      //Forbidden
+      res.sendErr(403);
+    } else {
+      async function update_ndi(){
+        const username = authData.username
+        
+        // Find user by username
+        User.findOne({ username }).then(user => {
+          // Check if user exists
+          if (!user) {
+            return res.status(404).json({ usernotfound: "Username not found" });
+          }
+          var temp = user.ndi.push(req.body);
+          user.ndi.push = temp
+          user.save();
+        });
+
+        return res.send("Updated")
+      }
+      update_ndi();
+      //console.log('NDI data updated!')
     }
   });
 });
@@ -333,7 +360,15 @@ router.get('/get_Profile',verifyToken,(req,res)=>{
           if (!user) {
             return res.status(404).json({ usernotfound: "Username not found" });
           } 
-          return user;
+          var ndi_length = Object.keys(user.ndi).length
+          var ndi = user.ndi[ndi_length -1 ]
+          var Profile = {
+            username: user.username,
+            email: user.email,
+            demographic: user.demographic,
+            ndi_score: ndi[10]
+          }
+          return Profile;
         });
         //console.log('done')
         return res.send(user_profile)

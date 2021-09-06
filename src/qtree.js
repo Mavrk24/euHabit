@@ -33,7 +33,7 @@ export default class Display extends Component{
       // ตรงนี้ได้ payload = JSON ที่มีตัวแปร payload อยู่ข้างในอีกที
       payload: this.state.arr
     };
-    console.log(payload)
+    // console.log(payload)
     axios({
       url: '/subentry',
       method: 'post',
@@ -49,7 +49,6 @@ export default class Display extends Component{
         },
         body: JSON.stringify(payload.payload) //เขียนแบบนี้เพราะสร้าง payload ไว้ไม่ค่อยดี
       })
-    .then(data => data.json())
     this.resolve();
   }
        
@@ -82,9 +81,6 @@ export default class Display extends Component{
       },
       body: JSON.stringify([payload2.payload2])
       })
-      .then(data => data.json())
-      console.log(typeof(payload2))
-      console.log(typeof(payload2.payload2))
     });
   };
 

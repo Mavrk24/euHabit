@@ -135,7 +135,7 @@ export default class Entry extends Component{
             
               <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                 <Form.Text className="text-muted">
-                  เราจะไม่เปิดเผยข้อมูลของคุณให้ผู้อื่นที่ไม่เกี่ยวข้องและจะใช้เพื่อการส่งแบบสอบถามการใช้งานเพิ่มเติมเท่านั้น
+                  เราจะไม่เปิดเผยข้อมูลของคุณให้ผู้อื่นที่ไม่เกี่ยวข้องและจะใช้เพื่อการแบบสอบถามการใช้งานเพิ่มเติมเท่านั้น
                 </Form.Text>
               </Form.Group>
 

@@ -9,8 +9,19 @@ import Navbar from './navbar';
 export default class Profile extends Component{
     
     state = {
-        user_data: {ii: 'aa'},
-        demographic: {test: '2'},
+        user_data: {
+            username: '',
+            email: '',
+            ndi: ''
+        },
+        demographic: {
+            age: '',
+            sex: '',
+            job: '',
+            faculty: '',
+            year: ''
+        },
+        ndi: []
     }
     
     componentDidMount = () => {
@@ -26,12 +37,14 @@ export default class Profile extends Component{
             }
             })
             .then(res => res.json())
-            .then(res => this.setState(
+            .then(res => {
+                this.setState(
                 { 
                     user_data: res,
-                    demographic: JSON.parse(res.demographic)
-                }
-                ))
+                    demographic: res.demographic,
+                    ndi: res.ndi_score
+                })
+            })
             .catch((err) => console.error(err))  
         
     }
@@ -47,6 +60,7 @@ export default class Profile extends Component{
 
     
     render() {
+
         return(
             <div>  
                 <Navbar /> 
@@ -97,13 +111,14 @@ export default class Profile extends Component{
                             <p><b> Screening Results </b> </p>  
                         </div>
                         <div class="alignment">
-                            <div class="d-flex">
+                            {/*<div class="d-flex">
                                 <p id="heading"> Workplace condition: </p>
-                                <p> 16 </p>    {/* ข้อมูลที่จะดึง */}
-                            </div>      
+                                <p> 16 ข้อมูลที่จะดึง </p>    
+                            </div> 
+                            */}
                             <div class="d-flex">
                                 <p id="heading"> Neck Disability Index (NDI): </p>
-                                <p> 40 </p> {/* ข้อมูลที่จะดึง */}    
+                                <p> {this.state.ndi} </p> {/* ข้อมูลที่จะดึง */}    
                             </div>       
                         </div>
                         

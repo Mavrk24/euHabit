@@ -17,6 +17,8 @@ import stretching_10 from './stretching_10.mp4';
 
 export default class Recommendation extends Component{
     // fetch recommendation มาใส่ t=state.target
+    
+
     constructor(props) {
         super(props);
         this.state = {

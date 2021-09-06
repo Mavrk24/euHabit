@@ -27,19 +27,19 @@ const UserSchema = new Schema(
       require: true
     },
     demographic: {
-      type: JSON,
+      type: Object,
       require: true,
-      default: 0
+      default: {}
     },
     ndi: {
-      type: JSON,
+      type: Array,
       require: true,
-      default: 0
+      default: [] 
     },
     workplace: {
-      type: JSON,
+      type: Array,
       require: true,
-      default: 0 
+      default: 0
     },
     qtree: {
       type: Array,
