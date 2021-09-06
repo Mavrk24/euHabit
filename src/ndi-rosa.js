@@ -692,10 +692,9 @@ export default class NDI extends Component{
                         ))}
                     </Form.Group>                
                 </Form>
-                <Button class="btn" id={0} type="submit" name="btn" onClick={this.calculate}>Finalize //อย่าลืมลบออก</Button>
                     <p id="Nxtbutton1">
                     <Button class="btn" id={0} type="submit" onClick={this.calculate} href="/rosa"><b>Next</b></Button>
-                </p>
+                    </p>
 
             </div>
         )

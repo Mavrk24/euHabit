@@ -29,7 +29,7 @@ export default class Profile extends Component{
     }
 
     renderProfile(){
-        fetch('http://localhost:8080/api/users/get_Profile', {
+        fetch('http://localhost:8080/api/users/get_UserData', {
             method: 'GET',
             headers: {
                 token: localStorage.getItem("token"),
@@ -65,7 +65,7 @@ export default class Profile extends Component{
             <div>  
                 <Navbar /> 
  
- {/* Profile */}
+                {/* Profile */}
                 
                 <h1 id="profile">  Profile </h1> 
 
@@ -123,11 +123,10 @@ export default class Profile extends Component{
                         </div>
                         
                     </div>
-        </div> {/* end Profile */}
-        
-    </div>
+                </div> {/* end Profile */}
+            </div>
          
-    ) 
+        ) 
     }
 }
 

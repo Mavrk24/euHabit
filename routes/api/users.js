@@ -343,7 +343,7 @@ router.get('/logout', (req, res) =>{
 // @route GET api/users/get_Profile
 // @desc return user using Header 
 // @access login-required
-router.get('/get_Profile',verifyToken,(req,res)=>{
+router.get('/get_UserData',verifyToken,(req,res)=>{
   jwt.verify(req.token,keys.secretOrKey ,(err,authData)=>{
     if(err){
 
@@ -360,13 +360,14 @@ router.get('/get_Profile',verifyToken,(req,res)=>{
           if (!user) {
             return res.status(404).json({ usernotfound: "Username not found" });
           } 
-          var ndi_length = Object.keys(user.ndi).length
-          var ndi = user.ndi[ndi_length -1 ]
+          var ndi = user.ndi[Object.keys(user.ndi).length-1 ]
+          var rec = user.recommendation[Object.keys(user.recommendation).length-1 ]
           var Profile = {
             username: user.username,
             email: user.email,
             demographic: user.demographic,
-            ndi_score: ndi[10]
+            ndi_score: ndi[10],
+            recommendation: rec
           }
           return Profile;
         });
