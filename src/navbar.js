@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Component } from 'react';
 import LgeuHabit from './LgeuHabit.png';
+import LgeuHabit_white from './LgeuHabit-white.png';
 import './mainpage.css';
 import { withRouter } from 'react-router-dom';
 
@@ -20,11 +21,11 @@ class Navbar extends Component{
         return(
             <div>
 {/*NavBar*/}        
-                <nav class="navbar navbar-light color">
+                <nav class="navbar navbar-dark color">
                 <div class="container-fluid">
                     <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
                         <svg width="30" height="30" class="d-inline-block align-text-top Logo">
-                            <image href={LgeuHabit} width="30" height="30"/ >
+                            <image href={LgeuHabit_white} width="30" height="30"/ >
                         </svg>
                         euHabit.
                     </a>
@@ -46,10 +47,10 @@ class Navbar extends Component{
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Prevention and Intervention
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="intervention">Ergonomics setting</a></li>
-                                <li><a class="dropdown-item" href="stretching">Stretching</a></li>
-                            </ul>
+                                <ul class="dropdown-menu color1" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" id="navoption" href="intervention">Ergonomics setting</a></li>
+                                    <li><a class="dropdown-item" id="navoption" href="stretching">Stretching</a></li>
+                                </ul>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="/Information">Information</a>
@@ -59,7 +60,7 @@ class Navbar extends Component{
                             </li>
                         </ul>
                         <span class="navbar-text">
-                            Signed in as: <a href="#login">Mark Otto</a>
+                            Signed in as: <a id="navoption" href="#login">Mark Otto</a>
                         </span>
                     </div> 
                                            

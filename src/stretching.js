@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
+import { Button } from 'react-bootstrap';
 import { Component } from 'react';
 import ReactPlayer from 'react-player';
 import './stretching.css';
-import rosa11 from './rosa11.png';
 import ReactDOM from 'react-dom';
 import LgeuHabit from './LgeuHabit.png';
 /*video*/
@@ -88,58 +88,21 @@ export default class Stretching extends Component {
         return(
             <div>
                 <Navbar />
-{/* NavbBar 
-        <nav class="navbar navbar-light c">
-            <div class="container-fluid">
-                <a class="navbar-brand mb-0 h1" id="euHabitnavbar" href="#">            
-                    <svg width="30" height="30" class="d-inline-block align-text-top Logo">
-                        <image href={LgeuHabit} width="30" height="30"/ >
-                    </svg>
-                    euHabit
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/mainpage">Home</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link active" href="/userprofile">Profile</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Prevention and Intervention
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="intervention">Ergonomics setting</a></li>
-                                <li><a class="dropdown-item" href="stretching">Stretching</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="/Information">Information</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="/" id="signout" type="submit" onClick={this.handleClick}>Sign Out</a>
-                        </li>
-                    </ul>
-                    <span class="navbar-text">
-                        Signed in as: <a href="#login">Mark Otto</a>
-                    </span>
-                </div> 
-                                       
-            </div>
-        </nav>
-
 
 {/* Stetching */}
 
-<p id="profile3">Stretching</p>
+    <div class="row">
+        <div class="col"> <p id="profile4"> ท่าบริหารร่างกาย </p> </div>
+        <div class="col"> <p id="profile3"> ( Stretching ) </p> </div>
+    </div>
 
 {/* Stretching Card */}
 
+    <p id="neck_title"> คอ </p>
+
     <div class="d-flex row row-cols-2 row-cols-md-4 row-cols-lg-5 mx-0 mb-4 g-4">
+
+{/* คอ */}
 
 {/*C1 ท่ามองซ้าย/ขวา stretching_1*/}    
         <div class="col">
@@ -197,6 +160,27 @@ export default class Stretching extends Component {
             </div>
         </div>
 
+{/*C8 ท่าเอามือไขว้หลัง stretching_7*/}    
+        <div class="col">
+            <div class="card stretch_card h-100">
+            {/* เอาภาพใน card */}
+                <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample8" aria-controls="offcanvasExample8">
+                    <img class="card-img-top" src={stretch7} />
+                </button>
+            {/* */}
+                <div class="card-body card_text">
+                    <p class="card-title" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample8">ท่าเอามือไขว้หลัง</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p id="shoulder_title"> ไหล่ </p>
+
+    <div class="d-flex row row-cols-2 row-cols-md-4 row-cols-lg-5 mx-0 mb-4 g-4">
+
+{/* ไหล่ */}
+
 {/*C6 ท่าหมุนไหล่ stretching_6*/}    
         <div class="col">
             <div class="card stretch_card h-100">
@@ -221,20 +205,6 @@ export default class Stretching extends Component {
             {/* */}
                 <div class="card-body card_text">
                     <p class="card-title" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample7">ท่ายืดไหล่ดึงข้อศอก</p>
-                </div>
-            </div>
-        </div>
-
-{/*C8 ท่าเอามือไขว้หลัง stretching_7*/}    
-        <div class="col">
-            <div class="card stretch_card h-100">
-            {/* เอาภาพใน card */}
-                <button class="stretch_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample8" aria-controls="offcanvasExample8">
-                    <img class="card-img-top" src={stretch7} />
-                </button>
-            {/* */}
-                <div class="card-body card_text">
-                    <p class="card-title" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample8">ท่าเอามือไขว้หลัง</p>
                 </div>
             </div>
         </div>
@@ -325,6 +295,7 @@ export default class Stretching extends Component {
                 </div>
             </div>
         </div>
+
 {/* C3 ท่ายืดเหยียดคอทีละด้าน stretching_8*/}  
         <div class="offcanvas offcanvas-start offcanvatext" data-bs-scroll="true" tabindex="-1" id="offcanvasExample3" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
@@ -521,7 +492,9 @@ export default class Stretching extends Component {
             </div>
             </div>            
 
-
+        <p id="Nxtbutton2" class="mt-5">
+            <Button class="btn" id="btn-login" type="submit" href="/intervention"> <b> go to Ergonomics setting </b> </Button>
+        </p>
 
 
 

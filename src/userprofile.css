@@ -4,20 +4,12 @@
     font-weight: bold;
 }
   
-#signout{
-    color: rgb(255, 96, 96);
-}
-  
-.c{
-    background-color: #eee3c4;
-}
-
 #profile{
     text-align: center;
     font-family: Quicksand, Verdana, sans-serif;
     font-size: 20px;
     font-weight: bold;
-    color: #eee3c4; 
+    color: #1c5744; 
     margin-top: 18px;   
 }
 

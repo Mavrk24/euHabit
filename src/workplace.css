@@ -1,34 +1,9 @@
-body{
-    background: linear-gradient(180deg, #010A09 0%, #010A09 100%);
-    font-family: "Bai Jamjuree", Verdana, sans-serif;
-}
-
-#survey{
-    font-family: "Bai Jamjuree", Verdana, sans-serif;
-    margin-bottom: 0px;
-}
-
-
-#demographic-data{
-    text-align: left;
-    font-size: 16px;
-    color:rgb(17, 38, 56);
-    font-family: Quicksand, Verdana, sans-serif;
-    margin-top: 30px;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 50px;
-    border-style: solid;
-    background-color: rgb(204, 205, 207);
-}
-
-#instruction{
+#instruction1{
     text-align: center;
-    font-size: 13px;
-    color: aliceblue;
+    font-size: 12px;
+    color: #1c5744;
     border-style: solid;
     letter-spacing: 80%;
-    
 }
 
 #screening-form{
@@ -40,6 +15,7 @@ body{
 #qtitle{
     font-size: 14px;
     font-weight: bold;
+    color: #1c5744;
 }
 
 #question{
@@ -54,6 +30,7 @@ body{
     padding-bottom: 10px;
     padding-top: 1px;
 }
+
 
 #photo{
     display: block;
@@ -86,6 +63,22 @@ body{
     width: 60px;
     background-color: #d43b3b;
     color: rgb(204, 218, 230);
+}
+
+#yesbutton{
+    margin-left: 30px;
+    width: 60px;
+    background-color: #56b495;
+    color: #ffffff;
+    border: none;
+}
+
+#nobutton{
+    margin-left: 30px;
+    width: 60px;
+    background-color: #fc5241;
+    color: #ffffff;
+    border: none;
 }
 
 input[type=radio] {

@@ -5,7 +5,6 @@ import './App.css';
 import Login from '../src/Login';
 import Register from '../src/register-login';
 import useToken from '../src/useToken';
-import Screening from '../src/Screening';
 import Main from '../src/Main'
 import {useState, setState} from 'react';
 import Result from './result';
@@ -21,6 +20,8 @@ import Workplace from './workplace';
 import Information from './information';
 import Stretching from './stretching';
 import Navbar from './navbar';
+import Display from './qtree';
+import Recommendation from './recommendation';
 
 
 
@@ -170,6 +171,8 @@ function App() {
     <Route exact path='/information' component={Information} />
     <Route exact path='/stretching' component={Stretching} />
     <Route exact path='/navbar' component={Navbar} />
+    <Route exact path='/qtree' component={Display} />
+    <Route exact path='/recommendation' component={Recommendation} />
   
     </Switch>
 
