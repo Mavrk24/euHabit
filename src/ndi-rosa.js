@@ -15,10 +15,13 @@ export default class NDI extends Component{
         };
     }
   
-    calculate = (ele) => {
-        
+    
+    
+    
+    
+    
+    calculate = (ele) => {    
         if (ele.target.name!=this.state.memory){
-            
             this.setState(previousState => ({
                 score: parseInt(parseInt(previousState.score) + parseInt(ele.target.id))
             }));
@@ -29,7 +32,6 @@ export default class NDI extends Component{
             this.setState(previousState => ({
                 score: parseInt(parseInt(previousState.score) - (this.state.prev) + parseInt(ele.target.id))
             }));
-            
             this.setState({
                 prev: parseInt(ele.target.id)
             });
@@ -47,6 +49,7 @@ export default class NDI extends Component{
             fetch('http://localhost:8080/api/users/ndi', {
                 method: 'POST',
                 headers: {
+                    'Access-Control-Allow-Origin': "https://euhabit.netlify.app",
                     token: localStorage.getItem("token"),
                     'Content-Type': 'application/json'
                 },
@@ -569,7 +572,7 @@ export default class NDI extends Component{
                         ))}
                     </Form.Group>
 
-{/*Q5*/}            <Form.Group className="mb-3 px-4">
+{/*Q9*/}            <Form.Group className="mb-3 px-4">
                         <Form.Label id="question1">9. การนอนหลับ</Form.Label>
                         {['radio'].map((type) => (
                             <div key={`default-${type}`} className="mb-3">

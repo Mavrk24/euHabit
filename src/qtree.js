@@ -28,9 +28,12 @@ export default class Display extends Component{
   };
         
 
-  postrequest = () =>{
-    let payload = {
-      // ตรงนี้ได้ payload = JSON ที่มีตัวแปร payload อยู่ข้างในอีกที
+
+
+
+
+  postrequest = () => {
+    let payload = {// ตรงนี้ได้ payload = JSON ที่มีตัวแปร payload อยู่ข้างในอีกที
       payload: this.state.arr
     };
     // console.log(payload)

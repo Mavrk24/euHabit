@@ -17,6 +17,7 @@ export default class Entry extends Component{
     return fetch('http://localhost:8080/api/users/demographic', {
       method: 'POST',
       headers: {
+        'Access-Control-Allow-Origin': "https://euhabit.netlify.app",
         token: localStorage.getItem("token"),
         'Content-Type': 'application/json'
       },
@@ -47,7 +48,6 @@ export default class Entry extends Component{
     .then(function (response) {
       console.log(response);
     });
-
   };
 
   handleChange = e => {
@@ -88,8 +88,7 @@ export default class Entry extends Component{
           <Form.Label >อายุ*</Form.Label>
                 <input id="TEST" name="age"id="age" type="number" size="30" placeholder="อายุ"
                  required onChange={this.handleChange}
-                 className="form-control mb-3" />
-                
+                 className="form-control mb-3" />       
           <FieldFeedbacks for="age">
             <FieldFeedback  id="feedback" when="*" class="mb-3"/>
           </FieldFeedbacks>    
@@ -143,8 +142,7 @@ export default class Entry extends Component{
             <button class="btn" id="btn-login" type="submit" onClick={this.contactSubmit}><b>Next</b></button>
           </p>
           </ FormWithConstraints>
-      </div>
-    
+      </div>  
     )
   }
 }
