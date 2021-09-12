@@ -6,6 +6,7 @@ import rosa11 from './rosa11.png';
 import LgeuHabit from './LgeuHabit.png';
 import Navbar from './navbar';
 
+
 export default class Profile extends Component{
     
     state = {
