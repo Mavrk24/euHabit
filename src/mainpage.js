@@ -12,6 +12,7 @@ import { withRouter } from 'react-router-dom';
 import circularlogo from './circlelogo_euHabit.png';
 import ergo_icon from './ergonomics.icon.png';
 import stretch_icon from './stretching.icon.png';
+import stretching_1 from './stretching_1.mp4';
 
 
 export default class Mainpage extends Component{
@@ -26,6 +27,14 @@ export default class Mainpage extends Component{
         window.location.reload();
       
     }
+
+    getErgo = () => {
+        this.props.history.push('/intervention');
+}
+
+getStretching = () => {
+        this.props.history.push('/stretching');
+}
 
     render() {
         return(
@@ -70,7 +79,7 @@ export default class Mainpage extends Component{
                             </button>
                         {/* */}
                             <div class="card-body card_text_mainpage">
-                                <a href="/intervention"><p class="card-title textlink"><b> Ergonomics setting </b></p></a>
+                                <p class="card-title textlink" onClick={this.getErgo}><b> Ergonomics setting </b></p>
                             </div>
                         </div>
                     </div>
@@ -85,12 +94,16 @@ export default class Mainpage extends Component{
                             </button>
                         {/* */}
                             <div class="card-body card_text_mainpage">
-                                <a href="/stretching"><p class="card-title textlink"><b> Stretching </b></p></a>
+                                <p class="card-title textlink"><b> Stretching </b></p>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <div class="embed-responsive embed-responsive-16by9" id="video_size">
+                      <video controls controlsList="nodownload" onContextMenu={e => e.preventDefault()}
+                      ref="vidRef2" id={1} type="video/mp4" src={stretching_1} ></video>
+                  </div>)
 
             </div>
         )
