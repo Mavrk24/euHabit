@@ -70,7 +70,7 @@ export default class Mainpage extends Component{
                             </button>
                         {/* */}
                             <div class="card-body card_text_mainpage">
-                                <a type="submit" href="/intervention"><p class="card-title textlink"><b> Ergonomics setting </b></p></a>
+                                <a href="/intervention"><p class="card-title textlink"><b> Ergonomics setting </b></p></a>
                             </div>
                         </div>
                     </div>
@@ -85,7 +85,7 @@ export default class Mainpage extends Component{
                             </button>
                         {/* */}
                             <div class="card-body card_text_mainpage">
-                                <a  type="submit" href="/stretching"><p class="card-title textlink"><b> Stretching </b></p></a>
+                                <a href="/stretching"><p class="card-title textlink"><b> Stretching </b></p></a>
                             </div>
                         </div>
                     </div>
