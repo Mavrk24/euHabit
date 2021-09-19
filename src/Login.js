@@ -23,16 +23,19 @@ async function loginUser(credentials) {
  }
   export default function Login({setToken,history}) {
   const [email, setEmail] = useState();
-  const [username, setUserName] = useState();
   const [password, setPassword] = useState();
   {/* Log in Submit */}
   const handleSubmit = async e => {
     e.preventDefault();
     const token = await loginUser({
-      username,
+      email,
       password
     });
-    setToken(token);
+    setToken({
+      token: token.token,
+      isNew: token.isNew
+    });
+
   }
   
   const handleClick = (e) => { 
@@ -61,10 +64,6 @@ async function loginUser(credentials) {
                 <input type="text" onChange={e => setEmail(e.target.value)}/>
                 </ul>
                 <ul>
-                <p>Username</p>
-                <input type="text" onChange={e => setUserName(e.target.value)}/>
-                </ul>
-                <ul>
                 <p>Password</p>
                 <input type="password" onChange={e => setPassword(e.target.value)}/>
                 </ul>
@@ -86,8 +85,6 @@ async function loginUser(credentials) {
   )
 }
 Login.propTypes = {
-  setToken: PropTypes.func.isRequired
-
 }
 
 

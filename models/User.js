@@ -50,6 +50,10 @@ const UserSchema = new Schema(
       type: Array,
       require: true,
       dafault: []
+    },
+    is_new: {
+      type: Boolean,
+      default: true
     } // end here
   },
 
