@@ -12,7 +12,7 @@ import LgeuHabit from './LgeuHabit.png';
 
 
 async function loginUser(credentials) {
-  return fetch('http://localhost:8080/api/users/login', {
+  return fetch('https://euhabit-server.herokuapp.com/api/users/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
